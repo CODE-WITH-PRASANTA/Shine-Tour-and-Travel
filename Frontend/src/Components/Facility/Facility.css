@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= SECTION & CONTAINER ================= */
+.facility-section {
+  width: 100%;
+  background-color: #fbfbf9;
+  padding: 80px 24px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #171d22;
+  overflow: hidden;
+  position: relative;
+}
+
+.facility-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 70px;
+  align-items: stretch;
+}
+
+/* ================= LEFT CONTENT & SOFT FADE BACKGROUND ================= */
+.facility-left-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 24px 0;
+  z-index: 1;
+}
+
+.facility-left-col::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -15%;
+  width: 130%;
+  height: 120%;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.12;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.facility-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #5da943;
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.badge-arrow,
+.badge-wave {
+  font-size: 16px;
+}
+
+/* ================= SLIDE TRANSITIONS ================= */
+.slide-content-wrapper {
+  transition: all 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slide-fade-in {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInText 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.slide-fade-out {
+  opacity: 0;
+  transform: translateX(-15px);
+}
+
+@keyframes slideInText {
+  from {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.facility-title {
+  font-size: 44px;
+  font-weight: 800;
+  color: #111417;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.facility-desc {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: #636e67;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+/* 2-Column Features Grid */
+.facility-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 16px;
+  margin-bottom: 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bullet-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #5da943;
+  flex-shrink: 0;
+}
+
+.feature-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #171d22;
+}
+
+/* ================= PAGINATION ================= */
+.facility-pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  user-select: none;
+  margin-top: auto;
+}
+
+.page-arrow {
+  background: #ffffff;
+  border: 1px solid #e5e8e3;
+  color: #6a746e;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.page-arrow:hover {
+  background-color: #5da943;
+  border-color: #5da943;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.page-numbers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.num-btn {
+  cursor: pointer;
+  color: #b5beb7;
+  transition: all 0.2s ease;
+}
+
+.num-btn:hover {
+  color: #5da943;
+}
+
+.num-btn.active {
+  color: #5da943;
+  font-weight: 800;
+}
+
+.num-slash {
+  color: #d1d8d2;
+  font-size: 16px;
+}
+
+/* ================= RIGHT IMAGE COLUMN ================= */
+.facility-right-col {
+  position: relative;
+  display: flex;
+  align-self: stretch;
+  width: 100%;
+}
+
+.facility-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  background-color: #1f2427;
+}
+
+.facility-main-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease;
+  transform: scale(1.05);
+}
+
+.facility-main-img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Tripadvisor Badge */
+.tripadvisor-badge {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: #ffffff;
+  border: 2px solid #5da943;
+  border-radius: 50%;
+  width: 86px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  z-index: 5;
+}
+
+.ta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.ta-label-top {
+  font-size: 7.5px;
+  font-weight: 800;
+  color: #111417;
+}
+
+.ta-label-mid {
+  font-size: 10px;
+  font-weight: 900;
+  color: #111417;
+}
+
+.ta-icon {
+  font-size: 22px;
+  color: #00af87;
+  margin: 3px 0;
+}
+
+.ta-label-bot {
+  font-size: 7.5px;
+  font-weight: 700;
+  color: #555e58;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .facility-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .facility-img-wrapper {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 650px) {
+  .facility-section {
+    padding: 50px 16px;
+  }
+
+  .facility-title {
+    font-size: 32px;
+  }
+
+  .facility-features-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .facility-img-wrapper {
+    min-height: 380px;
+  }
+}
