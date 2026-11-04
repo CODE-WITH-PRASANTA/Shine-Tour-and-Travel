@@ -1,32 +1,33 @@
 /* =========================================================
-   WHAT WE DO
-   JAGANNATH EXPLORER TRAVELS
+   WHAT WE DO — LIGHT BLUE THEME
 ========================================================= */
 
 .WhatWeDo {
-  --WhatWeDo-green: #61b341;
-  --WhatWeDo-green-dark: #4fa032;
+  --WhatWeDo-blue: #2b8be6;
+  --WhatWeDo-blue-dark: #1b74c9;
+  --WhatWeDo-blue-deep: #0f4c8a;
 
-  --WhatWeDo-orange: #ffad38;
-  --WhatWeDo-orange-dark: #ee9820;
+  --WhatWeDo-accent: #ffad38;
 
-  --WhatWeDo-cream: #fffbed;
+  --WhatWeDo-bg: #eaf4fd;
+  --WhatWeDo-bg-soft: #f5faff;
+  --WhatWeDo-bg-strong: #d6eafb;
 
-  --WhatWeDo-text: #0c0b09;
-  --WhatWeDo-description: #727b84;
+  --WhatWeDo-card: #ffffff;
+  --WhatWeDo-border: #cfe3f6;
 
-  --WhatWeDo-light-green: #e2f1db;
+  --WhatWeDo-text: #0b2540;
+  --WhatWeDo-description: #5b7189;
+
+  --WhatWeDo-icon-bg: #dcecfb;
+
+  --WhatWeDo-shadow: 0 10px 30px rgba(43, 139, 230, 0.12);
 
   width: 100%;
-
-  background:
-    var(--WhatWeDo-cream);
-
+  background: linear-gradient(135deg, var(--WhatWeDo-bg-soft) 0%, var(--WhatWeDo-bg) 55%, var(--WhatWeDo-bg-strong) 100%);
   overflow: hidden;
-
   box-sizing: border-box;
 }
-
 
 .WhatWeDo *,
 .WhatWeDo *::before,
@@ -34,157 +35,69 @@
   box-sizing: border-box;
 }
 
-
 /* =========================================================
    MAIN CONTAINER
 ========================================================= */
 
 .WhatWeDo__container {
   width: 100%;
-
   display: grid;
-
-  grid-template-columns:
-    41% 59%;
-
+  grid-template-columns: 41% 59%;
   align-items: stretch;
 }
 
-
 /* =========================================================
    IMAGE SIDE
-   DESKTOP
 ========================================================= */
 
 .WhatWeDo__image-side {
   position: relative;
-
   width: 100%;
-
   overflow: hidden;
-
-  background:
-    var(--WhatWeDo-cream);
-
+  background: var(--WhatWeDo-bg);
   align-self: start;
 }
 
-
-/* =========================================================
-   IMAGE WRAPPER
-========================================================= */
-
 .WhatWeDo__image-wrapper {
   position: relative;
-
   width: 100%;
-
   aspect-ratio: 1 / 1;
-
   overflow: hidden;
-
   display: block;
 }
-
-
-/* =========================================================
-   MAIN IMAGE
-   1254 x 1254
-   ZERO CROP
-========================================================= */
 
 .WhatWeDo__main-image {
   width: 100% !important;
-
   height: 100% !important;
-
   display: block;
-
   object-fit: contain !important;
-
   object-position: center center !important;
-
-  background:
-    var(--WhatWeDo-cream);
-
+  background: var(--WhatWeDo-bg);
   transform: scale(1);
-
   transform-origin: center center;
-
-  animation:
-    WhatWeDoImageAppear
-    0.65s
-    cubic-bezier(0.22, 0.61, 0.36, 1)
-    forwards;
-
-  will-change:
-    opacity,
-    transform;
-
-  transition:
-    transform 0.7s ease;
+  animation: WhatWeDoImageAppear 0.65s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  will-change: opacity, transform;
+  transition: transform 0.7s ease;
 }
-
-
-/* =========================================================
-   DESKTOP HOVER
-========================================================= */
 
 @media (min-width: 1101px) {
-
-  .WhatWeDo__image-side:hover
-  .WhatWeDo__main-image {
-    transform:
-      scale(1.012);
+  .WhatWeDo__image-side:hover .WhatWeDo__main-image {
+    transform: scale(1.012);
   }
-
 }
-
-
-/* =========================================================
-   IMAGE ANIMATION
-========================================================= */
 
 @keyframes WhatWeDoImageAppear {
-
-  0% {
-    opacity: 0;
-
-    transform:
-      scale(1.04);
-  }
-
-  100% {
-    opacity: 1;
-
-    transform:
-      scale(1);
-  }
-
+  0% { opacity: 0; transform: scale(1.04); }
+  100% { opacity: 1; transform: scale(1); }
 }
-
-
-/* =========================================================
-   IMAGE OVERLAY
-========================================================= */
 
 .WhatWeDo__image-overlay {
   position: absolute;
-
   inset: 0;
-
   pointer-events: none;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.035)
-    );
-
+  background: linear-gradient(180deg, rgba(43, 139, 230, 0), rgba(43, 139, 230, 0.06));
   z-index: 2;
 }
-
 
 /* =========================================================
    RIGHT CONTENT
@@ -192,41 +105,20 @@
 
 .WhatWeDo__content {
   width: 100%;
-
   min-width: 0;
-
-  background:
-    var(--WhatWeDo-cream);
-
+  background: transparent;
   display: flex;
-
   align-items: flex-start;
-
   justify-content: center;
-
   overflow: hidden;
 }
 
-
-/* =========================================================
-   CONTENT INNER
-========================================================= */
-
 .WhatWeDo__content-inner {
-  width:
-    min(
-      calc(100% - 55px),
-      900px
-    );
-
-  margin:
-    0 auto;
-
-  padding-top: 28px;
-
-  padding-bottom: 25px;
+  width: min(calc(100% - 55px), 900px);
+  margin: 0 auto;
+  padding-top: 34px;
+  padding-bottom: 32px;
 }
-
 
 /* =========================================================
    LABEL
@@ -234,156 +126,58 @@
 
 .WhatWeDo__label {
   width: 155px;
-
   height: 42px;
-
-  margin:
-    0 auto 0;
-
+  margin: 0 auto;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  background:
-    rgba(97, 179, 65, 0.18);
-
-  clip-path:
-    polygon(
-      3% 26%,
-      14% 13%,
-      28% 18%,
-      44% 7%,
-      60% 16%,
-      77% 10%,
-      94% 26%,
-      97% 52%,
-      91% 72%,
-      76% 69%,
-      60% 87%,
-      43% 76%,
-      28% 88%,
-      13% 73%,
-      3% 78%,
-      7% 52%
-    );
-
-  animation:
-    WhatWeDoLabelFloat
-    4s
-    ease-in-out
-    infinite;
+  background: rgba(43, 139, 230, 0.16);
+  clip-path: polygon(3% 26%, 14% 13%, 28% 18%, 44% 7%, 60% 16%, 77% 10%, 94% 26%, 97% 52%, 91% 72%, 76% 69%, 60% 87%, 43% 76%, 28% 88%, 13% 73%, 3% 78%, 7% 52%);
+  animation: WhatWeDoLabelFloat 4s ease-in-out infinite;
 }
 
-
 .WhatWeDo__label span {
-  color:
-    var(--WhatWeDo-green);
-
-  font-family:
-    "Brush Script MT",
-    "Segoe Script",
-    cursive;
-
+  color: var(--WhatWeDo-blue-dark);
+  font-family: "Brush Script MT", "Segoe Script", cursive;
   font-size: 17px;
-
   font-weight: 700;
-
   line-height: 1;
 }
 
-
-/* =========================================================
-   LABEL ANIMATION
-========================================================= */
-
 @keyframes WhatWeDoLabelFloat {
-
-  0%,
-  100% {
-    transform:
-      translateY(0);
-  }
-
-  50% {
-    transform:
-      translateY(-3px);
-  }
-
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
 }
 
-
 /* =========================================================
-   MAIN HEADING
+   HEADING + INTRO
 ========================================================= */
 
 .WhatWeDo__heading {
   width: 100%;
-
   max-width: 850px;
-
-  margin:
-    0 auto 17px;
-
-  color:
-    var(--WhatWeDo-text);
-
+  margin: 0 auto 17px;
+  color: var(--WhatWeDo-text);
   text-align: center;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size:
-    clamp(
-      30px,
-      2.15vw,
-      37px
-    );
-
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(30px, 2.15vw, 37px);
   font-weight: 700;
-
-  line-height: 1.08;
-
-  letter-spacing:
-    -0.9px;
+  line-height: 1.1;
+  letter-spacing: -0.9px;
 }
-
-
-/* =========================================================
-   INTRO
-========================================================= */
 
 .WhatWeDo__intro {
   width: 100%;
-
   max-width: 850px;
-
-  margin:
-    0 auto 7px;
-
-  color:
-    var(--WhatWeDo-description);
-
+  margin: 0 auto 7px;
+  color: var(--WhatWeDo-description);
   text-align: center;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 11.8px;
-
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
   font-weight: 400;
-
-  line-height: 1.58;
-
-  letter-spacing:
-    0.05px;
+  line-height: 1.65;
+  letter-spacing: 0.05px;
 }
-
 
 /* =========================================================
    ACTIVITY AREA
@@ -391,20 +185,12 @@
 
 .WhatWeDo__activity-area {
   width: 100%;
-
   display: grid;
-
-  grid-template-columns:
-    minmax(250px, 365px)
-    minmax(0, 1fr);
-
-  gap: 20px;
-
+  grid-template-columns: minmax(250px, 365px) minmax(0, 1fr);
+  gap: 22px;
   align-items: start;
-
-  margin-top: 19px;
+  margin-top: 24px;
 }
-
 
 /* =========================================================
    CATEGORIES
@@ -412,629 +198,274 @@
 
 .WhatWeDo__categories {
   width: 100%;
-
   display: flex;
-
   flex-direction: column;
-
   gap: 10px;
 }
 
-
-/* =========================================================
-   CATEGORY BUTTON
-========================================================= */
-
 .WhatWeDo__category {
   position: relative;
-
   width: 100%;
-
-  height: 54px;
-
-  min-height: 54px;
-
-  padding:
-    4px 16px 4px 4px;
-
-  border:
-    1px solid #e5e5e5;
-
-  border-radius:
-    50px;
-
-  background:
-    #ffffff;
-
+  height: 56px;
+  min-height: 56px;
+  padding: 4px 16px 4px 4px;
+  border: 1px solid var(--WhatWeDo-border);
+  border-radius: 50px;
+  background: var(--WhatWeDo-card);
   display: flex;
-
   align-items: center;
-
   gap: 11px;
-
-  color:
-    var(--WhatWeDo-text);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  color: var(--WhatWeDo-text);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-
   font-weight: 700;
-
   cursor: pointer;
-
   outline: none;
-
   text-align: left;
-
-  box-sizing: border-box;
-
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(43, 139, 230, 0.06);
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-
-/* =========================================================
-   CATEGORY HOVER
-========================================================= */
 
 .WhatWeDo__category:hover {
-  transform:
-    translateX(3px);
-
-  border-color:
-    var(--WhatWeDo-green);
-
-  box-shadow:
-    0 7px 18px
-    rgba(97, 179, 65, 0.13);
+  transform: translateX(4px);
+  border-color: var(--WhatWeDo-blue);
+  box-shadow: 0 8px 20px rgba(43, 139, 230, 0.18);
 }
-
-
-/* =========================================================
-   ACTIVE CATEGORY
-========================================================= */
 
 .WhatWeDo__category--active {
-  background:
-    var(--WhatWeDo-orange);
-
-  border-color:
-    var(--WhatWeDo-orange);
-
-  color:
-    #ffffff;
-
-  box-shadow:
-    0 8px 20px
-    rgba(255, 173, 56, 0.23);
+  background: linear-gradient(135deg, var(--WhatWeDo-blue) 0%, var(--WhatWeDo-blue-dark) 100%);
+  border-color: var(--WhatWeDo-blue-dark);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(27, 116, 201, 0.32);
 }
-
 
 .WhatWeDo__category--active:hover {
-  background:
-    var(--WhatWeDo-orange);
-
-  border-color:
-    var(--WhatWeDo-orange);
+  background: linear-gradient(135deg, var(--WhatWeDo-blue) 0%, var(--WhatWeDo-blue-dark) 100%);
+  border-color: var(--WhatWeDo-blue-dark);
 }
-
-
-/* =========================================================
-   CATEGORY ICON
-========================================================= */
 
 .WhatWeDo__category-icon {
   width: 46px;
-
   height: 46px;
-
-  flex:
-    0 0 46px;
-
-  border-radius:
-    50%;
-
+  flex: 0 0 46px;
+  border-radius: 50%;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  background:
-    var(--WhatWeDo-light-green);
-
-  color:
-    var(--WhatWeDo-green);
-
+  background: var(--WhatWeDo-icon-bg);
+  color: var(--WhatWeDo-blue-dark);
   font-size: 19px;
-
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-
-/* =========================================================
-   ACTIVE ICON
-========================================================= */
-
-.WhatWeDo__category--active
-.WhatWeDo__category-icon {
-
-  background:
-    rgba(150, 96, 17, 0.32);
-
-  color:
-    #ffffff;
-
-  transform:
-    scale(1.03);
+.WhatWeDo__category--active .WhatWeDo__category-icon {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  transform: scale(1.03);
 }
 
-
-/* =========================================================
-   CATEGORY HOVER ICON
-========================================================= */
-
-.WhatWeDo__category:hover
-.WhatWeDo__category-icon {
-
-  transform:
-    scale(1.05);
+.WhatWeDo__category:hover .WhatWeDo__category-icon {
+  transform: scale(1.06);
 }
-
-
-/* =========================================================
-   CATEGORY NAME
-========================================================= */
 
 .WhatWeDo__category-name {
-
   min-width: 0;
-
   font-size: 13.5px;
-
   font-weight: 700;
-
   line-height: 1.25;
-
   white-space: normal;
 }
 
-
 /* =========================================================
-   DETAILS
+   DETAILS CARD
 ========================================================= */
 
 .WhatWeDo__details {
-
   min-width: 0;
-
   width: 100%;
-
-  padding-top: 1px;
-
-  animation:
-    WhatWeDoDetailsAppear
-    0.45s
-    cubic-bezier(
-      0.2,
-      0.7,
-      0.2,
-      1
-    );
+  padding: 24px 24px 26px;
+  background: var(--WhatWeDo-card);
+  border: 1px solid var(--WhatWeDo-border);
+  border-top: 4px solid var(--WhatWeDo-blue);
+  border-radius: 20px;
+  box-shadow: var(--WhatWeDo-shadow);
+  animation: WhatWeDoDetailsAppear 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
-
-
-/* =========================================================
-   DETAILS ANIMATION
-========================================================= */
 
 @keyframes WhatWeDoDetailsAppear {
-
-  from {
-    opacity: 0;
-
-    transform:
-      translateX(15px);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      translateX(0);
-  }
-
+  from { opacity: 0; transform: translateX(15px); }
+  to { opacity: 1; transform: translateX(0); }
 }
-
-
-/* =========================================================
-   DETAILS TITLE
-========================================================= */
 
 .WhatWeDo__details-title {
-
-  margin:
-    0 0 10px;
-
-  color:
-    var(--WhatWeDo-text);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 20px;
-
+  margin: 0 0 10px;
+  color: var(--WhatWeDo-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
   font-weight: 700;
-
   line-height: 1.25;
-
-  letter-spacing:
-    -0.25px;
+  letter-spacing: -0.25px;
 }
-
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
 
 .WhatWeDo__details-description {
-
-  margin:
-    0 0 16px;
-
-  color:
-    var(--WhatWeDo-description);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 11.5px;
-
+  margin: 0 0 18px;
+  color: var(--WhatWeDo-description);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
   font-weight: 400;
-
-  line-height: 1.65;
-
-  letter-spacing:
-    0.05px;
+  line-height: 1.7;
+  letter-spacing: 0.05px;
 }
-
 
 /* =========================================================
    FEATURES
 ========================================================= */
 
 .WhatWeDo__features {
-
   width: 100%;
-
   display: grid;
-
-  grid-template-columns:
-    repeat(
-      2,
-      minmax(0, 1fr)
-    );
-
-  column-gap: 18px;
-
-  row-gap: 9px;
-
-  margin-bottom: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 14px;
+  row-gap: 10px;
+  margin-bottom: 22px;
 }
-
-
-/* =========================================================
-   FEATURE
-========================================================= */
 
 .WhatWeDo__feature {
-
   min-width: 0;
-
   display: flex;
-
   align-items: center;
-
-  gap: 8px;
-
-  color:
-    var(--WhatWeDo-text);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 11.5px;
-
+  gap: 9px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--WhatWeDo-bg-soft);
+  color: var(--WhatWeDo-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
   font-weight: 600;
-
   line-height: 1.35;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
-/* =========================================================
-   FEATURE DOT
-========================================================= */
+.WhatWeDo__feature:hover {
+  background: var(--WhatWeDo-bg-strong);
+  transform: translateY(-1px);
+}
 
 .WhatWeDo__feature-dot {
-
   width: 8px;
-
   height: 8px;
-
-  flex:
-    0 0 8px;
-
-  border-radius:
-    50%;
-
-  background:
-    var(--WhatWeDo-green);
-
-  transition:
-    transform 0.3s ease;
+  flex: 0 0 8px;
+  border-radius: 50%;
+  background: var(--WhatWeDo-blue);
+  box-shadow: 0 0 0 3px rgba(43, 139, 230, 0.18);
+  transition: transform 0.3s ease;
 }
 
-
-.WhatWeDo__feature:hover
-.WhatWeDo__feature-dot {
-
-  transform:
-    scale(1.3);
+.WhatWeDo__feature:hover .WhatWeDo__feature-dot {
+  transform: scale(1.3);
 }
-
 
 /* =========================================================
    ACTIONS
 ========================================================= */
 
 .WhatWeDo__actions {
-
   display: flex;
-
   align-items: center;
-
   gap: 18px;
-
   flex-wrap: wrap;
 }
 
-
-/* =========================================================
-   EXPLORE BUTTON
-========================================================= */
-
 .WhatWeDo__availability-button {
-
-  min-height: 45px;
-
-  padding:
-    0 22px;
-
-  border:
-    none;
-
-  border-radius:
-    30px;
-
-  background:
-    var(--WhatWeDo-green);
-
-  color:
-    #ffffff;
-
+  min-height: 46px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--WhatWeDo-blue) 0%, var(--WhatWeDo-blue-dark) 100%);
+  color: #ffffff;
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 9px;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 12px;
-
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
   font-weight: 700;
-
-  text-decoration:
-    none;
-
-  white-space:
-    nowrap;
-
+  text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
-
-  box-shadow:
-    0 5px 14px
-    rgba(97, 179, 65, 0.17);
-
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px rgba(43, 139, 230, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .WhatWeDo__availability-button:hover {
-
-  background:
-    var(--WhatWeDo-green-dark);
-
-  color:
-    #ffffff;
-
-  transform:
-    translateY(-3px);
-
-  box-shadow:
-    0 10px 22px
-    rgba(97, 179, 65, 0.25);
+  background: linear-gradient(135deg, var(--WhatWeDo-blue-dark) 0%, var(--WhatWeDo-blue-deep) 100%);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(27, 116, 201, 0.38);
 }
-
 
 .WhatWeDo__availability-button svg {
-
-  font-size:
-    12px;
-
-  transition:
-    transform 0.3s ease;
+  font-size: 12px;
+  transition: transform 0.3s ease;
 }
-
 
 .WhatWeDo__availability-button:hover svg {
-
-  transform:
-    translateX(4px);
+  transform: translateX(4px);
 }
 
-
 /* =========================================================
-   WATCH VIDEO LINK
+   WATCH VIDEO
 ========================================================= */
 
 .WhatWeDo__watch-button {
-
-  border:
-    none;
-
+  border: none;
   padding: 0;
-
   margin: 0;
-
-  background:
-    transparent;
-
+  background: transparent;
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 10px;
-
-  color:
-    var(--WhatWeDo-text);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 12px;
-
+  color: var(--WhatWeDo-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
   font-weight: 700;
-
-  text-decoration:
-    none;
-
-  white-space:
-    nowrap;
-
+  text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
-
   outline: none;
-
-  transition:
-    color 0.3s ease;
+  transition: color 0.3s ease;
 }
-
 
 .WhatWeDo__watch-button:hover {
-
-  color:
-    var(--WhatWeDo-green);
+  color: var(--WhatWeDo-blue-dark);
 }
 
-
-/* =========================================================
-   PLAY ICON
-========================================================= */
-
 .WhatWeDo__play-icon {
-
-  width: 45px;
-
-  height: 45px;
-
-  flex:
-    0 0 45px;
-
-  border:
-    1px solid #222222;
-
-  border-radius:
-    50%;
-
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border: 1.5px solid var(--WhatWeDo-blue);
+  border-radius: 50%;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  color:
-    #111111;
-
-  background:
-    transparent;
-
+  color: var(--WhatWeDo-blue-dark);
+  background: #ffffff;
   font-size: 10px;
-
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
-
-.WhatWeDo__watch-button:hover
-.WhatWeDo__play-icon {
-
-  background:
-    var(--WhatWeDo-green);
-
-  border-color:
-    var(--WhatWeDo-green);
-
-  color:
-    #ffffff;
-
-  transform:
-    scale(1.07);
+.WhatWeDo__watch-button:hover .WhatWeDo__play-icon {
+  background: var(--WhatWeDo-blue);
+  border-color: var(--WhatWeDo-blue);
+  color: #ffffff;
+  transform: scale(1.07);
 }
-
-
-/* =========================================================
-   WATCH TEXT
-========================================================= */
 
 .WhatWeDo__watch-text {
-
-  white-space:
-    nowrap;
+  white-space: nowrap;
 }
-
 
 /* =========================================================
    FOCUS
@@ -1043,1085 +474,421 @@
 .WhatWeDo__category:focus-visible,
 .WhatWeDo__watch-button:focus-visible,
 .WhatWeDo__availability-button:focus-visible {
-
-  outline:
-    3px solid
-    rgba(97, 179, 65, 0.35);
-
-  outline-offset:
-    3px;
+  outline: 3px solid rgba(43, 139, 230, 0.45);
+  outline-offset: 3px;
 }
 
-
 /* =========================================================
-   LARGE TABLET
-   1100px AND BELOW
-
-   IMAGE FULL
-   ZERO CROP
+   LARGE TABLET (1100px and below)
 ========================================================= */
 
 @media (max-width: 1100px) {
 
   .WhatWeDo {
-
-    width: 100%;
-
-    overflow:
-      visible;
+    overflow: visible;
   }
-
 
   .WhatWeDo__container {
-
-    width: 100%;
-
-    display:
-      flex;
-
-    flex-direction:
-      column;
-
-    align-items:
-      stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
-
-
-  /* =======================================================
-     IMAGE
-  ======================================================= */
 
   .WhatWeDo__image-side {
-
-    position:
-      relative;
-
-    width:
-      100%;
-
-    height:
-      auto;
-
-    min-height:
-      0;
-
-    overflow:
-      hidden;
-
-    background:
-      var(--WhatWeDo-cream);
-
-    order:
-      1;
+    height: auto;
+    min-height: 0;
+    order: 1;
   }
-
 
   .WhatWeDo__image-wrapper {
-
-    position:
-      relative;
-
-    width:
-      100%;
-
-    height:
-      auto;
-
-    aspect-ratio:
-      1 / 1;
-
-    overflow:
-      hidden;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
-
 
   .WhatWeDo__main-image {
-
-    width:
-      100% !important;
-
-    height:
-      100% !important;
-
-    object-fit:
-      contain !important;
-
-    object-position:
-      center center !important;
-
-    transform:
-      none !important;
+    object-fit: contain !important;
+    transform: none !important;
   }
 
-
-  .WhatWeDo__image-side:hover
-  .WhatWeDo__main-image {
-
-    transform:
-      none !important;
+  .WhatWeDo__image-side:hover .WhatWeDo__main-image {
+    transform: none !important;
   }
-
-
-  /* =======================================================
-     CONTENT
-  ======================================================= */
 
   .WhatWeDo__content {
-
-    width:
-      100%;
-
-    height:
-      auto;
-
-    min-height:
-      0;
-
-    overflow:
-      visible;
-
-    display:
-      block;
-
-    order:
-      2;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    display: block;
+    order: 2;
   }
-
 
   .WhatWeDo__content-inner {
-
-    width:
-      min(
-        calc(100% - 70px),
-        900px
-      );
-
-    margin:
-      0 auto;
-
-    padding-top:
-      45px;
-
-    padding-bottom:
-      55px;
+    width: min(calc(100% - 70px), 900px);
+    padding-top: 45px;
+    padding-bottom: 55px;
   }
-
-
-  /* =======================================================
-     HEADING
-  ======================================================= */
 
   .WhatWeDo__heading {
-
-    font-size:
-      34px;
-
-    line-height:
-      1.12;
-
-    margin-bottom:
-      22px;
+    font-size: 34px;
+    line-height: 1.12;
+    margin-bottom: 22px;
   }
-
 
   .WhatWeDo__intro {
-
-    font-size:
-      13px;
-
-    line-height:
-      1.75;
-
-    margin-bottom:
-      11px;
+    font-size: 13px;
+    line-height: 1.75;
+    margin-bottom: 11px;
   }
-
-
-  /* =======================================================
-     ACTIVITY
-  ======================================================= */
 
   .WhatWeDo__activity-area {
-
-    grid-template-columns:
-      1fr;
-
-    gap:
-      28px;
-
-    margin-top:
-      28px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 28px;
   }
-
-
-  /* =======================================================
-     CATEGORY GRID
-  ======================================================= */
 
   .WhatWeDo__categories {
-
-    display:
-      grid;
-
-    grid-template-columns:
-      repeat(
-        2,
-        minmax(0, 1fr)
-      );
-
-    gap:
-      13px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
   }
-
 
   .WhatWeDo__category {
-
-    height:
-      60px;
-
-    min-height:
-      60px;
-
-    padding:
-      5px 17px 5px 5px;
-
-    gap:
-      12px;
+    height: 60px;
+    min-height: 60px;
+    padding: 5px 17px 5px 5px;
+    gap: 12px;
   }
-
 
   .WhatWeDo__category-icon {
-
-    width:
-      50px;
-
-    height:
-      50px;
-
-    flex-basis:
-      50px;
-
-    font-size:
-      20px;
+    width: 50px;
+    height: 50px;
+    flex-basis: 50px;
+    font-size: 20px;
   }
-
 
   .WhatWeDo__category-name {
-
-    font-size:
-      14px;
+    font-size: 14px;
   }
-
-
-  /* =======================================================
-     DETAILS
-  ======================================================= */
 
   .WhatWeDo__details {
-
-    width:
-      100%;
+    padding: 28px 28px 30px;
   }
-
 
   .WhatWeDo__details-title {
-
-    font-size:
-      23px;
-
-    line-height:
-      1.3;
-
-    margin-bottom:
-      14px;
+    font-size: 23px;
+    line-height: 1.3;
+    margin-bottom: 14px;
   }
-
 
   .WhatWeDo__details-description {
-
-    font-size:
-      13px;
-
-    line-height:
-      1.8;
-
-    margin-bottom:
-      22px;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 22px;
   }
-
 
   .WhatWeDo__features {
-
-    column-gap:
-      30px;
-
-    row-gap:
-      13px;
-
-    margin-bottom:
-      25px;
+    column-gap: 16px;
+    row-gap: 12px;
+    margin-bottom: 25px;
   }
-
 
   .WhatWeDo__feature {
-
-    font-size:
-      13px;
+    font-size: 13px;
   }
-
 
   .WhatWeDo__availability-button {
-
-    min-height:
-      49px;
-
-    padding:
-      0 25px;
-
-    font-size:
-      13px;
+    min-height: 49px;
+    padding: 0 25px;
+    font-size: 13px;
   }
-
 
   .WhatWeDo__play-icon {
-
-    width:
-      49px;
-
-    height:
-      49px;
-
-    flex-basis:
-      49px;
+    width: 49px;
+    height: 49px;
+    flex-basis: 49px;
   }
-
 
   .WhatWeDo__watch-button {
-
-    font-size:
-      13px;
+    font-size: 13px;
   }
-
 }
 
-
 /* =========================================================
-   TABLET
-   768px - 900px
+   TABLET (900px and below)
 ========================================================= */
 
 @media (max-width: 900px) {
 
-  .WhatWeDo__image-wrapper {
-
-    aspect-ratio:
-      1 / 1;
-  }
-
-
   .WhatWeDo__content-inner {
-
-    width:
-      min(
-        calc(100% - 50px),
-        720px
-      );
-
-    padding-top:
-      43px;
-
-    padding-bottom:
-      52px;
+    width: min(calc(100% - 50px), 720px);
+    padding-top: 43px;
+    padding-bottom: 52px;
   }
-
 
   .WhatWeDo__heading {
-
-    font-size:
-      32px;
-
-    line-height:
-      1.12;
+    font-size: 32px;
   }
-
 
   .WhatWeDo__intro {
-
-    font-size:
-      12.5px;
+    font-size: 12.5px;
   }
-
 
   .WhatWeDo__activity-area {
-
-    gap:
-      25px;
+    gap: 25px;
   }
-
 
   .WhatWeDo__categories {
-
-    gap:
-      11px;
+    gap: 11px;
   }
-
 
   .WhatWeDo__category {
-
-    height:
-      58px;
-
-    min-height:
-      58px;
+    height: 58px;
+    min-height: 58px;
   }
-
 
   .WhatWeDo__category-icon {
-
-    width:
-      48px;
-
-    height:
-      48px;
-
-    flex-basis:
-      48px;
-
-    font-size:
-      19px;
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+    font-size: 19px;
   }
-
 
   .WhatWeDo__category-name {
-
-    font-size:
-      13.5px;
+    font-size: 13.5px;
   }
-
 
   .WhatWeDo__details-title {
-
-    font-size:
-      22px;
+    font-size: 22px;
   }
-
 }
 
-
 /* =========================================================
-   MOBILE
-   600px AND BELOW
-
-   FULL SQUARE IMAGE
-   ZERO CROP
+   MOBILE (600px and below)
 ========================================================= */
 
 @media (max-width: 600px) {
 
-  .WhatWeDo {
-
-    width:
-      100%;
-
-    min-height:
-      0;
-
-    overflow:
-      visible;
-  }
-
-
-  /* =======================================================
-     IMAGE
-  ======================================================= */
-
   .WhatWeDo__image-side {
-
-    width:
-      100%;
-
-    height:
-      auto !important;
-
-    min-height:
-      0 !important;
-
-    max-height:
-      none !important;
-
-    overflow:
-      hidden;
-
-    background:
-      var(--WhatWeDo-cream);
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
   }
-
 
   .WhatWeDo__image-wrapper {
-
-    width:
-      100%;
-
-    height:
-      auto !important;
-
-    min-height:
-      0 !important;
-
-    aspect-ratio:
-      1 / 1;
-
-    overflow:
-      hidden;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1;
   }
-
 
   .WhatWeDo__main-image {
-
-    width:
-      100% !important;
-
-    height:
-      100% !important;
-
-    min-width:
-      0 !important;
-
-    min-height:
-      0 !important;
-
-    max-width:
-      100% !important;
-
-    max-height:
-      100% !important;
-
-    display:
-      block;
-
-    object-fit:
-      contain !important;
-
-    object-position:
-      center center !important;
-
-    transform:
-      none !important;
-
-    animation:
-      WhatWeDoImageAppear
-      0.55s
-      ease
-      forwards;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    transform: none !important;
+    animation: WhatWeDoImageAppear 0.55s ease forwards;
   }
-
-
-  .WhatWeDo__image-side:hover
-  .WhatWeDo__main-image {
-
-    transform:
-      none !important;
-  }
-
-
-  /* =======================================================
-     CONTENT
-  ======================================================= */
-
-  .WhatWeDo__content {
-
-    width:
-      100%;
-
-    min-height:
-      0;
-
-    overflow:
-      visible;
-
-    display:
-      block;
-  }
-
 
   .WhatWeDo__content-inner {
-
-    width:
-      calc(100% - 26px);
-
-    height:
-      auto;
-
-    margin:
-      0 auto;
-
-    padding-top:
-      32px;
-
-    padding-bottom:
-      45px;
+    width: calc(100% - 26px);
+    padding-top: 32px;
+    padding-bottom: 45px;
   }
-
-
-  /* =======================================================
-     LABEL
-  ======================================================= */
 
   .WhatWeDo__label {
-
-    width:
-      140px;
-
-    height:
-      40px;
-
-    margin:
-      0 auto 3px;
+    width: 140px;
+    height: 40px;
+    margin: 0 auto 3px;
   }
-
 
   .WhatWeDo__label span {
-
-    font-size:
-      16px;
+    font-size: 16px;
   }
-
-
-  /* =======================================================
-     HEADING
-  ======================================================= */
 
   .WhatWeDo__heading {
-
-    width:
-      100%;
-
-    max-width:
-      100%;
-
-    margin:
-      0 auto 19px;
-
-    font-size:
-      27px;
-
-    line-height:
-      1.15;
-
-    letter-spacing:
-      -0.5px;
+    max-width: 100%;
+    margin: 0 auto 19px;
+    font-size: 27px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
   }
-
-
-  /* =======================================================
-     INTRO
-  ======================================================= */
 
   .WhatWeDo__intro {
-
-    width:
-      100%;
-
-    max-width:
-      100%;
-
-    margin:
-      0 auto 10px;
-
-    font-size:
-      12px;
-
-    line-height:
-      1.7;
+    max-width: 100%;
+    margin: 0 auto 10px;
+    font-size: 12px;
+    line-height: 1.7;
   }
-
-
-  /* =======================================================
-     ACTIVITY
-  ======================================================= */
 
   .WhatWeDo__activity-area {
-
-    width:
-      100%;
-
-    display:
-      grid;
-
-    grid-template-columns:
-      1fr;
-
-    gap:
-      23px;
-
-    margin-top:
-      24px;
+    grid-template-columns: 1fr;
+    gap: 23px;
+    margin-top: 24px;
   }
-
-
-  /* =======================================================
-     CATEGORY
-  ======================================================= */
 
   .WhatWeDo__categories {
-
-    width:
-      100%;
-
-    display:
-      grid;
-
-    grid-template-columns:
-      1fr;
-
-    gap:
-      9px;
+    grid-template-columns: 1fr;
+    gap: 9px;
   }
-
 
   .WhatWeDo__category {
-
-    width:
-      100%;
-
-    height:
-      56px;
-
-    min-height:
-      56px;
-
-    padding:
-      5px 13px 5px 5px;
-
-    border-radius:
-      50px;
+    height: 56px;
+    min-height: 56px;
+    padding: 5px 13px 5px 5px;
   }
-
 
   .WhatWeDo__category:hover {
-
-    transform:
-      translateX(2px);
+    transform: translateX(2px);
   }
-
 
   .WhatWeDo__category-icon {
-
-    width:
-      46px;
-
-    height:
-      46px;
-
-    flex:
-      0 0 46px;
-
-    font-size:
-      20px;
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    font-size: 20px;
   }
-
 
   .WhatWeDo__category-name {
-
-    font-size:
-      14px;
+    font-size: 14px;
   }
-
-
-  /* =======================================================
-     DETAILS
-  ======================================================= */
 
   .WhatWeDo__details {
-
-    width:
-      100%;
-
-    padding-top:
-      0;
+    padding: 22px 18px 24px;
+    border-radius: 16px;
   }
-
 
   .WhatWeDo__details-title {
-
-    font-size:
-      20px;
-
-    line-height:
-      1.35;
-
-    margin:
-      0 0 14px;
+    font-size: 20px;
+    line-height: 1.35;
+    margin: 0 0 14px;
   }
-
 
   .WhatWeDo__details-description {
-
-    font-size:
-      12px;
-
-    line-height:
-      1.75;
-
-    margin:
-      0 0 20px;
+    font-size: 12px;
+    line-height: 1.75;
+    margin: 0 0 20px;
   }
-
-
-  /* =======================================================
-     FEATURES
-  ======================================================= */
 
   .WhatWeDo__features {
-
-    width:
-      100%;
-
-    grid-template-columns:
-      1fr;
-
-    gap:
-      11px;
-
-    margin-bottom:
-      24px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
   }
-
 
   .WhatWeDo__feature {
-
-    font-size:
-      12px;
+    font-size: 12px;
   }
-
-
-  /* =======================================================
-     ACTIONS
-  ======================================================= */
 
   .WhatWeDo__actions {
-
-    width:
-      100%;
-
-    display:
-      flex;
-
-    align-items:
-      center;
-
-    flex-wrap:
-      wrap;
-
-    gap:
-      14px;
+    width: 100%;
+    gap: 14px;
   }
-
 
   .WhatWeDo__availability-button {
-
-    min-height:
-      49px;
-
-    padding:
-      0 22px;
-
-    font-size:
-      13px;
+    min-height: 49px;
+    padding: 0 22px;
+    font-size: 13px;
   }
-
 
   .WhatWeDo__watch-button {
-
-    font-size:
-      13px;
+    font-size: 13px;
   }
-
 
   .WhatWeDo__play-icon {
-
-    width:
-      49px;
-
-    height:
-      49px;
-
-    flex-basis:
-      49px;
+    width: 49px;
+    height: 49px;
+    flex-basis: 49px;
   }
-
 }
 
-
 /* =========================================================
-   SMALL MOBILE
-   400px
+   SMALL MOBILE (400px and below)
 ========================================================= */
 
 @media (max-width: 400px) {
 
-  .WhatWeDo__image-wrapper {
-
-    aspect-ratio:
-      1 / 1;
-  }
-
-
   .WhatWeDo__content-inner {
-
-    width:
-      calc(100% - 18px);
-
-    padding-top:
-      30px;
-
-    padding-bottom:
-      38px;
+    width: calc(100% - 18px);
+    padding-top: 30px;
+    padding-bottom: 38px;
   }
-
 
   .WhatWeDo__heading {
-
-    font-size:
-      24px;
-
-    margin-bottom:
-      18px;
+    font-size: 24px;
+    margin-bottom: 18px;
   }
-
 
   .WhatWeDo__intro {
-
-    font-size:
-      11.5px;
-
-    line-height:
-      1.7;
+    font-size: 11.5px;
   }
-
 
   .WhatWeDo__category {
-
-    height:
-      53px;
-
-    min-height:
-      53px;
+    height: 53px;
+    min-height: 53px;
   }
-
 
   .WhatWeDo__category-icon {
-
-    width:
-      43px;
-
-    height:
-      43px;
-
-    flex-basis:
-      43px;
-
-    font-size:
-      18px;
+    width: 43px;
+    height: 43px;
+    flex-basis: 43px;
+    font-size: 18px;
   }
-
 
   .WhatWeDo__category-name {
-
-    font-size:
-      13px;
+    font-size: 13px;
   }
 
+  .WhatWeDo__details {
+    padding: 20px 15px 22px;
+  }
 
   .WhatWeDo__details-title {
-
-    font-size:
-      18px;
+    font-size: 18px;
   }
-
 
   .WhatWeDo__details-description {
-
-    font-size:
-      11.5px;
+    font-size: 11.5px;
   }
-
 
   .WhatWeDo__feature {
-
-    font-size:
-      11.5px;
+    font-size: 11.5px;
   }
-
 
   .WhatWeDo__actions {
-
-    flex-direction:
-      column;
-
-    align-items:
-      stretch;
-
-    width:
-      100%;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
   }
-
 
   .WhatWeDo__availability-button {
-
-    width:
-      100%;
+    width: 100%;
   }
-
 
   .WhatWeDo__watch-button {
-
-    width:
-      100%;
-
-    justify-content:
-      center;
+    width: 100%;
+    justify-content: center;
   }
-
 }
 
-
 /* =========================================================
-   EXTRA SMALL MOBILE
-   350px
+   EXTRA SMALL MOBILE (350px and below)
 ========================================================= */
 
 @media (max-width: 350px) {
 
-  .WhatWeDo__image-wrapper {
-
-    aspect-ratio:
-      1 / 1;
-  }
-
-
   .WhatWeDo__heading {
-
-    font-size:
-      22px;
+    font-size: 22px;
   }
-
 
   .WhatWeDo__category-name {
-
-    font-size:
-      12px;
+    font-size: 12px;
   }
-
 
   .WhatWeDo__details-title {
-
-    font-size:
-      17px;
+    font-size: 17px;
   }
-
 }
-
 
 /* =========================================================
    REDUCED MOTION
@@ -2132,12 +899,7 @@
   .WhatWeDo *,
   .WhatWeDo *::before,
   .WhatWeDo *::after {
-
-    animation:
-      none !important;
-
-    transition:
-      none !important;
+    animation: none !important;
+    transition: none !important;
   }
-
 }

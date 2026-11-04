@@ -153,7 +153,7 @@ const Explore = () => {
 
   const handleExplore = () => {
     alert(
-      `Explore ${currentActivity.badge} with Jagannath Explorer Travels.`
+      `Explore ${currentActivity.badge} with Shine Tour & Travels.`
     );
   };
 
@@ -188,7 +188,7 @@ const Explore = () => {
           <p className="explore-main-description">
             Discover Odisha through its beautiful beaches, peaceful
             lakes, scenic hills, forests, rivers and unforgettable
-            outdoor experiences with Jagannath Explorer Travels.
+            outdoor experiences with Shine Tour & Travels.
           </p>
 
         </div>

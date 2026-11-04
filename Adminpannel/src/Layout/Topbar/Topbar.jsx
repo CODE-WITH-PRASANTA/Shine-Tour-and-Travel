@@ -40,7 +40,7 @@ const Topbar = ({ toggleSidebar }) => {
   // Profile data states
   const [currentProfile, setCurrentProfile] = useState({
     name: 'Admin User',
-    email: 'admin@jagannathexplorer.com',
+    email: 'admin@Shinetour&travel.com',
     travelerType: 'Super Admin',
     avatar: DEFAULT_AVATAR,
   });

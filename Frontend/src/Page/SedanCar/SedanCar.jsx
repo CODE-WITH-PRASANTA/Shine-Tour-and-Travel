@@ -20,7 +20,7 @@ const SedanCar = () => {
 
         <meta
           name="description"
-          content="Jagannath Explorer Travels is a trusted tour and travel agency in Bhubaneswar offering sedan car rentals, local and outstation travel, Odisha tour packages, airport transfers and customized sightseeing trips."
+          content="Shine Tour & Travels is a trusted tour and travel agency in Bhubaneswar offering sedan car rentals, local and outstation travel, Odisha tour packages, airport transfers and customized sightseeing trips."
         />
 
         <meta
@@ -30,7 +30,7 @@ const SedanCar = () => {
 
         <meta
           name="author"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta
@@ -59,7 +59,7 @@ const SedanCar = () => {
 
         <link
           rel="canonical"
-          href="https://jagannathexplorertravels.com/sedan-car"
+          href="https://ShineTour &travels.com/sedan-car"
         />
 
         {/* =========================================================
@@ -73,22 +73,22 @@ const SedanCar = () => {
 
         <meta
           property="og:title"
-          content="Best Tour and Travel Agency in Bhubaneswar | Jagannath Explorer Travels"
+          content="Best Tour and Travel Agency in Bhubaneswar | Shine Tour & Travels"
         />
 
         <meta
           property="og:description"
-          content="Book comfortable sedan cars, local and outstation cabs, airport transfers and customized Odisha tour packages with Jagannath Explorer Travels in Bhubaneswar."
+          content="Book comfortable sedan cars, local and outstation cabs, airport transfers and customized Odisha tour packages with Shine Tour & Travels in Bhubaneswar."
         />
 
         <meta
           property="og:url"
-          content="https://jagannathexplorertravels.com/sedan-car"
+          content="https://ShineTour &travels.com/sedan-car"
         />
 
         <meta
           property="og:site_name"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta
@@ -107,7 +107,7 @@ const SedanCar = () => {
 
         <meta
           name="twitter:title"
-          content="Best Tour and Travel Agency in Bhubaneswar | Jagannath Explorer Travels"
+          content="Best Tour and Travel Agency in Bhubaneswar | Shine Tour & Travels"
         />
 
         <meta
@@ -152,12 +152,12 @@ const SedanCar = () => {
             "@context": "https://schema.org",
             "@type": "TravelAgency",
 
-            name: "Jagannath Explorer Travels",
+            name: "Shine Tour & Travels",
 
             description:
-              "Jagannath Explorer Travels is a tour and travel agency in Bhubaneswar offering car rental, local and outstation travel, airport transfers, sightseeing and customized Odisha tour packages.",
+              "Shine Tour & Travels is a tour and travel agency in Bhubaneswar offering car rental, local and outstation travel, airport transfers, sightseeing and customized Odisha tour packages.",
 
-            url: "https://jagannathexplorertravels.com",
+            url: "https://ShineTour &travels.com",
 
             telephone: "+91-9668892441",
 
@@ -212,14 +212,14 @@ const SedanCar = () => {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://jagannathexplorertravels.com/",
+                item: "https://ShineTour &travels.com/",
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "Sedan Car Rental",
                 item:
-                  "https://jagannathexplorertravels.com/sedan-car",
+                  "https://ShineTour &travels.com/sedan-car",
               },
             ],
           })}

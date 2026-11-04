@@ -84,7 +84,7 @@ const TourExperiance = ({ tour }) => {
     dbHighlights.length > 0
       ? dbHighlights
       : [
-          "Sacred Jagannath Temple Darshan & Mahaprasad Experience",
+          
           "Witness Majestic Konark Sun Temple Architecture",
           "Scenic Golden Beach Walk & Sunrise Moments in Puri",
           "Enchanting Chilika Lake Dolphin & Bird Watching",
@@ -120,10 +120,10 @@ const TourExperiance = ({ tour }) => {
           tour?.destination || "Puri"
         } Temple Darshan`,
         description:
-          "Warm welcome upon arrival. Transfer to the hotel. Proceed for sacred darshan of Lord Jagannath and enjoy the evening spiritual atmosphere around Grand Road.",
+          "Warm welcome upon arrival. Transfer to the hotel. Proceed for sacred darshan of Lord Shine and enjoy the evening spiritual atmosphere around Grand Road.",
         highlights: [
           "Hotel Check-in & Refreshment",
-          "Jagannath Temple Darshan",
+          "Shine Temple Darshan",
           "Evening Beach Walk",
         ],
       },
@@ -445,7 +445,7 @@ const TourExperiance = ({ tour }) => {
       tour?.title || "Odisha Holiday Tour";
 
     let message =
-      `Jai Jagannath! I would like to book the tour: *${tourTitle}*\n` +
+      `Jai Shine! I would like to book the tour: *${tourTitle}*\n` +
       `- Destination: ${
         tour?.destination || "Odisha"
       }\n`;
@@ -493,7 +493,7 @@ const TourExperiance = ({ tour }) => {
 
           <h1 className="TourExperience-title">
             {tour?.title ||
-              "Jagannath Dham & Odisha Tour Package"}
+              "Shine Dham & Odisha Tour Package"}
           </h1>
 
           <div className="TourExperience-priceTag">
@@ -539,7 +539,7 @@ const TourExperiance = ({ tour }) => {
             <p>
               {tour?.detailedDescription ||
                 tour?.shortDescription ||
-                "Experience the divine heritage of Odisha with our curated tour package. From the holy Puri Jagannath Temple to the architectural marvel of Konark Sun Temple and serene beaches, immerse yourself in an unforgettable journey of spiritual devotion, rich culture, and authentic Odia hospitality."}
+                "Experience the divine heritage of Odisha with our curated tour package. From the holy Puri Shine Temple to the architectural marvel of Konark Sun Temple and serene beaches, immerse yourself in an unforgettable journey of spiritual devotion, rich culture, and authentic Odia hospitality."}
             </p>
           </div>
 

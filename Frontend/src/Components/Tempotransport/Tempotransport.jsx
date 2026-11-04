@@ -7,7 +7,7 @@ import "./Tempotransport.css";
 ========================================================= */
 
 const BUSINESS = {
-  name: "Jagannath Explorer Travels",
+  name: "Shine Tour & Travels",
   address:
     "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha, Pin - 751002",
   phone1: "9668892441",
@@ -230,7 +230,7 @@ const structuredData = {
     },
   ],
   description:
-    "Jagannath Explorer Travels is a travel agency in Bhubaneswar offering local and outstation vehicle rentals, group transportation, sightseeing services and Odisha tourism packages.",
+    "Shine Tour & Travels is a travel agency in Bhubaneswar offering local and outstation vehicle rentals, group transportation, sightseeing services and Odisha tourism packages.",
   serviceType: [
     "Local Car Rental",
     "Outstation Car Rental",
@@ -258,22 +258,22 @@ const Tempotransport = () => {
       <Helmet>
         <title>
           Best Tour and Travel Agency in Bhubaneswar | Transport Tariff
-          | Jagannath Explorer Travels
+          | Shine Tour & Travels
         </title>
 
         <meta
           name="description"
-          content="Jagannath Explorer Travels is a trusted tour and travel agency in Bhubaneswar offering local and outstation cab rentals, Tempo Travellers, Urbania, group transportation and Odisha tourism packages with price options."
+          content="Shine Tour & Travels is a trusted tour and travel agency in Bhubaneswar offering local and outstation cab rentals, Tempo Travellers, Urbania, group transportation and Odisha tourism packages with price options."
         />
 
         <meta
           name="keywords"
-          content="Best tour and travel agency in bhubaneswar, tour and travel agency in Bhubaneswar, travel agency in Bhubaneswar, top 10 travel agency in Bhubaneswar, Odisha tourism packages with price, Odisha tour packages, Bhubaneswar tour packages, travel operators in Bhubaneswar, car rental Bhubaneswar, Tempo Traveller Bhubaneswar, Urbania rental Bhubaneswar, outstation cab Bhubaneswar, Jagannath Explorer Travels"
+          content="Best tour and travel agency in bhubaneswar, tour and travel agency in Bhubaneswar, travel agency in Bhubaneswar, top 10 travel agency in Bhubaneswar, Odisha tourism packages with price, Odisha tour packages, Bhubaneswar tour packages, travel operators in Bhubaneswar, car rental Bhubaneswar, Tempo Traveller Bhubaneswar, Urbania rental Bhubaneswar, outstation cab Bhubaneswar, Shine Tour & Travels"
         />
 
         <meta
           name="author"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta
@@ -320,17 +320,17 @@ const Tempotransport = () => {
 
         <meta
           property="og:title"
-          content="Best Tour and Travel Agency in Bhubaneswar | Jagannath Explorer Travels"
+          content="Best Tour and Travel Agency in Bhubaneswar | Shine Tour & Travels"
         />
 
         <meta
           property="og:description"
-          content="Explore transparent transport tariffs, local and outstation vehicle rentals and Odisha tourism packages from Jagannath Explorer Travels, Bhubaneswar."
+          content="Explore transparent transport tariffs, local and outstation vehicle rentals and Odisha tourism packages from Shine Tour & Travels, Bhubaneswar."
         />
 
         <meta
           property="og:site_name"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta
@@ -347,12 +347,12 @@ const Tempotransport = () => {
 
         <meta
           name="twitter:title"
-          content="Best Tour and Travel Agency in Bhubaneswar | Jagannath Explorer Travels"
+          content="Best Tour and Travel Agency in Bhubaneswar | Shine Tour & Travels"
         />
 
         <meta
           name="twitter:description"
-          content="Local and outstation travel services, vehicle rentals and Odisha tourism packages from Jagannath Explorer Travels."
+          content="Local and outstation travel services, vehicle rentals and Odisha tourism packages from Shine Tour & Travels."
         />
 
         {/* Structured Data */}
@@ -369,7 +369,7 @@ const Tempotransport = () => {
       <section className="tempotransport-header">
 
         <span className="tempotransport-subtitle">
-          ✦ JAGANNATH EXPLORER TRAVELS ✦
+          ✦ Shine Tour & TRAVELS ✦
         </span>
 
         <h1 className="tempotransport-title">
@@ -387,7 +387,7 @@ const Tempotransport = () => {
 
         <p className="tempotransport-intro">
           Planning a city ride, family trip, wedding journey or an
-          outstation holiday from Bhubaneswar? Jagannath Explorer Travels
+          outstation holiday from Bhubaneswar? Shine Tour & Travels
           offers practical transportation options for individuals,
           families and groups. Choose from comfortable cars, Tempo
           Travellers, Urbania vehicles and larger coaches according to
@@ -671,7 +671,7 @@ const Tempotransport = () => {
               Odisha is a wonderful choice for family holidays,
               temple visits, coastal escapes and cultural trips.
               If you are starting your journey from Bhubaneswar,
-              Jagannath Explorer Travels can help arrange the vehicle
+              Shine Tour & Travels can help arrange the vehicle
               and travel plan around your preferred destinations.
             </p>
 
@@ -884,8 +884,8 @@ const Tempotransport = () => {
 
             <p>
               Tell us your destination, travel date, passenger
-              count and preferred vehicle. Our team at Jagannath
-              Explorer Travels can help you choose a suitable
+              count and preferred vehicle. Our team at Shine
+              Tour & Travels can help you choose a suitable
               travel option.
             </p>
 

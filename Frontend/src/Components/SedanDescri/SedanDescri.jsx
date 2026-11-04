@@ -362,7 +362,7 @@ const BookingModal = ({ car, open, onRequestClose }) => {
                         onChange={handleChange}
                       />
                       <span>
-                        I agree to the <span className="booking-modal__terms-link">Terms & Conditions</span> from <strong>Jagannath Explorer Travels</strong>.
+                        I agree to the <span className="booking-modal__terms-link">Terms & Conditions</span> from <strong>Shine Tour & Travels</strong>.
                       </span>
                     </label>
                   </div>
@@ -670,7 +670,7 @@ const SedanDescri = () => {
     <section className="sedan-catalog">
       <header className="sedan-catalog__header">
         <div className="sedan-catalog__badge-pill">
-          <span>✨ Welcome to Jagannath Explorer Travels</span>
+          <span>✨ Welcome to Shine Tour & Travels</span>
         </div>
 
         <h1 className="sedan-catalog__title">
@@ -678,7 +678,7 @@ const SedanDescri = () => {
         </h1>
 
         <p className="sedan-catalog__desc">
-          Experience world-class comfort with <strong>Jagannath Explorer Travels</strong>. We offer pristine vehicles, professional chauffeurs, airport pickups, scenic local sightseeing, and outstation trips tailored for your ultimate safety and luxury.
+          Experience world-class comfort with <strong>Shine Tour & Travels</strong>. We offer pristine vehicles, professional chauffeurs, airport pickups, scenic local sightseeing, and outstation trips tailored for your ultimate safety and luxury.
         </p>
 
         <div className="sedan-catalog__business-info">

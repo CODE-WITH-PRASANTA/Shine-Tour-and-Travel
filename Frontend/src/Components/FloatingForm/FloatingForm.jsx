@@ -444,7 +444,7 @@ const FloatingForm = ({
 
                 <h2 className="floating-form-promo-title">
                   Your Journey Begins <br />
-                  With <span>Jagannath Explorer Travels</span>
+                  With <span>Shine Tour & Travels</span>
                 </h2>
 
                 <p className="floating-form-promo-desc">
@@ -689,7 +689,7 @@ const FloatingForm = ({
                     required
                   />
                   <label htmlFor="floatingFormTerms">
-                    I agree to the <a href="/terms">Terms &amp; Conditions</a> of Jagannath Explorer Travels.
+                    I agree to the <a href="/terms">Terms &amp; Conditions</a> of Shine Tour & Travels.
                   </label>
                 </div>
 

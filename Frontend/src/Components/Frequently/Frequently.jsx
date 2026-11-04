@@ -6,13 +6,13 @@ const faqData = [
     id: 1,
     question: "Are family tour packages available in Bhubaneswar?",
     answer:
-      "Yes. Jagannath Explorer Travels offers comfortable travel options for families, couples and groups. You can choose a suitable car, tempo traveller or larger vehicle depending on your group size, destination and travel plans."
+      "Yes. Shine Tour & Travels offers comfortable travel options for families, couples and groups. You can choose a suitable car, tempo traveller or larger vehicle depending on your group size, destination and travel plans."
   },
   {
     id: 2,
     question: "Where can I get cab service in Bhubaneswar?",
     answer:
-      "You can book a cab from Jagannath Explorer Travels for local travel, airport transfers, railway station pickups, sightseeing and outstation journeys. You can also contact our team directly to discuss your pickup location and travel requirements."
+      "You can book a cab from Shine Tour & Travels for local travel, airport transfers, railway station pickups, sightseeing and outstation journeys. You can also contact our team directly to discuss your pickup location and travel requirements."
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ const faqData = [
   },
   {
     id: 9,
-    question: "What makes Jagannath Explorer Travels useful for travellers?",
+    question: "What makes Shine Tour & Travels useful for travellers?",
     answer:
       "We focus on making travel simple from booking to the end of the journey. Customers can choose from different vehicle categories, discuss their route with our team and plan local or outstation travel according to their requirements."
   },
@@ -143,7 +143,7 @@ const Frequently = () => {
           <p className="faq-subtitle">
             Find answers about cab services, tempo travellers, family
             tours, outstation trips and Odisha travel bookings with
-            Jagannath Explorer Travels.
+            Shine Tour & Travels.
           </p>
         </header>
 
@@ -156,7 +156,7 @@ const Frequently = () => {
           <p>
             Planning a trip from Bhubaneswar becomes easier when your
             transportation is comfortable, reliable and suited to your
-            group. Jagannath Explorer Travels provides cars, cabs,
+            group. Shine Tour & Travels provides cars, cabs,
             tempo travellers and larger vehicles for local sightseeing,
             family holidays, business travel, weddings, pilgrimages and
             outstation journeys.
@@ -207,7 +207,7 @@ const Frequently = () => {
 
           <p>
             From short city transfers to multi-day Odisha tours,
-            Jagannath Explorer Travels offers practical vehicle choices
+            Shine Tour & Travels offers practical vehicle choices
             for different types of travellers. You can plan trips to
             destinations such as Puri, Konark, Chilika, Cuttack and
             other popular places in Odisha with a vehicle that matches

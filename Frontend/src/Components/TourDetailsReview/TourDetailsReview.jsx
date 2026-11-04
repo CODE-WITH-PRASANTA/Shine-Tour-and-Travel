@@ -14,11 +14,11 @@ const TourDetailsReview = ({ tour }) => {
   const tourTitle = tour?.title || "Odisha Holiday Tour";
   const tourDestination = tour?.destination || "Puri & Konark";
 
-  // Dynamic SEO Schema Markup for Jagannatha Tour and Travels
+  // Dynamic SEO Schema Markup for Shine Tour and Travels
   const schemaMarkup = {
     "@context": "https://schema.org/",
     "@type": "TouristAttraction",
-    "name": `Jagannatha Tour and Travels - ${tourTitle}`,
+    "name": `Shine Tour and Travels - ${tourTitle}`,
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
@@ -126,7 +126,7 @@ const TourDetailsReview = ({ tour }) => {
             </div>
 
             <p className="TourDetailsReview-text">
-              We booked the {tourTitle} with Jagannath Explorer Travel. The whole itinerary covering {tourDestination} was seamlessly executed. The cab arrived on time, hotel transfers were smooth, and our family had a memorable spiritual journey.
+              We booked the {tourTitle} with Shine Tour & Travel. The whole itinerary covering {tourDestination} was seamlessly executed. The cab arrived on time, hotel transfers were smooth, and our family had a memorable spiritual journey.
             </p>
 
             <button type="button" className="TourDetailsReview-replyBtn">
@@ -137,15 +137,15 @@ const TourDetailsReview = ({ tour }) => {
             <div className="TourDetailsReview-nestedReply">
               <img
                 src={avatarAuthor}
-                alt="Jagannath Explorer Team"
+                alt="Shine Tour & Team"
                 className="TourDetailsReview-avatar"
               />
               <div className="TourDetailsReview-replyContent">
                 <h4 className="TourDetailsReview-userName">
-                  Jagannath Explorer Team, <span className="TourDetailsReview-date">13 April, 2024</span>
+                  Shine Tour & Team, <span className="TourDetailsReview-date">13 April, 2024</span>
                 </h4>
                 <p className="TourDetailsReview-text">
-                  Jai Jagannath! Thank you so much for traveling with us, Bhabani Ji. We are honored to have hosted your family tour.
+                  Jai Shine! Thank you so much for traveling with us, Bhabani Ji. We are honored to have hosted your family tour.
                 </p>
                 <button type="button" className="TourDetailsReview-replyBtn">
                   <FaReply className="TourDetailsReview-replyIcon" /> Reply

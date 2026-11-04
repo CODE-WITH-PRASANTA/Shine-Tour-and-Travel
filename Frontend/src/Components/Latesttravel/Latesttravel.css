@@ -1,4 +1,4 @@
-
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,10 +9,13 @@
 .latesttravel-section {
   position: relative;
   width: 100%;
-  background-color: #ffffff;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(199, 230, 255, 0.42) 0%, transparent 42%),
+    radial-gradient(circle at 88% 82%, rgba(219, 240, 255, 0.48) 0%, transparent 45%),
+    linear-gradient(180deg, #f0f7fd 0%, #e8f3fc 100%);
   padding: 85px 24px 105px 24px;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #171d22;
+  color: #0f172a;
   overflow: hidden;
 }
 
@@ -40,9 +43,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(#e4ece0 1px, transparent 1px);
+  background-image: radial-gradient(rgba(56, 140, 224, 0.22) 1.2px, transparent 1.2px);
   background-size: 32px 32px;
-  opacity: 0.55;
+  opacity: 0.65;
   mask-image: radial-gradient(circle, black 40%, transparent 80%);
   -webkit-mask-image: radial-gradient(circle, black 40%, transparent 80%);
 }
@@ -52,36 +55,39 @@
   bottom: 80px;
   left: 20px;
   width: 90px;
-  opacity: 0.6;
+  opacity: 0.35;
+  filter: hue-rotate(120deg) brightness(0.85);
 }
 
 /* ================= HEADER ================= */
 .latesttravel-header {
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 48px;
 }
 
 .latesttravel-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #5da943;
+  color: #0284c7;
   font-family: 'Caveat', cursive;
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
 .badge-arrow,
 .badge-sparkle {
   font-size: 16px;
+  color: #38bdf8;
 }
 
 .latesttravel-main-title {
   font-size: 42px;
   font-weight: 800;
-  color: #111827;
-  letter-spacing: -0.5px;
+  color: #0f1f33;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
 }
 
 /* ================= 2-COLUMN GRID ================= */
@@ -132,18 +138,19 @@
 /* ================= LEFT FEATURED CARD ================= */
 .featured-card {
   background-color: #ffffff;
-  border-radius: 14px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
-  border: 1px solid #f0f2ee;
+  box-shadow: 0 10px 30px rgba(18, 64, 107, 0.06);
+  border: 1px solid rgba(56, 140, 224, 0.14);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .featured-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  border-color: rgba(56, 140, 224, 0.3);
+  box-shadow: 0 18px 40px rgba(18, 64, 107, 0.12);
 }
 
 .featured-img-wrap {
@@ -151,11 +158,11 @@
   width: 100%;
   height: 380px;
   overflow: hidden;
-  background-color: #121619;
+  background-color: #0f172a;
 }
 
 .featured-content {
-  padding: 24px 26px;
+  padding: 26px 28px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -166,33 +173,44 @@
   align-items: center;
   gap: 8px;
   font-size: 12.5px;
-  color: #7b8580;
+  color: #64748b;
   margin-bottom: 12px;
 }
 
 .author-link {
   background: none;
   border: none;
-  color: #555e58;
+  color: #0284c7;
   font-weight: 700;
   text-decoration: underline;
+  text-underline-offset: 3px;
   cursor: pointer;
   padding: 0;
   font-family: inherit;
   font-size: inherit;
+  transition: color 0.2s ease;
+}
+
+.author-link:hover {
+  color: #0369a1;
 }
 
 .meta-dot {
   font-size: 10px;
-  color: #b0b8af;
+  color: #94a3b8;
 }
 
 .featured-title {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 800;
-  color: #111417;
+  color: #0f1f33;
   line-height: 1.4;
   margin-bottom: 22px;
+  transition: color 0.2s ease;
+}
+
+.featured-card:hover .featured-title {
+  color: #0284c7;
 }
 
 .featured-footer {
@@ -200,7 +218,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: auto;
-  border-top: 1px solid #f4f6f2;
+  border-top: 1px solid #edf4fb;
   padding-top: 18px;
 }
 
@@ -210,8 +228,8 @@
   border: none;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  color: #5da943;
+  gap: 7px;
+  color: #0284c7;
   font-size: 13.5px;
   font-weight: 700;
   cursor: pointer;
@@ -219,20 +237,27 @@
   transition: color 0.2s ease;
 }
 
+.view-post-btn:hover {
+  color: #0369a1;
+}
+
 .arrow-circle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  border: 1.2px solid #5da943;
+  border: 1.4px solid #0284c7;
+  color: #0284c7;
   font-size: 11px;
   line-height: 1;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .view-post-btn:hover .arrow-circle {
+  background-color: #0284c7;
+  color: #ffffff;
   transform: translate(2px, -2px);
 }
 
@@ -245,16 +270,16 @@
 .social-links-row button {
   background: none;
   border: none;
-  color: #717c75;
-  font-size: 13px;
+  color: #64748b;
+  font-size: 13.5px;
   cursor: pointer;
   padding: 2px;
   transition: color 0.2s ease, transform 0.15s ease;
 }
 
 .social-links-row button:hover {
-  color: #5da943;
-  transform: translateY(-1px);
+  color: #0284c7;
+  transform: translateY(-2px);
 }
 
 /* ================= RIGHT STACKED CARDS ================= */
@@ -267,18 +292,19 @@
 
 .horizontal-post-card {
   background-color: #ffffff;
-  border-radius: 14px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  border: 1px solid #f0f2ee;
+  box-shadow: 0 8px 24px rgba(18, 64, 107, 0.05);
+  border: 1px solid rgba(56, 140, 224, 0.14);
   display: flex;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   min-height: 165px;
 }
 
 .horizontal-post-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+  transform: translateY(-4px);
+  border-color: rgba(56, 140, 224, 0.3);
+  box-shadow: 0 16px 36px rgba(18, 64, 107, 0.1);
 }
 
 .horizontal-img-wrap {
@@ -286,7 +312,7 @@
   width: 220px;
   min-width: 220px;
   overflow: hidden;
-  background-color: #1f2427;
+  background-color: #0f172a;
 }
 
 /* Circular Date Badge */
@@ -294,19 +320,20 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: rgba(22, 27, 30, 0.55);
-  backdrop-filter: blur(4px);
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
   color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  line-height: 1;
+  line-height: 1.05;
   z-index: 2;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .date-number {
@@ -318,11 +345,13 @@
 .date-month {
   font-size: 9px;
   font-weight: 600;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #7dd3fc;
 }
 
 .horizontal-content {
-  padding: 18px 22px;
+  padding: 20px 24px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -333,21 +362,26 @@
   align-items: center;
   gap: 7px;
   font-size: 12px;
-  color: #7d8882;
+  color: #64748b;
   margin-bottom: 8px;
 }
 
 .category-text {
-  color: #7d8882;
-  font-weight: 600;
+  color: #0284c7;
+  font-weight: 700;
 }
 
 .horizontal-title {
-  font-size: 16px;
+  font-size: 16.5px;
   font-weight: 800;
-  color: #111417;
-  line-height: 1.35;
+  color: #0f1f33;
+  line-height: 1.4;
   margin-bottom: 14px;
+  transition: color 0.2s ease;
+}
+
+.horizontal-post-card:hover .horizontal-title {
+  color: #0284c7;
 }
 
 .horizontal-footer {
@@ -360,17 +394,18 @@
 .read-time-box {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
 }
 
 .fire-icon {
-  font-size: 12px;
+  font-size: 13px;
+  color: #f59e0b;
 }
 
 .read-time-text {
   font-size: 11.5px;
   font-weight: 600;
-  color: #838e88;
+  color: #64748b;
 }
 
 /* ================= MOBILE CONTROLS ================= */
@@ -407,7 +442,7 @@
   }
 }
 
-/* मोबाइल रिस्पॉन्सिव (<= 650px) - सिंगल कार्ड स्लाइडर */
+/* Mobile responsive (<= 650px) */
 @media (max-width: 650px) {
   .latesttravel-section {
     padding: 60px 16px 70px 16px;
@@ -437,7 +472,6 @@
     padding: 20px 18px;
   }
 
-  /* मोबाइल एरो और डॉट्स नेविगेशन */
   .mobile-slider-controls {
     display: flex;
     justify-content: center;
@@ -450,22 +484,22 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #bae6fd;
     background-color: #ffffff;
-    color: #111417;
+    color: #0284c7;
     font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12);
     transition: all 0.2s ease;
   }
 
   .slider-arrow-btn:active {
-    background-color: #5da943;
+    background-color: #0284c7;
     color: #ffffff;
-    border-color: #5da943;
+    border-color: #0284c7;
     transform: scale(0.94);
   }
 
@@ -479,13 +513,13 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #d1d5db;
+    background-color: #cbd5e1;
     cursor: pointer;
     transition: all 0.25s ease;
   }
 
   .slider-dot.active {
-    background-color: #5da943;
+    background-color: #0284c7;
     width: 22px;
     border-radius: 12px;
   }

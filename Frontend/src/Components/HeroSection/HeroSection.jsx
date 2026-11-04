@@ -19,10 +19,10 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import Nandankanan from "../../assets/Nandankanan.webp";
-import Jaganathmandir from "../../assets/ShriJaganath.webp";
+import Nandankanan from "../../assets/Nandankanan.png";
+import Jaganathmandir from "../../assets/heroimg-2.png";
 import kalijaee from "../../assets/kalijaee.webp";
-import Dhauli from "../../assets/Bhubaneswar.webp";
+import Dhauli from "../../assets/heroimg-3.png";
 import SunTemple from "../../assets/Kohinur.webp";
 
 /* =====================================================

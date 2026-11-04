@@ -7,8 +7,8 @@ import "./SedanFaq.css";
 
 const FAQS = [
   {
-    q: "Why choose Jagannath Explorer Travels as the best tour and travel agency in Bhubaneswar?",
-    a: "Jagannath Explorer Travels provides comfortable cars, reliable drivers, local sightseeing, airport and railway transfers, and customized travel plans from Bhubaneswar. We focus on transparent service, comfortable journeys, and helping travelers explore Odisha with ease.",
+    q: "Why choose Shine Tour & Travels as the best tour and travel agency in Bhubaneswar?",
+    a: "Shine Tour & Travels provides comfortable cars, reliable drivers, local sightseeing, airport and railway transfers, and customized travel plans from Bhubaneswar. We focus on transparent service, comfortable journeys, and helping travelers explore Odisha with ease.",
   },
   {
     q: "What bhubaneswar travel agency tour packages do you offer?",
@@ -36,11 +36,11 @@ const FAQS = [
   },
   {
     q: "Can I contact Tour & Travel Agents in Bhubaneswar for a customized package?",
-    a: "Yes. You can contact Jagannath Explorer Travels and share your destination, travel dates, number of passengers, pickup location, and preferred vehicle. Our team can help you create a practical travel plan based on your requirements.",
+    a: "Yes. You can contact Shine Tour & Travels and share your destination, travel dates, number of passengers, pickup location, and preferred vehicle. Our team can help you create a practical travel plan based on your requirements.",
   },
   {
     q: "How can I find a reliable travel agency in Bhubaneswar?",
-    a: "Look for a travel company that provides clear pricing, dependable vehicles, experienced drivers, flexible travel options, and responsive customer support. Jagannath Explorer Travels serves travelers from Bhubaneswar with local and outstation transportation and customized tour services.",
+    a: "Look for a travel company that provides clear pricing, dependable vehicles, experienced drivers, flexible travel options, and responsive customer support. Shine Tour & Travels serves travelers from Bhubaneswar with local and outstation transportation and customized tour services.",
   },
   {
     q: "Are you among the top 10 travel agency in Bhubaneswar?",
@@ -136,7 +136,7 @@ const SedanFaq = () => {
       <div className="sedan-faq__bg" aria-hidden="true" />
 
       <header className="sedan-faq__header">
-        <span className="sedan-faq__eyebrow">Jagannath Explorer Travels</span>
+        <span className="sedan-faq__eyebrow">Shine Tour & Travels</span>
 
         <h1
           id="travel-faq-title"
@@ -152,7 +152,7 @@ const SedanFaq = () => {
         </p>
 
         <div className="sedan-faq__business">
-          <strong>Jagannath Explorer Travels</strong>
+          <strong>Shine Tour & Travels</strong>
           <span>
             Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur,
             Bhubaneswar, Odisha - 751002

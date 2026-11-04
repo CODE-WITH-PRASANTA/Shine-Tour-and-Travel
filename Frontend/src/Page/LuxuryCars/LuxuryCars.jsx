@@ -10,11 +10,11 @@ const LuxuryCars = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
-    name: "Jagannath Explorer Travels",
-    url: "https://jagannathexplorertravels.com/luxury-cars",
+    name: "Shine Tour & Travels",
+    url: "https://ShineTour&travels.com/luxury-cars",
     telephone: ["+919668892441", "+919556355446"],
     description:
-      "Jagannath Explorer Travels is a trusted Tour & Travel Agency in Bhubaneswar, Odisha, offering luxury car rentals, wedding cars, local and outstation travel, airport transfers and comfortable transportation services.",
+      "Shine Tour & Travels is a trusted Tour & Travel Agency in Bhubaneswar, Odisha, offering luxury car rentals, wedding cars, local and outstation travel, airport transfers and comfortable transportation services.",
     address: {
       "@type": "PostalAddress",
       streetAddress:
@@ -52,26 +52,26 @@ const LuxuryCars = () => {
       <Helmet>
         {/* Primary SEO Title */}
         <title>
-          Luxury Car Rental in Bhubaneswar | Wedding Cars | Jagannath Explorer
+          Luxury Car Rental in Bhubaneswar | Wedding Cars | Shine Tour &
           Travels
         </title>
 
         {/* Meta Description */}
         <meta
           name="description"
-          content="Book luxury cars, wedding cars, premium vehicles and comfortable travel services in Bhubaneswar with Jagannath Explorer Travels. We offer local rentals, outstation trips, airport transfers and tour travel services across Odisha."
+          content="Book luxury cars, wedding cars, premium vehicles and comfortable travel services in Bhubaneswar with Shine Tour & Travels. We offer local rentals, outstation trips, airport transfers and tour travel services across Odisha."
         />
 
         {/* SEO Keywords */}
         <meta
           name="keywords"
-          content="luxury car rental in Bhubaneswar, luxury cars Bhubaneswar, wedding car rental Bhubaneswar, wedding cars in Bhubaneswar, premium car rental Bhubaneswar, luxury vehicle rental Odisha, car rental Bhubaneswar, outstation car rental Bhubaneswar, tour and travel agency Bhubaneswar, Jagannath Explorer Travels"
+          content="luxury car rental in Bhubaneswar, luxury cars Bhubaneswar, wedding car rental Bhubaneswar, wedding cars in Bhubaneswar, premium car rental Bhubaneswar, luxury vehicle rental Odisha, car rental Bhubaneswar, outstation car rental Bhubaneswar, tour and travel agency Bhubaneswar, Shine Tour & Travels"
         />
 
         {/* Author */}
         <meta
           name="author"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         {/* Search Engine Instructions */}
@@ -95,7 +95,7 @@ const LuxuryCars = () => {
         ========================================================= */}
         <link
           rel="canonical"
-          href="https://jagannathexplorertravels.com/luxury-cars"
+          href="https://ShineTour &travels.com/luxury-cars"
         />
 
         {/* =========================================================
@@ -105,22 +105,22 @@ const LuxuryCars = () => {
 
         <meta
           property="og:title"
-          content="Luxury Car Rental in Bhubaneswar | Jagannath Explorer Travels"
+          content="Luxury Car Rental in Bhubaneswar | Shine Tour & Travels"
         />
 
         <meta
           property="og:description"
-          content="Explore luxury cars, wedding cars and premium travel services in Bhubaneswar with Jagannath Explorer Travels. Book comfortable vehicles for weddings, local travel, airport transfers and outstation journeys."
+          content="Explore luxury cars, wedding cars and premium travel services in Bhubaneswar with Shine Tour & Travels. Book comfortable vehicles for weddings, local travel, airport transfers and outstation journeys."
         />
 
         <meta
           property="og:url"
-          content="https://jagannathexplorertravels.com/luxury-cars"
+          content="https://ShineTour &travels.com/luxury-cars"
         />
 
         <meta
           property="og:site_name"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta property="og:locale" content="en_IN" />
@@ -128,7 +128,7 @@ const LuxuryCars = () => {
         {/* Replace this with your actual luxury car image URL */}
         <meta
           property="og:image"
-          content="https://jagannathexplorertravels.com/assets/luxury-cars-og.jpg"
+          content="https://ShineTour &travels.com/assets/luxury-cars-og.jpg"
         />
 
         <meta
@@ -143,17 +143,17 @@ const LuxuryCars = () => {
 
         <meta
           name="twitter:title"
-          content="Luxury Car Rental in Bhubaneswar | Jagannath Explorer Travels"
+          content="Luxury Car Rental in Bhubaneswar | Shine Tour & Travels"
         />
 
         <meta
           name="twitter:description"
-          content="Book luxury cars, wedding cars and premium transportation services in Bhubaneswar, Odisha with Jagannath Explorer Travels."
+          content="Book luxury cars, wedding cars and premium transportation services in Bhubaneswar, Odisha with Shine Tour & Travels."
         />
 
         <meta
           name="twitter:image"
-          content="https://jagannathexplorertravels.com/assets/luxury-cars-og.jpg"
+          content="https://ShineTour &travels.com/assets/luxury-cars-og.jpg"
         />
 
         {/* =========================================================

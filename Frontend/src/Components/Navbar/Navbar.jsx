@@ -19,7 +19,7 @@ const Navbar = () => {
         <NavLink to="/" className="navbar-logo-link" onClick={closeMenu}>
           <img
             src={logo}
-            alt="Jagannath Explorer Travels"
+            alt="Shine Tour & Travels"
             className="navbar-logo"
           />
         </NavLink>

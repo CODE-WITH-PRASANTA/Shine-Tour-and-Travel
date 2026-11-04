@@ -7,16 +7,16 @@ import SuvRate from "../../Components/SuvRate/SuvRate";
 import SuvFaq from "../../Components/SuvFaq/SuvFaq";
 
 const Suvcars = () => {
-  const businessName = "Jagannath Explorer Travels";
+  const businessName = "Shine Tour & Travels";
 
   const pageTitle =
     "Best Tour and Travel Agency in Bhubaneswar | SUV Car Rental";
 
   const pageDescription =
-    "Jagannath Explorer Travels is a trusted tour and travel agency in Bhubaneswar offering comfortable SUV rentals, local sightseeing, airport transfers, outstation trips and Bhubaneswar travel agency tour packages across Odisha.";
+    "Shine Tour & Travels is a trusted tour and travel agency in Bhubaneswar offering comfortable SUV rentals, local sightseeing, airport transfers, outstation trips and Bhubaneswar travel agency tour packages across Odisha.";
 
   const canonicalUrl =
-    "https://jagannathexplorertravels.com/suv-cars";
+    "https://ShineTour &travels.com/suv-cars";
 
   const keywords = [
     "Best tour and travel agency in bhubaneswar",
@@ -50,7 +50,7 @@ const Suvcars = () => {
     "@type": "TravelAgency",
     name: businessName,
     description: pageDescription,
-    url: "https://jagannathexplorertravels.com",
+    url: "https://ShineTour &travels.com",
     telephone: "+91-9668892441",
     address: businessAddress,
     areaServed: [
@@ -84,7 +84,7 @@ const Suvcars = () => {
     isPartOf: {
       "@type": "WebSite",
       name: businessName,
-      url: "https://jagannathexplorertravels.com",
+      url: "https://ShineTour &travels.com",
     },
     about: {
       "@type": "TravelAgency",
@@ -100,7 +100,7 @@ const Suvcars = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://jagannathexplorertravels.com/",
+        item: "https://ShineTour &travels.com/",
       },
       {
         "@type": "ListItem",
@@ -211,7 +211,7 @@ const Suvcars = () => {
         {/* Add your actual SUV image URL here */}
         <meta
           property="og:image"
-          content="https://jagannathexplorertravels.com/images/suv-cars.jpg"
+          content="https://ShineTour &travels.com/images/suv-cars.jpg"
         />
 
         <meta
@@ -240,7 +240,7 @@ const Suvcars = () => {
 
         <meta
           name="twitter:image"
-          content="https://jagannathexplorertravels.com/images/suv-cars.jpg"
+          content="https://ShineTour &travels.com/images/suv-cars.jpg"
         />
 
         {/* =========================

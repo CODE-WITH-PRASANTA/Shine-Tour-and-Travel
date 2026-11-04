@@ -202,7 +202,7 @@ const Suvvehcle = () => {
       <header className="Suvvehcle-header">
 
         <div className="Suvvehcle-badge-pill">
-          <span>✨ Jagannath Explorer Travels</span>
+          <span>✨ Shine Tour & Travels</span>
         </div>
 
         <h1 className="Suvvehcle-title">
@@ -211,7 +211,7 @@ const Suvvehcle = () => {
 
         <p className="Suvvehcle-description">
           Looking for a comfortable SUV for your next journey?{" "}
-          <strong>Jagannath Explorer Travels</strong> is a trusted{" "}
+          <strong>Shine Tour & Travels</strong> is a trusted{" "}
           <strong>
             Tour &amp; Travel Agency in Bhubaneswar, Odisha
           </strong>{" "}
@@ -608,7 +608,7 @@ const Suvvehcle = () => {
                     from{" "}
 
                     <strong>
-                      Jagannath Explorer Travels
+                      Shine Tour & Travels
                     </strong>.
                   </label>
                 </div>

@@ -270,7 +270,7 @@ const TariffTable = () => {
         >
           <table className="suv-rate-table">
             <caption className="sr-only">
-              SUV rental tariff and charges for Jagannath Explorer Travels in Bhubaneswar
+              SUV rental tariff and charges for Shine Tour & Travels in Bhubaneswar
             </caption>
 
             <thead>
@@ -450,7 +450,7 @@ const SuvRate = () => {
 
         <p className="suv-rate-section__subtitle">
           Plan your next journey with{" "}
-          <strong>Jagannath Explorer Travels</strong>, a
+          <strong>Shine Tour & Travels</strong>, a
           reliable travel service provider offering comfortable
           SUV rentals and well-planned travel options in
           Bhubaneswar and across Odisha.
@@ -476,7 +476,7 @@ const SuvRate = () => {
             </span>
 
             <div>
-              <strong>Jagannath Explorer Travels</strong>
+              <strong>Shine Tour & Travels</strong>
               <span>
                 Plot No - 001, Mahaveer Nagar, Road No. - 18,
                 Samantarapur, Bhubaneswar, Odisha - 751002

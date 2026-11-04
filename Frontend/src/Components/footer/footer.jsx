@@ -134,17 +134,17 @@ const Footer = () => {
                 e.preventDefault();
                 handleNavigation("/");
               }}
-              aria-label="Jagannath Explorer Travels Home"
+              aria-label="Shine Tour & Travels Home"
             >
               <img
                 src={logo}
-                alt="Jagannath Explorer Travels"
+                alt="Shine Tour & Travels"
                 className="footer-logo"
               />
             </Link>
 
             <h2 className="footer-brand-title">
-              Jagannath Explorer Travels
+              Shine Tour & Travels
             </h2>
 
             <p className="footer-description">
@@ -312,8 +312,8 @@ const Footer = () => {
 
               <div className="contact-content">
 
-                <a href="mailto:jagannathexplorertravels@gmail.com">
-                  jagannathexplorertravels@gmail.com
+                <a href="mailto:ShineTour &travels@gmail.com">
+                  ShineTour &travels@gmail.com
                 </a>
 
               </div>

@@ -232,7 +232,7 @@ const Sidebar = ({
         {(!isCollapsed || isMobileOpen) && (
           <div className="Sidebar-logo-text-group">
             <span className="Sidebar-logo-text">
-              Jagannath Explorer
+              Shine Tour & Travel
             </span>
 
             <span className="Sidebar-logo-tagline">

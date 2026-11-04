@@ -7,7 +7,7 @@ import "./TransportFees.css";
 ========================================================= */
 
 const BUSINESS = {
-  name: "Jagannath Explorer Travels",
+  name: "Shine Tour & Travels",
   address:
     "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha, Pin - 751002",
   phones: ["9668892441", "9556355446"],
@@ -24,7 +24,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
   name: BUSINESS.name,
-  url: "https://jagannathexplorertravels.com/transport-fees",
+  url: "https://ShineTour &travels.com/transport-fees",
   telephone: ["+919668892441", "+919556355446"],
   address: {
     "@type": "PostalAddress",
@@ -46,7 +46,7 @@ const structuredData = {
     },
   ],
   description:
-    "Jagannath Explorer Travels is a trusted travel agency in Bhubaneswar offering tour packages, travel operator services, local transportation, outstation travel and comfortable vehicles for individuals, families, corporate groups and special occasions.",
+    "Shine Tour & Travels is a trusted travel agency in Bhubaneswar offering tour packages, travel operator services, local transportation, outstation travel and comfortable vehicles for individuals, families, corporate groups and special occasions.",
 };
 
 /* =========================================================
@@ -248,22 +248,22 @@ const TransportFees = () => {
       <Helmet>
         <title>
           Best Tour and Travel Agency in Bhubaneswar | Transport Tariff |
-          Jagannath Explorer Travels
+          Shine Tour & Travels
         </title>
 
         <meta
           name="description"
-          content="Jagannath Explorer Travels is a trusted travel agency in Bhubaneswar offering transparent transport tariffs, tour packages, travel operator services, local cab rentals, outstation vehicles, tempo travellers and coaches across Bhubaneswar and Odisha."
+          content="Shine Tour & Travels is a trusted travel agency in Bhubaneswar offering transparent transport tariffs, tour packages, travel operator services, local cab rentals, outstation vehicles, tempo travellers and coaches across Bhubaneswar and Odisha."
         />
 
         <meta
           name="keywords"
-          content="Best tour and travel agency in bhubaneswar, Tour packages & Travel operators in Bhubaneswar, tour packages in Bhubaneswar, travel operators in Bhubaneswar, travel agency in Bhubaneswar, transport tariff Bhubaneswar, car rental Bhubaneswar, tempo traveller Bhubaneswar, bus rental Bhubaneswar, outstation travel Bhubaneswar, Jagannath Explorer Travels"
+          content="Best tour and travel agency in bhubaneswar, Tour packages & Travel operators in Bhubaneswar, tour packages in Bhubaneswar, travel operators in Bhubaneswar, travel agency in Bhubaneswar, transport tariff Bhubaneswar, car rental Bhubaneswar, tempo traveller Bhubaneswar, bus rental Bhubaneswar, outstation travel Bhubaneswar, Shine Tour & Travels"
         />
 
         <meta
           name="author"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta
@@ -293,7 +293,7 @@ const TransportFees = () => {
 
         <link
           rel="canonical"
-          href="https://jagannathexplorertravels.com/transport-fees"
+          href="https://ShineTour &travels.com/transport-fees"
         />
 
         {/* Open Graph */}
@@ -305,22 +305,22 @@ const TransportFees = () => {
 
         <meta
           property="og:title"
-          content="Best Tour and Travel Agency in Bhubaneswar | Jagannath Explorer Travels"
+          content="Best Tour and Travel Agency in Bhubaneswar | Shine Tour & Travels"
         />
 
         <meta
           property="og:description"
-          content="Explore transparent transport tariffs and dependable travel services from Jagannath Explorer Travels, a trusted travel agency serving Bhubaneswar and Odisha."
+          content="Explore transparent transport tariffs and dependable travel services from Shine Tour & Travels, a trusted travel agency serving Bhubaneswar and Odisha."
         />
 
         <meta
           property="og:url"
-          content="https://jagannathexplorertravels.com/transport-fees"
+          content="https://ShineTour &travels.com/transport-fees"
         />
 
         <meta
           property="og:site_name"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta
@@ -337,7 +337,7 @@ const TransportFees = () => {
 
         <meta
           name="twitter:title"
-          content="Best Tour and Travel Agency in Bhubaneswar | Jagannath Explorer Travels"
+          content="Best Tour and Travel Agency in Bhubaneswar | Shine Tour & Travels"
         />
 
         <meta
@@ -361,7 +361,7 @@ const TransportFees = () => {
         <div className="transport-fees-header-glow"></div>
 
         <span className="transport-fees-subtitle">
-          ✦ JAGANNATH EXPLORER TRAVELS ✦
+          ✦ Shine Tour & TRAVELS ✦
         </span>
 
         <h1 className="transport-fees-title">
@@ -378,7 +378,7 @@ const TransportFees = () => {
 
         <p className="transport-fees-header-description">
           Plan your journey with confidence with{" "}
-          <strong>Jagannath Explorer Travels</strong>, a dependable travel
+          <strong>Shine Tour & Travels</strong>, a dependable travel
           service provider in Bhubaneswar. We offer comfortable cars,
           tempo travellers, Urbania vehicles and coaches for local travel,
           family trips, group journeys, weddings, corporate requirements
@@ -431,7 +431,7 @@ const TransportFees = () => {
 
           <p>
             Looking for reliable transportation for your next trip?
-            <strong> Jagannath Explorer Travels </strong>
+            <strong> Shine Tour & Travels </strong>
             provides practical travel solutions for individuals, families,
             businesses and groups. From comfortable sedans and SUVs to
             spacious tempo travellers, Urbania vehicles and coaches, our
@@ -829,7 +829,7 @@ const TransportFees = () => {
           </h2>
 
           <p>
-            Talk to Jagannath Explorer Travels for vehicle
+            Talk to Shine Tour & Travels for vehicle
             availability, travel requirements and booking assistance
             in Bhubaneswar.
           </p>

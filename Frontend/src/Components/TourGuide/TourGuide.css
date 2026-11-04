@@ -1,27 +1,30 @@
-
 /* =========================================================
-   TOUR GUIDE
+   TOUR GUIDE — LIGHT BLUE THEME
 ========================================================= */
 
 .TourGuide {
-  --TourGuide-green: #61b341;
-  --TourGuide-green-dark: #4fa035;
-  --TourGuide-cream: #fffdf0;
-  --TourGuide-text: #090807;
-  --TourGuide-muted: #858585;
+  --TourGuide-blue: #2b8be6;
+  --TourGuide-blue-dark: #1b74c9;
+  --TourGuide-blue-deep: #0f4c8a;
+
+  --TourGuide-bg: #eaf4fd;
+  --TourGuide-bg-soft: #f5faff;
+  --TourGuide-bg-strong: #d6eafb;
+
+  --TourGuide-card: #f3f9ff;
+  --TourGuide-border: #cfe3f6;
+
+  --TourGuide-text: #0b2540;
+  --TourGuide-muted: #5b7189;
 
   width: 100%;
-  padding: 42px 0 48px;
+  padding: 48px 0 54px;
 
-  background: #ffffff;
+  background: linear-gradient(180deg, var(--TourGuide-bg-soft) 0%, var(--TourGuide-bg) 55%, var(--TourGuide-bg-strong) 100%);
 
   overflow: hidden;
 
-  font-family:
-    "Poppins",
-    "Montserrat",
-    Arial,
-    sans-serif;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
 }
 
 
@@ -31,13 +34,10 @@
 
 .TourGuide__header {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   text-align: center;
-
   margin-bottom: 43px;
 }
 
@@ -49,69 +49,26 @@
 .TourGuide__label {
   width: 175px;
   height: 46px;
-
   margin-bottom: 2px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: rgba(97, 179, 65, 0.20);
-
-  clip-path: polygon(
-    3% 27%,
-    14% 13%,
-    28% 18%,
-    44% 7%,
-    60% 16%,
-    77% 10%,
-    94% 26%,
-    97% 52%,
-    91% 72%,
-    76% 69%,
-    60% 87%,
-    43% 76%,
-    28% 88%,
-    13% 73%,
-    3% 78%,
-    7% 52%
-  );
-
-  animation:
-    TourGuideLabelFloat 4s ease-in-out infinite;
+  background: rgba(43, 139, 230, 0.16);
+  clip-path: polygon(3% 27%, 14% 13%, 28% 18%, 44% 7%, 60% 16%, 77% 10%, 94% 26%, 97% 52%, 91% 72%, 76% 69%, 60% 87%, 43% 76%, 28% 88%, 13% 73%, 3% 78%, 7% 52%);
+  animation: TourGuideLabelFloat 4s ease-in-out infinite;
 }
 
-
 .TourGuide__label span {
-  color: var(--TourGuide-green);
-
-  font-family:
-    "Brush Script MT",
-    "Segoe Script",
-    cursive;
-
+  color: var(--TourGuide-blue-dark);
+  font-family: "Brush Script MT", "Segoe Script", cursive;
   font-size: 18px;
-
   font-weight: 600;
-
   letter-spacing: 0.2px;
 }
 
-
-/* =========================================================
-   LABEL ANIMATION
-========================================================= */
-
 @keyframes TourGuideLabelFloat {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-3px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
 }
 
 
@@ -121,23 +78,11 @@
 
 .TourGuide__heading {
   margin: 0;
-
   color: var(--TourGuide-text);
-
-  font-family:
-    "Poppins",
-    Arial,
-    sans-serif;
-
-  /*
-    Less bold than previous version
-  */
+  font-family: "Poppins", Arial, sans-serif;
   font-size: clamp(32px, 3vw, 47px);
-
   font-weight: 600;
-
   line-height: 1.15;
-
   letter-spacing: -0.8px;
 }
 
@@ -148,9 +93,7 @@
 
 .TourGuide__carousel-wrapper {
   position: relative;
-
   width: min(100% - 150px, 1620px);
-
   margin: 0 auto;
 }
 
@@ -161,23 +104,15 @@
 
 .TourGuide__carousel {
   width: 100%;
-
   display: flex;
-
   gap: 28px;
-
   overflow-x: auto;
   overflow-y: visible;
-
   scroll-behavior: smooth;
-
   scroll-snap-type: x mandatory;
-
   scrollbar-width: none;
-
-  padding: 5px 0 12px;
+  padding: 10px 0 18px;
 }
-
 
 .TourGuide__carousel::-webkit-scrollbar {
   display: none;
@@ -190,51 +125,24 @@
 
 .TourGuide__card {
   position: relative;
-
-  /*
-    Slightly smaller than previous version
-  */
-  flex: 0 0 calc(
-    (100% - 84px) / 4
-  );
-
+  flex: 0 0 calc((100% - 84px) / 4);
   height: 470px;
-
   min-width: 0;
-
   overflow: hidden;
-
-  border-radius: 13px;
-
-  border: 1px solid #e7e3d4;
-
-  background: var(--TourGuide-cream);
-
+  border-radius: 18px;
+  border: 1px solid var(--TourGuide-border);
+  background: linear-gradient(180deg, #ffffff 0%, var(--TourGuide-card) 100%);
   scroll-snap-align: start;
-
   cursor: pointer;
-
   isolation: isolate;
-
-  box-shadow:
-    0 3px 15px rgba(0, 0, 0, 0.035);
-
-  transition:
-    transform 0.45s
-      cubic-bezier(0.2, 0.7, 0.2, 1),
-    box-shadow 0.45s ease;
+  box-shadow: 0 6px 20px rgba(43, 139, 230, 0.10);
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.45s ease, border-color 0.45s ease;
 }
 
-
-/* =========================================================
-   CARD HOVER
-========================================================= */
-
 .TourGuide__card:hover {
-  transform: translateY(-6px);
-
-  box-shadow:
-    0 17px 35px rgba(0, 0, 0, 0.13);
+  transform: translateY(-8px);
+  border-color: var(--TourGuide-blue);
+  box-shadow: 0 20px 40px rgba(27, 116, 201, 0.25);
 }
 
 
@@ -244,92 +152,59 @@
 
 .TourGuide__image-wrapper {
   position: absolute;
-
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   overflow: hidden;
-
   z-index: 1;
-
-  background:
-    var(--TourGuide-cream);
+  background: linear-gradient(180deg, #ffffff 0%, var(--TourGuide-bg) 100%);
 }
 
 
 /* =========================================================
-   IMAGE
-   NORMAL = CIRCLE
+   IMAGE (CIRCLE)
 ========================================================= */
 
 .TourGuide__image {
   position: absolute;
-
-  /*
-    Circle position
-  */
-
   top: 49px;
   left: 50%;
-
   width: 250px;
   height: 250px;
-
-  transform:
-    translateX(-50%);
-
+  transform: translateX(-50%);
   display: block;
-
   object-fit: cover;
-
   object-position: center;
-
   border-radius: 50%;
-
-  /*
-    Important:
-    This creates the circular reference design.
-  */
-
+  border: 5px solid #ffffff;
+  box-shadow: 0 10px 28px rgba(43, 139, 230, 0.25), 0 0 0 8px rgba(43, 139, 230, 0.12);
   z-index: 2;
-
   transition:
-    width 0.7s
-      cubic-bezier(0.2, 0.75, 0.2, 1),
-    height 0.7s
-      cubic-bezier(0.2, 0.75, 0.2, 1),
-    top 0.7s
-      cubic-bezier(0.2, 0.75, 0.2, 1),
-    left 0.7s
-      cubic-bezier(0.2, 0.75, 0.2, 1),
-    transform 0.7s
-      cubic-bezier(0.2, 0.75, 0.2, 1),
-    border-radius 0.65s ease;
+    width 0.7s cubic-bezier(0.2, 0.75, 0.2, 1),
+    height 0.7s cubic-bezier(0.2, 0.75, 0.2, 1),
+    top 0.7s cubic-bezier(0.2, 0.75, 0.2, 1),
+    left 0.7s cubic-bezier(0.2, 0.75, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.75, 0.2, 1),
+    border-radius 0.65s ease,
+    border-width 0.65s ease,
+    box-shadow 0.65s ease;
 }
 
 
 /* =========================================================
-   IMAGE HOVER
-   CIRCLE → FULL CARD
+   IMAGE HOVER — CIRCLE TO FULL CARD
 ========================================================= */
 
-.TourGuide__card:hover
-.TourGuide__image {
-
+.TourGuide__card:hover .TourGuide__image {
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-
   transform: none;
-
   border-radius: 0;
-
+  border-width: 0;
+  box-shadow: none;
   object-position: center;
-
 }
 
 
@@ -339,30 +214,20 @@
 
 .TourGuide__image-overlay {
   position: absolute;
-
   inset: 0;
-
   z-index: 3;
-
   pointer-events: none;
-
   opacity: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.02) 15%,
-      rgba(0, 0, 0, 0.04) 45%,
-      rgba(0, 0, 0, 0.52) 100%
-    );
-
-  transition:
-    opacity 0.5s ease;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 76, 138, 0.02) 15%,
+    rgba(15, 76, 138, 0.08) 45%,
+    rgba(15, 76, 138, 0.60) 100%
+  );
+  transition: opacity 0.5s ease;
 }
 
-
-.TourGuide__card:hover
-.TourGuide__image-overlay {
+.TourGuide__card:hover .TourGuide__image-overlay {
   opacity: 1;
 }
 
@@ -373,46 +238,25 @@
 
 .TourGuide__info {
   position: absolute;
-
   left: 0;
   bottom: 0;
-
   width: 100%;
-
   height: 90px;
-
   padding: 17px 12px;
-
   z-index: 8;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
   text-align: center;
-
   background: #ffffff;
-
-  transition:
-    background-color 0.45s ease,
-    color 0.45s ease;
+  border-top: 1px solid var(--TourGuide-border);
+  transition: background 0.45s ease, border-color 0.45s ease;
 }
 
-
-/* =========================================================
-   INFORMATION HOVER
-========================================================= */
-
-.TourGuide__card:hover
-.TourGuide__info {
-
-  background:
-    var(--TourGuide-green);
-
+.TourGuide__card:hover .TourGuide__info {
+  background: linear-gradient(135deg, var(--TourGuide-blue) 0%, var(--TourGuide-blue-dark) 100%);
+  border-top-color: transparent;
 }
 
 
@@ -422,34 +266,18 @@
 
 .TourGuide__name {
   margin: 0 0 6px;
-
   color: var(--TourGuide-text);
-
-  font-family:
-    "Poppins",
-    Arial,
-    sans-serif;
-
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 23px;
-
   font-weight: 600;
-
   line-height: 1.2;
-
   letter-spacing: -0.25px;
-
-  transition:
-    color 0.35s ease,
-    transform 0.35s ease;
+  transition: color 0.35s ease, transform 0.35s ease;
 }
 
-
-.TourGuide__card:hover
-.TourGuide__name {
+.TourGuide__card:hover .TourGuide__name {
   color: #ffffff;
-
-  transform:
-    translateY(-2px);
+  transform: translateY(-2px);
 }
 
 
@@ -459,29 +287,16 @@
 
 .TourGuide__designation {
   margin: 0;
-
   color: var(--TourGuide-muted);
-
-  font-family:
-    "Poppins",
-    Arial,
-    sans-serif;
-
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 13px;
-
   font-weight: 400;
-
   line-height: 1.4;
-
-  transition:
-    color 0.35s ease;
+  transition: color 0.35s ease;
 }
 
-
-.TourGuide__card:hover
-.TourGuide__designation {
-  color:
-    rgba(255, 255, 255, 0.92);
+.TourGuide__card:hover .TourGuide__designation {
+  color: rgba(255, 255, 255, 0.92);
 }
 
 
@@ -491,104 +306,46 @@
 
 .TourGuide__socials {
   position: absolute;
-
   left: 15px;
-
   top: 50%;
-
   z-index: 12;
-
   display: flex;
-
   flex-direction: column;
-
   gap: 8px;
-
   opacity: 0;
-
-  transform:
-    translateX(-55px)
-    translateY(-50%);
-
-  transition:
-    opacity 0.35s ease,
-    transform 0.45s
-      cubic-bezier(0.2, 0.7, 0.2, 1);
+  transform: translateX(-55px) translateY(-50%);
+  transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-
-/* =========================================================
-   SOCIAL ICON SHOW
-========================================================= */
-
-.TourGuide__card:hover
-.TourGuide__socials {
+.TourGuide__card:hover .TourGuide__socials {
   opacity: 1;
-
-  transform:
-    translateX(0)
-    translateY(-50%);
+  transform: translateX(0) translateY(-50%);
 }
-
-
-/* =========================================================
-   SOCIAL BUTTON
-========================================================= */
 
 .TourGuide__social {
   width: 39px;
   height: 39px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   text-decoration: none;
-
   color: #ffffff;
-
-  background:
-    rgba(0, 0, 0, 0.58);
-
+  background: rgba(11, 37, 64, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(5px);
-
   -webkit-backdrop-filter: blur(5px);
-
   font-size: 15px;
-
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
 
 .TourGuide__social:hover {
-  transform:
-    translateX(4px)
-    scale(1.08);
+  transform: translateX(4px) scale(1.08);
 }
 
-
-/* =========================================================
-   SOCIAL COLORS
-========================================================= */
-
-.TourGuide__social--instagram:hover {
-  background: #e1306c;
-}
-
-
-.TourGuide__social--facebook:hover {
-  background: #1877f2;
-}
-
-
-.TourGuide__social--whatsapp:hover {
-  background: #25d366;
-}
+.TourGuide__social--instagram:hover { background: #e1306c; }
+.TourGuide__social--facebook:hover { background: #1877f2; }
+.TourGuide__social--whatsapp:hover { background: #25d366; }
 
 
 /* =========================================================
@@ -597,90 +354,37 @@
 
 .TourGuide__arrow {
   position: absolute;
-
   top: 50%;
-
   z-index: 20;
-
   width: 45px;
   height: 45px;
-
   padding: 0;
-
-  border: none;
-
+  border: 1px solid var(--TourGuide-border);
   border-radius: 50%;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   background: #ffffff;
-
-  color: var(--TourGuide-green);
-
+  color: var(--TourGuide-blue-dark);
   font-size: 15px;
-
   cursor: pointer;
-
-  box-shadow:
-    0 5px 17px rgba(0, 0, 0, 0.12);
-
-  transform:
-    translateY(-50%);
-
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(43, 139, 230, 0.18);
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-/* =========================================================
-   LEFT ARROW
-========================================================= */
-
-.TourGuide__arrow--left {
-  left: -58px;
-}
-
-
-/* =========================================================
-   RIGHT ARROW
-========================================================= */
-
-.TourGuide__arrow--right {
-  right: -58px;
-}
-
-
-/* =========================================================
-   ARROW HOVER
-========================================================= */
+.TourGuide__arrow--left { left: -58px; }
+.TourGuide__arrow--right { right: -58px; }
 
 .TourGuide__arrow:hover {
-  background:
-    var(--TourGuide-green);
-
+  background: var(--TourGuide-blue);
+  border-color: var(--TourGuide-blue);
   color: #ffffff;
-
-  box-shadow:
-    0 8px 20px rgba(97, 179, 65, 0.25);
+  box-shadow: 0 10px 22px rgba(27, 116, 201, 0.35);
 }
 
-
-.TourGuide__arrow--left:hover {
-  transform:
-    translate(-3px, -50%);
-}
-
-
-.TourGuide__arrow--right:hover {
-  transform:
-    translate(3px, -50%);
-}
+.TourGuide__arrow--left:hover { transform: translate(-3px, -50%); }
+.TourGuide__arrow--right:hover { transform: translate(3px, -50%); }
 
 
 /* =========================================================
@@ -689,57 +393,44 @@
 
 .TourGuide__pagination {
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   gap: 7px;
-
   margin-top: 21px;
 }
-
-
-/* =========================================================
-   PAGINATION DOT
-========================================================= */
 
 .TourGuide__pagination-dot {
   width: 8px;
   height: 8px;
-
   padding: 0;
-
   border: none;
-
   border-radius: 50%;
-
-  background: #d9e5d4;
-
+  background: #b9d6f2;
   cursor: pointer;
-
-  transition:
-    width 0.3s ease,
-    background-color 0.3s ease,
-    transform 0.3s ease;
+  transition: width 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
-
 
 .TourGuide__pagination-dot--active {
   width: 25px;
-
   border-radius: 10px;
+  background: var(--TourGuide-blue);
+}
 
-  background:
-    var(--TourGuide-green);
+.TourGuide__pagination-dot:hover {
+  background: var(--TourGuide-blue-dark);
+  transform: scale(1.1);
 }
 
 
-.TourGuide__pagination-dot:hover {
-  background:
-    var(--TourGuide-green);
+/* =========================================================
+   FOCUS
+========================================================= */
 
-  transform:
-    scale(1.1);
+.TourGuide__arrow:focus-visible,
+.TourGuide__pagination-dot:focus-visible,
+.TourGuide__social:focus-visible {
+  outline: 3px solid rgba(43, 139, 230, 0.45);
+  outline-offset: 3px;
 }
 
 
@@ -749,47 +440,22 @@
 
 @media (max-width: 1400px) {
 
-  .TourGuide__carousel-wrapper {
-    width: min(100% - 120px, 1300px);
-  }
+  .TourGuide__carousel-wrapper { width: min(100% - 120px, 1300px); }
 
-
-  .TourGuide__card {
-    height: 450px;
-  }
-
+  .TourGuide__card { height: 450px; }
 
   .TourGuide__image {
     width: 225px;
     height: 225px;
-
     top: 47px;
   }
 
+  .TourGuide__info { height: 112px; }
+  .TourGuide__name { font-size: 21px; }
+  .TourGuide__designation { font-size: 12.5px; }
 
-  .TourGuide__info {
-    height: 112px;
-  }
-
-
-  .TourGuide__name {
-    font-size: 21px;
-  }
-
-
-  .TourGuide__designation {
-    font-size: 12.5px;
-  }
-
-
-  .TourGuide__arrow--left {
-    left: -52px;
-  }
-
-
-  .TourGuide__arrow--right {
-    right: -52px;
-  }
+  .TourGuide__arrow--left { left: -52px; }
+  .TourGuide__arrow--right { right: -52px; }
 }
 
 
@@ -800,71 +466,37 @@
 @media (max-width: 1100px) {
 
   .TourGuide {
-    padding-top: 38px;
-    padding-bottom: 42px;
+    padding-top: 42px;
+    padding-bottom: 46px;
   }
 
+  .TourGuide__header { margin-bottom: 36px; }
+  .TourGuide__heading { font-size: 38px; }
 
-  .TourGuide__header {
-    margin-bottom: 36px;
-  }
-
-
-  .TourGuide__heading {
-    font-size: 38px;
-  }
-
-
-  .TourGuide__carousel-wrapper {
-    width: calc(100% - 95px);
-  }
-
-
-  .TourGuide__carousel {
-    gap: 22px;
-  }
-
+  .TourGuide__carousel-wrapper { width: calc(100% - 95px); }
+  .TourGuide__carousel { gap: 22px; }
 
   .TourGuide__card {
-    flex-basis:
-      calc((100% - 66px) / 3);
-
+    flex-basis: calc((100% - 66px) / 3);
     height: 435px;
   }
-
 
   .TourGuide__image {
     width: 205px;
     height: 205px;
-
     top: 45px;
   }
 
-
-  .TourGuide__info {
-    height: 108px;
-  }
-
-
-  .TourGuide__name {
-    font-size: 20px;
-  }
-
+  .TourGuide__info { height: 108px; }
+  .TourGuide__name { font-size: 20px; }
 
   .TourGuide__arrow {
     width: 42px;
     height: 42px;
   }
 
-
-  .TourGuide__arrow--left {
-    left: -50px;
-  }
-
-
-  .TourGuide__arrow--right {
-    right: -50px;
-  }
+  .TourGuide__arrow--left { left: -50px; }
+  .TourGuide__arrow--right { right: -50px; }
 }
 
 
@@ -874,45 +506,23 @@
 
 @media (max-width: 950px) {
 
-  .TourGuide__carousel-wrapper {
-    width: calc(100% - 80px);
-  }
-
-
-  .TourGuide__carousel {
-    gap: 18px;
-  }
-
+  .TourGuide__carousel-wrapper { width: calc(100% - 80px); }
+  .TourGuide__carousel { gap: 18px; }
 
   .TourGuide__card {
-    flex:
-      0 0 calc((100% - 18px) / 2);
-
+    flex: 0 0 calc((100% - 18px) / 2);
     height: 425px;
   }
-
 
   .TourGuide__image {
     width: 220px;
     height: 220px;
-
     top: 42px;
   }
 
-
-  .TourGuide__name {
-    font-size: 20px;
-  }
-
-
-  .TourGuide__designation {
-    font-size: 12px;
-  }
-
-
-  .TourGuide__info {
-    height: 105px;
-  }
+  .TourGuide__name { font-size: 20px; }
+  .TourGuide__designation { font-size: 12px; }
+  .TourGuide__info { height: 105px; }
 }
 
 
@@ -922,112 +532,59 @@
 
 @media (max-width: 600px) {
 
-  .TourGuide {
-    padding:
-      32px 0 38px;
-  }
+  .TourGuide { padding: 34px 0 40px; }
 
-
-  .TourGuide__header {
-    margin-bottom: 28px;
-  }
-
+  .TourGuide__header { margin-bottom: 28px; }
 
   .TourGuide__label {
     width: 150px;
     height: 42px;
   }
 
-
-  .TourGuide__label span {
-    font-size: 17px;
-  }
-
+  .TourGuide__label span { font-size: 17px; }
 
   .TourGuide__heading {
     font-size: 29px;
-
     font-weight: 600;
-
     letter-spacing: -0.4px;
   }
 
-
-  .TourGuide__carousel-wrapper {
-    width: calc(100% - 65px);
-  }
-
-
-  .TourGuide__carousel {
-    gap: 15px;
-  }
-
+  .TourGuide__carousel-wrapper { width: calc(100% - 65px); }
+  .TourGuide__carousel { gap: 15px; }
 
   .TourGuide__card {
-    flex:
-      0 0 100%;
-
+    flex: 0 0 100%;
     height: 420px;
   }
-
 
   .TourGuide__image {
     width: 225px;
     height: 225px;
-
     top: 42px;
   }
 
+  .TourGuide__info { height: 105px; }
+  .TourGuide__name { font-size: 20px; }
+  .TourGuide__designation { font-size: 12px; }
 
-  .TourGuide__info {
-    height: 105px;
-  }
-
-
-  .TourGuide__name {
-    font-size: 20px;
-  }
-
-
-  .TourGuide__designation {
-    font-size: 12px;
-  }
-
-
-  .TourGuide__socials {
-    left: 12px;
-  }
-
+  .TourGuide__socials { left: 12px; }
 
   .TourGuide__social {
     width: 37px;
     height: 37px;
-
     font-size: 14px;
   }
-
 
   .TourGuide__arrow {
     width: 39px;
     height: 39px;
-
     font-size: 13px;
   }
 
+  .TourGuide__arrow--left { left: -47px; }
+  .TourGuide__arrow--right { right: -47px; }
 
-  .TourGuide__arrow--left {
-    left: -47px;
-  }
-
-
-  .TourGuide__arrow--right {
-    right: -47px;
-  }
-
-
-  .TourGuide__pagination {
-    margin-top: 19px;
-  }
+  .TourGuide__pagination { margin-top: 19px; }
 }
 
 
@@ -1037,79 +594,40 @@
 
 @media (max-width: 400px) {
 
-  .TourGuide {
-    padding:
-      28px 0 34px;
-  }
+  .TourGuide { padding: 28px 0 34px; }
 
+  .TourGuide__heading { font-size: 26px; }
 
-  .TourGuide__heading {
-    font-size: 26px;
-  }
+  .TourGuide__carousel-wrapper { width: calc(100% - 55px); }
 
-
-  .TourGuide__carousel-wrapper {
-    width: calc(100% - 55px);
-  }
-
-
-  .TourGuide__card {
-    height: 395px;
-  }
-
+  .TourGuide__card { height: 395px; }
 
   .TourGuide__image {
     width: 205px;
     height: 205px;
-
     top: 39px;
   }
 
+  .TourGuide__info { height: 98px; }
+  .TourGuide__name { font-size: 18px; }
+  .TourGuide__designation { font-size: 11.5px; }
 
-  .TourGuide__info {
-    height: 98px;
-  }
-
-
-  .TourGuide__name {
-    font-size: 18px;
-  }
-
-
-  .TourGuide__designation {
-    font-size: 11.5px;
-  }
-
-
-  .TourGuide__socials {
-    left: 9px;
-  }
-
+  .TourGuide__socials { left: 9px; }
 
   .TourGuide__social {
     width: 34px;
     height: 34px;
-
     font-size: 13px;
   }
-
 
   .TourGuide__arrow {
     width: 35px;
     height: 35px;
-
     font-size: 11px;
   }
 
-
-  .TourGuide__arrow--left {
-    left: -42px;
-  }
-
-
-  .TourGuide__arrow--right {
-    right: -42px;
-  }
+  .TourGuide__arrow--left { left: -42px; }
+  .TourGuide__arrow--right { right: -42px; }
 }
 
 
@@ -1122,11 +640,8 @@
   .TourGuide *,
   .TourGuide *::before,
   .TourGuide *::after {
-
     animation: none !important;
-
     transition: none !important;
-
     scroll-behavior: auto !important;
   }
 }

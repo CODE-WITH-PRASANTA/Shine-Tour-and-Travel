@@ -7,7 +7,7 @@ import "./Tempofaq.css";
 ========================================================= */
 
 const BUSINESS = {
-  name: "Jagannath Explorer Travels",
+  name: "Shine Tour & Travels",
   address:
     "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha, Pin - 751002",
   phone1: "9668892441",
@@ -75,7 +75,7 @@ const FAQ_ITEMS = [
       "Bookings can be cancelled or modified by contacting our support team. Cancellation charges may apply based on the notice period provided.",
   },
   {
-    question: "Why choose Jagannath Explorer Travels?",
+    question: "Why choose Shine Tour & Travels?",
     answer:
       "We guarantee transparent pricing, immaculately maintained vehicles, punctual pick-ups, and dedicated customer support throughout your trip.",
   },
@@ -118,11 +118,11 @@ const Tempofaq = () => {
       <Helmet>
         <html lang="en" />
         <title>
-          Best Tour and Travel Agency in Bhubaneswar | Jagannath Explorer Travels
+          Best Tour and Travel Agency in Bhubaneswar | Shine Tour & Travels
         </title>
         <meta
           name="description"
-          content="Jagannath Explorer Travels offers local, outstation, group travel, and Odisha tourism packages in Bhubaneswar."
+          content="Shine Tour & Travels offers local, outstation, group travel, and Odisha tourism packages in Bhubaneswar."
         />
         <meta
           name="keywords"
@@ -136,7 +136,7 @@ const Tempofaq = () => {
       {/* HEADER */}
       <section className="tempofaq-header">
         <div className="tempofaq-header-inner">
-          <span className="tempofaq-subtitle">Jagannath Explorer Travels</span>
+          <span className="tempofaq-subtitle">Shine Tour & Travels</span>
           <h1 className="tempofaq-title">
             Best tour and travel agency in bhubaneswar
           </h1>
@@ -154,7 +154,7 @@ const Tempofaq = () => {
               <span className="tempofaq-section-label">Travel Support</span>
               <h2>Your Trusted Travel Partner in Odisha</h2>
               <p>
-                Looking for a dependable vehicle for your trip? Jagannath Explorer Travels provides well-maintained cars, SUVs, and coaches for all your local and outstation journeys with experienced drivers.
+                Looking for a dependable vehicle for your trip? Shine Tour & Travels provides well-maintained cars, SUVs, and coaches for all your local and outstation journeys with experienced drivers.
               </p>
             </div>
 

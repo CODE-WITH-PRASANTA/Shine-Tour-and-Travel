@@ -6,7 +6,7 @@ import "./SuvFaq.css";
 --------------------------------------------------------------------------- */
 
 const BUSINESS = {
-  name: "Jagannath Explorer Travels",
+  name: "Shine Tour & Travels",
   address:
     "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha - 751002",
   phones: ["9668892441", "9556355446"],
@@ -19,14 +19,14 @@ const BUSINESS = {
 const FAQS = [
   {
     q: "What types of SUVs and vehicles are available for booking?",
-    a: "Jagannath Explorer Travels offers a practical range of comfortable vehicles for families, couples, groups and business travellers. Our fleet includes Maruti Suzuki Ertiga, Toyota Innova, Toyota Innova Crysta, Mahindra Scorpio-N, Toyota Fortuner and other options depending on your travel requirement. Vehicles can be arranged for local sightseeing, airport transfers, family trips and outstation journeys.",
+    a: "Shine Tour & Travels offers a practical range of comfortable vehicles for families, couples, groups and business travellers. Our fleet includes Maruti Suzuki Ertiga, Toyota Innova, Toyota Innova Crysta, Mahindra Scorpio-N, Toyota Fortuner and other options depending on your travel requirement. Vehicles can be arranged for local sightseeing, airport transfers, family trips and outstation journeys.",
   },
   {
     q: "Do you provide Bhubaneswar travel agency tour packages?",
     a: "Yes. We help travellers plan convenient Bhubaneswar travel agency tour packages based on their destination, number of days, group size and preferred vehicle. You can discuss your itinerary with our team and choose suitable sightseeing, transportation and outstation travel options.",
   },
   {
-    q: "Why choose Jagannath Explorer Travels in Bhubaneswar?",
+    q: "Why choose Shine Tour & Travels in Bhubaneswar?",
     a: "We focus on straightforward bookings, comfortable vehicles and dependable travel support. From local city trips to longer Odisha journeys, our aim is to make transportation simple and comfortable. This customer-focused approach is why many travellers consider us when looking for a Best Tour & Travel Agency in Bhubaneswar Odisha.",
   },
   {
@@ -39,7 +39,7 @@ const FAQS = [
   },
   {
     q: "Do you offer airport and railway station pickup?",
-    a: "Yes. Jagannath Explorer Travels provides airport and railway station transfers in Bhubaneswar. Share your pickup time, location and travel details with us, and we can help arrange a suitable vehicle for a smooth transfer.",
+    a: "Yes. Shine Tour & Travels provides airport and railway station transfers in Bhubaneswar. Share your pickup time, location and travel details with us, and we can help arrange a suitable vehicle for a smooth transfer.",
   },
   {
     q: "How can I book a car or SUV?",
@@ -51,11 +51,11 @@ const FAQS = [
   },
   {
     q: "Where can I find information about Odisha tourism packages with price?",
-    a: "The price of Odisha tourism packages depends on destinations, number of days, vehicle type, travel distance, accommodation requirements and sightseeing plans. Contact Jagannath Explorer Travels with your preferred itinerary and we can help you understand the available travel and vehicle options with applicable pricing.",
+    a: "The price of Odisha tourism packages depends on destinations, number of days, vehicle type, travel distance, accommodation requirements and sightseeing plans. Contact Shine Tour & Travels with your preferred itinerary and we can help you understand the available travel and vehicle options with applicable pricing.",
   },
   {
     q: "How do I find a reliable travel agency in Bhubaneswar?",
-    a: "When choosing a travel agency in Bhubaneswar, it is useful to check vehicle condition, pricing, booking terms, travel support and whether the service matches your itinerary. Jagannath Explorer Travels provides local and outstation transportation options with clear booking communication and support for different types of journeys.",
+    a: "When choosing a travel agency in Bhubaneswar, it is useful to check vehicle condition, pricing, booking terms, travel support and whether the service matches your itinerary. Shine Tour & Travels provides local and outstation transportation options with clear booking communication and support for different types of journeys.",
   },
 ];
 
@@ -256,7 +256,7 @@ const SuvFaq = () => {
       {/* Bottom Content */}
       <div className="suv-faq-bottom">
         <h2>
-          Plan Your Next Journey with Jagannath Explorer Travels
+          Plan Your Next Journey with Shine Tour & Travels
         </h2>
 
         <p>

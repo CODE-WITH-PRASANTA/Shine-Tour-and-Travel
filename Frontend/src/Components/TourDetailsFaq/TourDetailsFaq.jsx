@@ -23,7 +23,7 @@ const TourDetailsFaq = ({ faqs }) => {
     parsedFaqs = [
       {
         number: "01",
-        question: "How do I confirm my tour booking with Jagannath Explorer Travel?",
+        question: "How do I confirm my tour booking with Shine Tour & Travel?",
         answer: "You can book directly by clicking 'Book Now' via WhatsApp, submitting the quick inquiry form, or calling our helpline at +91 96688 92441. Our team will send your booking confirmation immediately."
       },
       {

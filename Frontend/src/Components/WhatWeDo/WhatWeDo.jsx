@@ -55,10 +55,10 @@ const WhatWeDo = () => {
         "Discover Odisha's Famous Temples & Spiritual Heritage",
 
       description:
-        "Explore the spiritual heart of Odisha with memorable pilgrimage journeys through Bhubaneswar, Puri and other historic destinations. Visit the sacred Jagannath Temple in Puri and discover the beautiful architecture, traditions and heritage of Odisha.",
+        "Explore the spiritual heart of Odisha with memorable pilgrimage journeys through Bhubaneswar, Puri and other historic destinations. Visit the sacred Shine Temple in Puri and discover the beautiful architecture, traditions and heritage of Odisha.",
 
       features: [
-        "Jagannath Temple, Puri",
+        "Shine Temple, Puri",
         "Lingaraj Temple, Bhubaneswar",
         "Mukteswar & Rajarani Temples",
         "Spiritual & Heritage Tours",
@@ -184,10 +184,10 @@ const WhatWeDo = () => {
     "@type": "TravelAgency",
 
     name:
-      "Jagannath Explorer Travels",
+      "Shine Tour & Travels",
 
     description:
-      "Jagannath Explorer Travels is a tour and travel agency in Bhubaneswar, Odisha offering Odisha tour packages, pilgrimage tours, sightseeing tours, cultural experiences and customized travel services.",
+      "Shine Tour & Travels is a tour and travel agency in Bhubaneswar, Odisha offering Odisha tour packages, pilgrimage tours, sightseeing tours, cultural experiences and customized travel services.",
 
     telephone: [
       "+91-9668892441",
@@ -274,10 +274,10 @@ const WhatWeDo = () => {
       "WebPage",
 
     name:
-      "Odisha Travel Experiences & Tour Activities | Jagannath Explorer Travels",
+      "Odisha Travel Experiences & Tour Activities | Shine Tour & Travels",
 
     description:
-      "Explore temples, beaches, Chilika Lake, wildlife, culture and festivals with Jagannath Explorer Travels, a tour and travel agency in Bhubaneswar, Odisha.",
+      "Explore temples, beaches, Chilika Lake, wildlife, culture and festivals with Shine Tour & Travels, a tour and travel agency in Bhubaneswar, Odisha.",
 
     about: {
 
@@ -294,7 +294,7 @@ const WhatWeDo = () => {
         "TravelAgency",
 
       name:
-        "Jagannath Explorer Travels",
+        "Shine Tour & Travels",
     },
   };
 
@@ -381,13 +381,13 @@ const WhatWeDo = () => {
       <Helmet>
 
         <title>
-          Odisha Tour & Travel Experiences | Jagannath Explorer Travels
+          Odisha Tour & Travel Experiences | Shine Tour & Travels
         </title>
 
 
         <meta
           name="description"
-          content="Explore Odisha with Jagannath Explorer Travels. Discover Puri Jagannath Temple, Konark, Chilika Lake, beaches, wildlife, culture and customized Odisha tour packages from Bhubaneswar."
+          content="Explore Odisha with Shine Tour & Travels. Discover Puri Shine Temple, Konark, Chilika Lake, beaches, wildlife, culture and customized Odisha tour packages from Bhubaneswar."
         />
 
 
@@ -399,7 +399,7 @@ const WhatWeDo = () => {
 
         <meta
           name="author"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
 
@@ -429,7 +429,7 @@ const WhatWeDo = () => {
 
         <link
           rel="canonical"
-          href="https://www.jagannathexplorertravels.com/what-we-do"
+          href="https://www.ShineTour &travels.com/what-we-do"
         />
 
 
@@ -442,22 +442,22 @@ const WhatWeDo = () => {
 
         <meta
           property="og:title"
-          content="Odisha Tour & Travel Experiences | Jagannath Explorer Travels"
+          content="Odisha Tour & Travel Experiences | Shine Tour & Travels"
         />
 
         <meta
           property="og:description"
-          content="Discover Odisha's temples, beaches, Chilika Lake, wildlife, culture and festivals with Jagannath Explorer Travels in Bhubaneswar."
+          content="Discover Odisha's temples, beaches, Chilika Lake, wildlife, culture and festivals with Shine Tour & Travels in Bhubaneswar."
         />
 
         <meta
           property="og:url"
-          content="https://www.jagannathexplorertravels.com/what-we-do"
+          content="https://www.ShineTour &travels.com/what-we-do"
         />
 
         <meta
           property="og:site_name"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta
@@ -467,7 +467,7 @@ const WhatWeDo = () => {
 
         <meta
           property="og:image"
-          content="https://www.jagannathexplorertravels.com/assets/odisha.webp"
+          content="https://www.ShineTour &travels.com/assets/odisha.webp"
         />
 
         <meta
@@ -485,17 +485,17 @@ const WhatWeDo = () => {
 
         <meta
           name="twitter:title"
-          content="Explore Odisha | Jagannath Explorer Travels"
+          content="Explore Odisha | Shine Tour & Travels"
         />
 
         <meta
           name="twitter:description"
-          content="Explore Odisha's temples, beaches, Chilika Lake, wildlife, culture and festivals with Jagannath Explorer Travels."
+          content="Explore Odisha's temples, beaches, Chilika Lake, wildlife, culture and festivals with Shine Tour & Travels."
         />
 
         <meta
           name="twitter:image"
-          content="https://www.jagannathexplorertravels.com/assets/odisha.webp"
+          content="https://www.ShineTour &travels.com/assets/odisha.webp"
         />
 
         <meta
@@ -550,7 +550,7 @@ const WhatWeDo = () => {
               <img
                 key={currentActivity.id}
                 src={currentActivity.image}
-                alt={`${currentActivity.name} in Odisha - Jagannath Explorer Travels`}
+                alt={`${currentActivity.name} in Odisha - Shine Tour & Travels`}
                 className="WhatWeDo__main-image"
                 loading="lazy"
                 decoding="async"
@@ -592,8 +592,8 @@ const WhatWeDo = () => {
                 id="what-we-do-heading"
                 className="WhatWeDo__heading"
               >
-                Discover the Best of Odisha with Jagannath
-                Explorer Travels
+                Discover the Best of Odisha with Shine
+                Tour & Travels
               </h2>
 
 
@@ -613,7 +613,7 @@ const WhatWeDo = () => {
 
               <p className="WhatWeDo__intro">
 
-                Jagannath Explorer Travels, based in Bhubaneswar, helps
+                Shine Tour & Travels, based in Bhubaneswar, helps
                 travellers explore Odisha through thoughtfully planned
                 sightseeing, pilgrimage, cultural, nature and holiday
                 experiences.

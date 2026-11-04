@@ -10,10 +10,10 @@ const TempoTravell = () => {
   const businessSchema = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
-    name: "Jagannath Explorer Travels",
+    name: "Shine Tour & Travels",
     description:
-      "Jagannath Explorer Travels is a tour and travel agency in Bhubaneswar, Odisha, providing car rentals, Tempo Traveller, Urbania, SML Coach, local sightseeing and outstation travel services.",
-    url: "https://jagannathexplorertravels.com/",
+      "Shine Explorer Travels is a tour and travel agency in Bhubaneswar, Odisha, providing car rentals, Tempo Traveller, Urbania, SML Coach, local sightseeing and outstation travel services.",
+    url: "https://Jagannathexplorertravels.com/",
     telephone: [
       "+91-9668892441",
       "+91-9556355446",
@@ -60,12 +60,12 @@ const TempoTravell = () => {
         <html lang="en" />
 
         <title>
-          Tempo Traveller &amp; Tour Travel Agency in Bhubaneswar | Jagannath Explorer Travels
+          Tempo Traveller &amp; Tour Travel Agency in Bhubaneswar | Shine Explorer Travels
         </title>
 
         <meta
           name="description"
-          content="Jagannath Explorer Travels is a trusted tour and travel agency in Bhubaneswar offering Tempo Traveller, car rental, Urbania, SML Coach, local sightseeing, outstation trips and Odisha tourism packages."
+          content="Shine Explorer Travels is a trusted tour and travel agency in Bhubaneswar offering Tempo Traveller, car rental, Urbania, SML Coach, local sightseeing, outstation trips and Odisha tourism packages."
         />
 
         <meta
@@ -75,7 +75,7 @@ const TempoTravell = () => {
 
         <meta
           name="author"
-          content="Jagannath Explorer Travels"
+          content="Shine Explorer Travels"
         />
 
         <meta
@@ -112,7 +112,7 @@ const TempoTravell = () => {
         {/* Canonical */}
         <link
           rel="canonical"
-          href="https://jagannathexplorertravels.com/tempo-traveller"
+          href="https://Shineexplorertravels.com/tempo-traveller"
         />
 
         {/* =================================================
@@ -131,28 +131,28 @@ const TempoTravell = () => {
 
         <meta
           property="og:site_name"
-          content="Jagannath Explorer Travels"
+          content="Shine Explorer Travels"
         />
 
         <meta
           property="og:title"
-          content="Tempo Traveller & Tour Travel Agency in Bhubaneswar | Jagannath Explorer Travels"
+          content="Tempo Traveller & Tour Travel Agency in Bhubaneswar | Shine Explorer Travels"
         />
 
         <meta
           property="og:description"
-          content="Book Tempo Travellers, cars, Urbania and SML Coaches with Jagannath Explorer Travels for local sightseeing, group travel and outstation journeys from Bhubaneswar, Odisha."
+          content="Book Tempo Travellers, cars, Urbania and SML Coaches with Shine Explorer Travels for local sightseeing, group travel and outstation journeys from Bhubaneswar, Odisha."
         />
 
         <meta
           property="og:url"
-          content="https://jagannathexplorertravels.com/tempo-traveller"
+          content="https://Shineexplorertravels.com/tempo-traveller"
         />
 
         {/* Replace this image with your actual website image */}
         <meta
           property="og:image"
-          content="https://jagannathexplorertravels.com/assets/tempo-traveller.jpg"
+          content="https://Shineexplorertravels.com/assets/tempo-traveller.jpg"
         />
 
         <meta
@@ -171,17 +171,17 @@ const TempoTravell = () => {
 
         <meta
           name="twitter:title"
-          content="Tempo Traveller & Tour Travel Agency in Bhubaneswar | Jagannath Explorer Travels"
+          content="Tempo Traveller & Tour Travel Agency in Bhubaneswar | Shine Explorer Travels"
         />
 
         <meta
           name="twitter:description"
-          content="Tempo Traveller, car rental, Urbania, SML Coach and Odisha tour travel services from Jagannath Explorer Travels, Bhubaneswar."
+          content="Tempo Traveller, car rental, Urbania, SML Coach and Odisha tour travel services from Shine Explorer Travels, Bhubaneswar."
         />
 
         <meta
           name="twitter:image"
-          content="https://jagannathexplorertravels.com/assets/tempo-traveller.jpg"
+          content="https://Shineexplorertravels.com/assets/tempo-traveller.jpg"
         />
 
         {/* =================================================

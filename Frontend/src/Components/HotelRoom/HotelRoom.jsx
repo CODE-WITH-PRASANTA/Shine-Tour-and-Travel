@@ -434,7 +434,7 @@ const HotelRoom = () => {
   const schemaMarkup = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Jagannatha Tour and Travels - Premium Hotel Rooms',
+    name: 'Shine Tour and Travels - Premium Hotel Rooms',
     itemListElement: displayedHotels.map((hotel, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -692,7 +692,7 @@ const HotelRoom = () => {
 
                     <img
                       src={currentImage}
-                      alt={`${hotel.name} - Jagannatha Tour and Travels`}
+                      alt={`${hotel.name} - Shinea Tour and Travels`}
                       className="HotelRoom-img"
                     />
 

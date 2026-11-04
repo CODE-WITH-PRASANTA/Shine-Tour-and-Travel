@@ -1,5 +1,35 @@
+/* =========================================================
+   LIGHT BLUE THEME - OUR SUCCESS SECTION
+========================================================= */
 
-* {
+:root {
+  --succ-bg-base: #f0f7ff;
+  --succ-bg-soft: #e0f2fe;
+  --succ-surface: #ffffff;
+  --succ-surface-subtle: #f8fafc;
+
+  --succ-primary: #0284c7;        /* Sky 600 */
+  --succ-primary-hover: #0369a1;  /* Sky 700 */
+  --succ-accent: #0ea5e9;         /* Sky 500 */
+  --succ-accent-light: #e0f2fe;   /* Sky 100 */
+
+  --succ-text-main: #0f172a;      /* Slate 900 */
+  --succ-text-muted: #475569;     /* Slate 600 */
+  --succ-text-subtle: #64748b;    /* Slate 500 */
+  --succ-text-light: #94a3b8;     /* Slate 400 */
+
+  --succ-border: #cbd5e1;
+  --succ-border-light: #e2e8f0;
+  --succ-border-soft: #bae6fd;
+
+  --succ-shadow-sm: 0 4px 14px rgba(2, 132, 199, 0.05);
+  --succ-shadow-md: 0 16px 36px rgba(15, 23, 42, 0.08);
+  --succ-shadow-lg: 0 24px 50px rgba(2, 132, 199, 0.16);
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,10 +39,21 @@
 .oursuccess-section {
   position: relative;
   width: 100%;
-  background-color: #ffffff;
-  padding: 90px 24px 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #171d22;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(56, 189, 248, 0.16),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(2, 132, 199, 0.08),
+      transparent 35%
+    ),
+    var(--succ-bg-base);
+  padding: 90px 24px 105px;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--succ-text-main);
   overflow: hidden;
 }
 
@@ -37,11 +78,12 @@
 
 .bg-trail-svg {
   position: absolute;
-  top: 10%;
+  top: 8%;
   left: 0;
   width: 100%;
   height: auto;
-  opacity: 0.85;
+  opacity: 0.55;
+  filter: hue-rotate(170deg) saturate(140%);
 }
 
 /* Hot air balloon float animation */
@@ -50,7 +92,7 @@
   top: 40px;
   right: 12%;
   width: 70px;
-  opacity: 0.6;
+  opacity: 0.75;
   animation: balloonFloat 7s ease-in-out infinite alternate;
 }
 
@@ -72,7 +114,7 @@
   top: 50px;
   right: 2%;
   width: 170px;
-  opacity: 0.55;
+  opacity: 0.45;
   animation: mountainDrift 10s ease-in-out infinite alternate;
 }
 
@@ -88,108 +130,143 @@
 /* ================= HEADER ================= */
 .oursuccess-header {
   text-align: center;
-  margin-bottom: 50px;
+  max-width: 860px;
+  margin: 0 auto 52px auto;
 }
 
 .oursuccess-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #5da943;
-  font-family: 'Caveat', cursive;
+  color: var(--succ-primary);
+  font-family: 'Caveat', cursive, sans-serif;
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
 .badge-arrow,
 .badge-sparkle {
   font-size: 17px;
+  color: var(--succ-accent);
 }
 
 .oursuccess-title {
-  font-size: 44px;
+  font-size: clamp(32px, 3.5vw, 46px);
   font-weight: 800;
-  color: #111827;
-  letter-spacing: -0.5px;
+  color: var(--succ-text-main);
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.oursuccess-subtitle {
+  font-size: 15.5px;
+  color: var(--succ-text-muted);
+  max-width: 700px;
+  margin: 12px auto 0;
+  line-height: 1.7;
+  font-weight: 500;
 }
 
 /* ================= FEATURES 3x2 GRID ================= */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
 .feature-card {
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 34px 26px;
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  background: #ffffff;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border: 1px solid var(--succ-border-light);
+  background: var(--succ-surface);
+  box-shadow: var(--succ-shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+  transform: translateY(-7px);
+  border-color: var(--succ-border-soft);
+  box-shadow: var(--succ-shadow-lg);
 }
 
-/* ================= COLOR THEMES & SUBTLE GRADIENTS ================= */
-/* 1. Green Theme */
-.feature-card.theme-green {
-  background: linear-gradient(135deg, rgba(243, 249, 239, 0.75) 0%, rgba(255, 255, 255, 0.95) 60%);
+/* ================= COHESIVE SKY / BLUE GRADIENTS ================= */
+/* 1. Sky Theme */
+.feature-card.theme-green,
+.feature-card.theme-sky {
+  background: linear-gradient(135deg, rgba(224, 242, 254, 0.7) 0%, rgba(255, 255, 255, 0.96) 65%);
 }
-.theme-green .card-icon-bubble {
-  background-color: #dcf1d4;
-  color: #4da333;
-}
-
-/* 2. Orange Theme */
-.feature-card.theme-orange {
-  background: linear-gradient(135deg, rgba(254, 248, 239, 0.75) 0%, rgba(255, 255, 255, 0.95) 60%);
-}
-.theme-orange .card-icon-bubble {
-  background-color: #fee9ce;
-  color: #e58d23;
+.theme-green .card-icon-bubble,
+.theme-sky .card-icon-bubble {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.18);
 }
 
-/* 3. Yellow Theme */
-.feature-card.theme-yellow {
-  background: linear-gradient(135deg, rgba(254, 252, 237, 0.75) 0%, rgba(255, 255, 255, 0.95) 60%);
+/* 2. Cyan Theme */
+.feature-card.theme-orange,
+.feature-card.theme-cyan {
+  background: linear-gradient(135deg, rgba(207, 250, 254, 0.7) 0%, rgba(255, 255, 255, 0.96) 65%);
 }
-.theme-yellow .card-icon-bubble {
-  background-color: #fcf1ca;
-  color: #bfa11b;
-}
-
-/* 4. Lime Theme */
-.feature-card.theme-lime {
-  background: linear-gradient(135deg, rgba(248, 252, 238, 0.75) 0%, rgba(255, 255, 255, 0.95) 60%);
-}
-.theme-lime .card-icon-bubble {
-  background-color: #eef7ce;
-  color: #9ab426;
+.theme-orange .card-icon-bubble,
+.theme-cyan .card-icon-bubble {
+  background-color: #cffafe;
+  color: #0891b2;
+  box-shadow: 0 4px 12px rgba(8, 145, 178, 0.18);
 }
 
-/* 5. Mint Theme */
-.feature-card.theme-mint {
-  background: linear-gradient(135deg, rgba(241, 249, 244, 0.75) 0%, rgba(255, 255, 255, 0.95) 60%);
+/* 3. Indigo Theme */
+.feature-card.theme-yellow,
+.feature-card.theme-indigo {
+  background: linear-gradient(135deg, rgba(224, 231, 255, 0.7) 0%, rgba(255, 255, 255, 0.96) 65%);
 }
-.theme-mint .card-icon-bubble {
-  background-color: #d6f2e0;
-  color: #38a169;
+.theme-yellow .card-icon-bubble,
+.theme-indigo .card-icon-bubble {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.18);
 }
 
-/* 6. Peach Theme */
-.feature-card.theme-peach {
-  background: linear-gradient(135deg, rgba(254, 246, 240, 0.75) 0%, rgba(255, 255, 255, 0.95) 60%);
+/* 4. Ocean / Teal Theme */
+.feature-card.theme-lime,
+.feature-card.theme-teal {
+  background: linear-gradient(135deg, rgba(204, 251, 241, 0.7) 0%, rgba(255, 255, 255, 0.96) 65%);
 }
-.theme-peach .card-icon-bubble {
-  background-color: #fde2cf;
-  color: #dd7028;
+.theme-lime .card-icon-bubble,
+.theme-teal .card-icon-bubble {
+  background-color: #ccfbf1;
+  color: #0d9488;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.18);
+}
+
+/* 5. Blue Theme */
+.feature-card.theme-mint,
+.feature-card.theme-blue {
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(255, 255, 255, 0.96) 65%);
+}
+.theme-mint .card-icon-bubble,
+.theme-blue .card-icon-bubble {
+  background-color: #dbeafe;
+  color: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.18);
+}
+
+/* 6. Soft Slate / Ice Theme */
+.feature-card.theme-peach,
+.feature-card.theme-ice {
+  background: linear-gradient(135deg, rgba(241, 245, 249, 0.85) 0%, rgba(255, 255, 255, 0.96) 65%);
+}
+.theme-peach .card-icon-bubble,
+.theme-ice .card-icon-bubble {
+  background-color: #e2e8f0;
+  color: #0369a1;
+  box-shadow: 0 4px 12px rgba(3, 105, 161, 0.16);
 }
 
 /* ================= CARD INNER CONTENT ================= */
@@ -201,12 +278,13 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .card-icon-bubble svg {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
 }
 
 .feature-card:hover .card-icon-bubble {
@@ -221,19 +299,40 @@
 .card-heading {
   font-size: 18px;
   font-weight: 800;
-  color: #111827;
-  margin-bottom: 10px;
+  color: var(--succ-text-main);
+  margin-bottom: 8px;
   line-height: 1.3;
+  letter-spacing: -0.3px;
+  transition: color 0.2s ease;
+}
+
+.feature-card:hover .card-heading {
+  color: var(--succ-primary);
 }
 
 .card-desc {
   font-size: 13.5px;
   line-height: 1.65;
-  color: #6b7280;
+  color: var(--succ-text-muted);
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  .float-balloon,
+  .float-mountain,
+  .feature-card,
+  .card-icon-bubble {
+    transition: none;
+    animation: none;
+  }
 }
 
 /* ================= RESPONSIVE DESIGN ================= */
 @media (max-width: 1024px) {
+  .oursuccess-section {
+    padding: 75px 20px 85px;
+  }
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -246,11 +345,22 @@
 
 @media (max-width: 680px) {
   .oursuccess-section {
-    padding: 60px 16px 70px;
+    padding: 55px 16px 70px;
+  }
+
+  .oursuccess-header {
+    margin-bottom: 34px;
   }
 
   .oursuccess-title {
     font-size: 28px;
+    letter-spacing: -0.6px;
+  }
+
+  .oursuccess-subtitle {
+    font-size: 13.5px;
+    margin-top: 8px;
+    padding: 0 4px;
   }
 
   .features-grid {
@@ -259,45 +369,36 @@
   }
 
   .feature-card {
-    padding: 24px 20px;
+    padding: 22px 18px;
     gap: 16px;
+    border-radius: 16px;
   }
 
   .card-icon-bubble {
-    width: 54px;
-    height: 54px;
+    width: 52px;
+    height: 52px;
   }
 
   .card-icon-bubble svg {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .card-heading {
+    font-size: 16.5px;
+  }
+
+  .card-desc {
+    font-size: 13px;
   }
 
   .float-balloon {
-    width: 50px;
+    width: 48px;
     top: 20px;
     right: 5%;
   }
 
   .float-mountain {
     display: none;
-  }
-}
-
-/* Subtitle styling for SEO description */
-.oursuccess-subtitle {
-  font-size: 16px;
-  color: #64748b;
-  max-width: 720px;
-  margin: 12px auto 0;
-  line-height: 1.6;
-  font-weight: 500;
-}
-
-@media (max-width: 680px) {
-  .oursuccess-subtitle {
-    font-size: 14px;
-    margin-top: 8px;
-    padding: 0 8px;
   }
 }

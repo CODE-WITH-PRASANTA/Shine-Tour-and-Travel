@@ -5,8 +5,8 @@ import HotelRoom from '../../Components/HotelRoom/HotelRoom'
 const Hotel = () => {
   return (
     <div>
-<HotelBreadCrumb/>
-<HotelRoom/>
+      <HotelBreadCrumb/>
+      <HotelRoom/>
     </div>
   )
 }

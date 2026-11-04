@@ -30,7 +30,7 @@ import urbania17 from "../../assets/Urbania-Traveller.webp";
 // =====================================================
 
 const BUSINESS = {
-  name: "Jagannath Explorer Travels",
+  name: "Shine Tour & Travels",
   address:
     "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha, Pin - 751002",
   phone1: "9668892441",
@@ -298,7 +298,7 @@ const TravellerJourney = () => {
         <header className="TravellerJourney__header">
 
           <div className="TravellerJourney__eyebrow">
-            Jagannath Explorer Travels
+            Shine Tour & Travels
           </div>
 
           <h1
@@ -310,7 +310,7 @@ const TravellerJourney = () => {
 
           <p className="TravellerJourney__description">
             Looking for a comfortable vehicle for your next
-            journey? <strong>Jagannath Explorer Travels</strong>{" "}
+            journey? <strong>Shine Tour & Travels</strong>{" "}
             provides Urbania Tempo Traveller rental services
             in Bhubaneswar for family trips, group tours,
             airport transfers, local sightseeing and
@@ -586,7 +586,7 @@ const TravellerJourney = () => {
           </h2>
 
           <p>
-            Jagannath Explorer Travels helps travellers
+            Shine Tour & Travels helps travellers
             arrange comfortable transportation from
             Bhubaneswar for local and outstation journeys.
             Whether you are travelling with family, friends
@@ -624,7 +624,7 @@ const TravellerJourney = () => {
       <a
         href={`tel:+91${BUSINESS.phone1}`}
         className="TravellerJourney__support"
-        aria-label="Call Jagannath Explorer Travels"
+        aria-label="Call Shine Tour & Travels"
       >
         <FaHeadset />
       </a>
@@ -916,7 +916,7 @@ const TravellerJourney = () => {
                         </a>{" "}
                         of{" "}
                         <strong>
-                          Jagannath Explorer Travels
+                          Shine Tour & Travels
                         </strong>
                         .
                       </label>

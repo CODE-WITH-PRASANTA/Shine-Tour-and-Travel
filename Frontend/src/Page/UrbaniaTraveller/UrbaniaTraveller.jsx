@@ -8,10 +8,10 @@ import UrbaniaTravellerBreadcrumb from "../../Components/UrbaniaTravellerBreadcr
 
 const UrbaniaTraveller = () => {
   const pageTitle =
-    "Best Tour and Travel Agency in Bhubaneswar | Jagannath Explorer Travels";
+    "Best Tour and Travel Agency in Bhubaneswar | Shine Tour & Travels";
 
   const pageDescription =
-    "Looking for the best tour and travel agency in Bhubaneswar? Jagannath Explorer Travels offers Urbania tempo traveller, cab, car and group travel services in Bhubaneswar, Odisha with comfortable vehicles and flexible travel options.";
+    "Looking for the best tour and travel agency in Bhubaneswar? Shine Tour & Travels offers Urbania tempo traveller, cab, car and group travel services in Bhubaneswar, Odisha with comfortable vehicles and flexible travel options.";
 
   const keywords =
     "Best tour and travel agency in bhubaneswar, Best Tour & Travel Agency in Bhubaneswar Odisha, Tour & Travel Agency in Bhubaneswar Odisha, odisha tourism packages with price, Urbania tempo traveller in Bhubaneswar, tempo traveller service in Bhubaneswar, travel agency in Bhubaneswar";
@@ -19,7 +19,7 @@ const UrbaniaTraveller = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
-    name: "Jagannath Explorer Travels",
+    name: "Shine Tour & Travels",
     description: pageDescription,
     telephone: ["+91-9668892441", "+91-9556355446"],
     address: {
@@ -79,12 +79,12 @@ const UrbaniaTraveller = () => {
 
         <meta
           name="author"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta
           name="publisher"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         {/* =========================
@@ -147,7 +147,7 @@ const UrbaniaTraveller = () => {
 
         <meta
           property="og:site_name"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta

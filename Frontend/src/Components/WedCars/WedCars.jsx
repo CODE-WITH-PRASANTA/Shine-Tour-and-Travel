@@ -20,7 +20,7 @@ import image6 from "../../assets/Weddingcar6.webp";
    ========================================================= */
 
 const BUSINESS = {
-  name: "Jagannath Explorer Travels",
+  name: "Shine Tour & Travels",
   address:
     "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha, Pin - 751002",
   phone1: "9668892441",
@@ -435,7 +435,7 @@ const WedStage = ({
 
           <p className="stage-description">
             Make your wedding day memorable with the
-            elegant {car.name}. Jagannath Explorer Travels
+            elegant {car.name}. Shine Tour & Travels
             provides premium wedding car arrangements
             for grand entrances, bride and groom
             transfers and special celebrations in
@@ -1009,7 +1009,7 @@ const WedCars = () => {
             Tour &amp; Travel Agency in
             Bhubaneswar, Odisha
           </strong>
-          ? Jagannath Explorer Travels provides
+          ? Shine Tour & Travels provides
           dependable travel and vehicle
           arrangements for local and special
           occasion requirements.

@@ -1,10 +1,32 @@
-/* Container Layout */
+/* =========================================================
+   BOOK TRIP — LIGHT BLUE THEME
+========================================================= */
+
 .BookTrip {
+  --BookTrip-blue: #2b8be6;
+  --BookTrip-blue-dark: #1b74c9;
+  --BookTrip-blue-deep: #0f4c8a;
+
+  --BookTrip-bg: #eaf4fd;
+  --BookTrip-bg-soft: #f5faff;
+  --BookTrip-bg-strong: #d6eafb;
+
+  --BookTrip-border: #cfe3f6;
+  --BookTrip-text: #0b2540;
+  --BookTrip-muted: #5b7189;
+  --BookTrip-faint: #8aa0b6;
+
   width: 100%;
-  padding: 40px 20px;
-  background-color: #f8fafc;
+  padding: 48px 20px;
+  background: linear-gradient(180deg, var(--BookTrip-bg-soft) 0%, var(--BookTrip-bg) 55%, var(--BookTrip-bg-strong) 100%);
   box-sizing: border-box;
   font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+.BookTrip *,
+.BookTrip *::before,
+.BookTrip *::after {
+  box-sizing: border-box;
 }
 
 .BookTrip-container {
@@ -19,27 +41,31 @@
 
 /* =========================================================
    Grid Layout & Card Styles
-   ========================================================= */
+========================================================= */
+
 .BookTrip-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 26px;
 }
 
 .BookTrip-card {
   background: #ffffff;
+  border: 1px solid var(--BookTrip-border);
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(43, 139, 230, 0.10);
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
-              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              border-color 0.4s ease;
   display: flex;
   flex-direction: column;
 }
 
 .BookTrip-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: var(--BookTrip-blue);
+  box-shadow: 0 22px 44px rgba(27, 116, 201, 0.24);
 }
 
 .BookTrip-imageContainer {
@@ -47,6 +73,7 @@
   width: 100%;
   height: 220px;
   overflow: hidden;
+  background: var(--BookTrip-bg);
 }
 
 .BookTrip-image {
@@ -70,35 +97,36 @@
   position: absolute;
   top: 15px;
   left: 15px;
-  background: #000000;
+  background: linear-gradient(135deg, var(--BookTrip-blue-deep) 0%, #0b2540 100%);
   color: #ffffff;
   font-size: 0.7rem;
   font-weight: 700;
-  padding: 4px 10px;
+  padding: 5px 11px;
   letter-spacing: 0.5px;
-  border-radius: 2px;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(11, 37, 64, 0.3);
   z-index: 2;
 }
 
 .BookTrip-locationTag {
   position: absolute;
-  top: 42px;
+  top: 44px;
   left: 15px;
   background: #ffffff;
-  color: #2e3138;
+  color: var(--BookTrip-text);
   font-size: 0.7rem;
   font-weight: 700;
-  padding: 4px 10px;
+  padding: 5px 11px;
   display: flex;
   align-items: center;
   gap: 6px;
-  border-radius: 2px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(43, 139, 230, 0.2);
   z-index: 2;
 }
 
 .BookTrip-tagIcon {
-  color: #61b138;
+  color: var(--BookTrip-blue);
   font-size: 0.8rem;
 }
 
@@ -112,7 +140,7 @@
 .BookTrip-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #121827;
+  color: var(--BookTrip-text);
   line-height: 1.4;
   margin: 0 0 16px 0;
   min-height: 44px;
@@ -138,12 +166,13 @@
 .BookTrip-cityName {
   font-size: 0.72rem;
   font-weight: 600;
-  color: #94a3b8;
+  color: var(--BookTrip-muted);
   letter-spacing: 0.5px;
 }
 
 .BookTrip-arrow {
-  color: #cbd5e1;
+  color: var(--BookTrip-blue);
+  opacity: 0.55;
   font-size: 0.7rem;
 }
 
@@ -154,7 +183,7 @@
 
 .BookTrip-divider {
   height: 1px;
-  background-color: #f1f5f9;
+  background-color: var(--BookTrip-border);
   margin-bottom: 16px;
 }
 
@@ -172,7 +201,7 @@
 
 .BookTrip-priceLabel {
   font-size: 0.7rem;
-  color: #64748b;
+  color: var(--BookTrip-muted);
   font-weight: 500;
 }
 
@@ -186,25 +215,25 @@
 .BookTrip-currentPrice {
   font-size: 1.35rem;
   font-weight: 800;
-  color: #61b138;
+  color: var(--BookTrip-blue-dark);
 }
 
 .BookTrip-oldPrice {
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: var(--BookTrip-faint);
   text-decoration: line-through;
   font-weight: 500;
 }
 
 .BookTrip-taxInfo {
   font-size: 0.65rem;
-  color: #94a3b8;
+  color: var(--BookTrip-faint);
   font-weight: 600;
   letter-spacing: 0.3px;
 }
 
 .BookTrip-btn {
-  background-color: #61b138;
+  background: linear-gradient(135deg, var(--BookTrip-blue) 0%, var(--BookTrip-blue-dark) 100%);
   color: #ffffff;
   border: none;
   padding: 10px 16px;
@@ -219,7 +248,7 @@
   overflow: hidden;
   z-index: 1;
   transition: color 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(97, 177, 56, 0.25);
+  box-shadow: 0 6px 14px rgba(43, 139, 230, 0.30);
 }
 
 .BookTrip-btn::before {
@@ -229,7 +258,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #111827;
+  background-color: var(--BookTrip-blue-deep);
   z-index: -1;
   transform: scaleX(0);
   transform-origin: right;
@@ -242,8 +271,13 @@
 }
 
 .BookTrip-btn:hover {
-  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.3);
+  box-shadow: 0 10px 22px rgba(15, 76, 138, 0.38);
   transform: translateY(-2px);
+}
+
+.BookTrip-btn:focus-visible {
+  outline: 3px solid rgba(43, 139, 230, 0.45);
+  outline-offset: 3px;
 }
 
 .BookTrip-btnIcon {
@@ -257,7 +291,8 @@
 
 /* =========================================================
    Responsive Breakpoints
-   ========================================================= */
+========================================================= */
+
 @media (max-width: 1200px) {
   .BookTrip-searchForm {
     grid-template-columns: repeat(2, 1fr);
@@ -274,6 +309,10 @@
 }
 
 @media (max-width: 640px) {
+  .BookTrip {
+    padding: 34px 14px;
+  }
+
   .BookTrip-searchForm {
     grid-template-columns: 1fr;
   }
@@ -292,5 +331,14 @@
 
   .BookTrip-searchCard {
     padding: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .BookTrip *,
+  .BookTrip *::before,
+  .BookTrip *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }

@@ -83,7 +83,7 @@ const ContactMain = () => {
             </div>
 
             <div className="ContactMain__infoDetails">
-              <p>jagannathexplorertravels@gmail.com</p>
+              <p>ShineTour&travels@gmail.com</p>
              
             </div>
           </div>
@@ -156,7 +156,7 @@ const ContactMain = () => {
               <span className="ContactMain__brandDot"></span>
 
               <span className="ContactMain__brandName">
-                JAGANNATH EXPLORER TRAVELS
+                Shine Tour & TRAVELS
               </span>
 
               <span className="ContactMain__brandLineAfter"></span>
@@ -264,7 +264,7 @@ const ContactMain = () => {
       ====================================================== */}
       <div className="ContactMain__mapWrapper">
         <iframe
-          title="Jagannath Explorer Travels Office Location"
+          title="Shine Tour & Travels Office Location"
           src={mapEmbedUrl}
           className="ContactMain__mapIframe"
           loading="lazy"

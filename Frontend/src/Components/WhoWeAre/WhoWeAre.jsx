@@ -92,7 +92,7 @@ const WhoWeAre = () => {
       className={`WhoWeAre ${
         isVisible ? "WhoWeAre--visible" : ""
       }`}
-      aria-labelledby="why-jagannath-explorer-title"
+      aria-labelledby="why-Shine-Tour &-title"
     >
       <div className="WhoWeAre__container">
 
@@ -104,14 +104,14 @@ const WhoWeAre = () => {
           </div>
 
           <h2
-            id="why-jagannath-explorer-title"
+            id="why-Shine-Tour &-title"
             className="WhoWeAre__title"
           >
-            Why Choose Jagannath Explorer Travels?
+            Why Choose Shine Tour & Travels?
           </h2>
 
           <p className="WhoWeAre__intro">
-            Jagannath Explorer Travels is a Bhubaneswar-based tour and
+            Shine Tour & Travels is a Bhubaneswar-based tour and
             travel agency offering carefully planned tour packages,
             travel services and customized holidays across Odisha and
             India. We help travelers discover beautiful destinations
@@ -156,12 +156,12 @@ const WhoWeAre = () => {
         {/* Business Information */}
         <div className="WhoWeAre__business-info">
 
-          <h3>Jagannath Explorer Travels – Bhubaneswar</h3>
+          <h3>Shine Tour & Travels – Bhubaneswar</h3>
 
           <p>
             Looking for a reliable{" "}
             <strong>tour and travel agency in Bhubaneswar</strong>?
-            Jagannath Explorer Travels provides tour packages,
+            Shine Tour & Travels provides tour packages,
             travel planning and customized holiday experiences from
             Bhubaneswar, Odisha.
           </p>

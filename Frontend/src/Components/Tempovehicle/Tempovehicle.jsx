@@ -7,7 +7,7 @@ import image2 from "../../assets/tempotraveller2.webp";
 import image3 from "../../assets/TempoTraveller3.webp";
 
 const BUSINESS = {
-  name: "Jagannath Explorer Travels",
+  name: "Shine Tour & Travels",
   address:
     "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha, Pin - 751002",
   phone1: "9668892441",
@@ -439,7 +439,7 @@ const Tempovehicle = () => {
 
           <p className="tempovehicle-description">
             Planning a family trip, wedding, corporate outing or
-            group journey from Bhubaneswar? Jagannath Explorer Travels
+            group journey from Bhubaneswar? Shine Tour & Travels
             offers comfortable Tempo Travellers and Urbania vehicles
             for local sightseeing, airport transfers, events and
             outstation journeys across Odisha. Choose the right
@@ -591,7 +591,7 @@ const Tempovehicle = () => {
 
           <p>
             From short city trips to multi-day Odisha tours,
-            Jagannath Explorer Travels makes group transportation
+            Shine Tour & Travels makes group transportation
             simple and comfortable. Our Tempo Traveller and Urbania
             options are suitable for family holidays, pilgrimage
             trips, wedding transportation, corporate travel,

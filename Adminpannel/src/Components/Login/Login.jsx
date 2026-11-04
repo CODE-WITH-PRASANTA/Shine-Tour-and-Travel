@@ -46,7 +46,7 @@ const Login = () => {
     e.preventDefault();
 
     if (
-      formData.identifier === "jagannatha" &&
+      formData.identifier === "Shine" &&
       formData.password === "12345"
     ) {
       sessionStorage.setItem("isAdminAuthenticated", "true");
@@ -72,7 +72,7 @@ const Login = () => {
             </div>
             <h1 className="Login-success-title">LOGIN SUCCESSFUL</h1>
             <p className="Login-success-subtitle">
-              Welcome back to Jagannath Explorer Admin Portal
+              Welcome back to Shine Tour & Travel Admin Portal
             </p>
             <div className="Login-success-loader"></div>
           </div>
@@ -99,7 +99,7 @@ const Login = () => {
                 <div className="Login-logo-temple-icon">🛕</div>
               </div>
               <div className="Login-logo-text-group">
-                <h2 className="Login-brand-title">Jagannath Explorer</h2>
+                <h2 className="Login-brand-title">Shine Tour & Travel</h2>
                 <span className="Login-brand-subtitle">TRAVELS</span>
                 <p className="Login-brand-tagline">Explore • Discover • Travel</p>
               </div>
@@ -134,7 +134,7 @@ const Login = () => {
 
           <div className="Login-form-header">
             <h2>Welcome Back</h2>
-            <p>Login to your account and continue your journey with Jagannath Explorer Travels.</p>
+            <p>Login to your account and continue your journey with Shine Tour & Travel Travels.</p>
           </div>
 
           {errorMessage && (

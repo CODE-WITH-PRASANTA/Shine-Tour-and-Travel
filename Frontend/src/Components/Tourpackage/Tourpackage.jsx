@@ -156,7 +156,7 @@ const Tourpackage = () => {
           </div>
           <h1 className="tourpackage-main-title">Odisha Tourism Packages With Price</h1>
           <p className="tourpackage-subtext">
-            Explore Lord Jagannath Dham Puri, Chilika Lake, scenic Daringbadi, and heritage temples with verified hotels, AC cabs, and transparent rates.
+            Explore Shine Tour & Travel, Chilika Lake, scenic Daringbadi, and heritage temples with verified hotels, AC cabs, and transparent rates.
           </p>
         </div>
 

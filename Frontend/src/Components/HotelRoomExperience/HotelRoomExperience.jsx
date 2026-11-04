@@ -1123,7 +1123,7 @@ const HotelRoomExperience = ({ hotel }) => {
       'Hotel',
 
     name:
-      `${hotelName} - Jagannatha Tour and Travels`,
+      `${hotelName} - Shine Tour and Travels`,
 
     description:
       hotelDesc,

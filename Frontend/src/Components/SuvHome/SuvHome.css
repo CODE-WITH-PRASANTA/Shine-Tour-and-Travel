@@ -1,21 +1,26 @@
 /* ==========================================================================
-   SUV Car — Compact & Immersive Luxury Showroom Hero
+   SUV Hero — Light Blue Showroom Theme
    ========================================================================== */
 
-
 .suv-hero {
-  --bg-0: #030406;
-  --bg-1: #080c12;
-  --bg-2: #101722;
-  --chrome-100: #f5f7f9;
-  --chrome-300: #ccd4dc;
-  --chrome-500: #8a94a1;
-  --chrome-700: #414b56;
-  --amber: #ffb020;
-  --amber-soft: rgba(255, 176, 32, 0.4);
-  --cyan: #57d3ff;
-  --cyan-soft: rgba(87, 211, 255, 0.35);
-  --hairline: rgba(255, 255, 255, 0.1);
+  --bg-0: #d6eafb;
+  --bg-1: #eaf4fd;
+  --bg-2: #f8fcff;
+
+  --ink-900: #0b2540;
+  --ink-700: #1b4a7a;
+  --ink-500: #5b7189;
+  --ink-300: #8aa0b6;
+
+  --blue: #2b8be6;
+  --blue-dark: #1b74c9;
+  --blue-deep: #0f4c8a;
+  --blue-soft: rgba(43, 139, 230, 0.35);
+
+  --amber: #ffad38;
+  --amber-soft: rgba(255, 173, 56, 0.4);
+
+  --hairline: rgba(43, 139, 230, 0.22);
 
   --tiltX: 0;
   --tiltY: 0;
@@ -23,18 +28,18 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: 280px; /* Slimmed down height */
+  min-height: 280px;
   padding: 52px 20px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(140% 160% at 50% 10%, var(--bg-2) 0%, var(--bg-1) 50%, var(--bg-0) 100%);
+  background: radial-gradient(140% 160% at 50% 0%, var(--bg-2) 0%, var(--bg-1) 50%, var(--bg-0) 100%);
   perspective: 1200px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* -------------------------------------------------------------------------
-   Road backdrop & 4D Environment
+   Road backdrop & Environment
    ------------------------------------------------------------------------- */
 
 .suv-road {
@@ -54,7 +59,7 @@
   max-width: 650px;
   max-height: 650px;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, var(--amber-soft) 0%, rgba(255, 176, 32, 0.08) 45%, transparent 75%);
+  background: radial-gradient(circle, var(--amber-soft) 0%, rgba(255, 173, 56, 0.10) 45%, transparent 75%);
   filter: blur(8px);
   animation: suvHorizonPulse 6s ease-in-out infinite;
 }
@@ -65,15 +70,15 @@
   left: 0;
   width: 100%;
   height: 60%;
-  background-image: 
-    linear-gradient(to right, rgba(87, 211, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(87, 211, 255, 0.06) 1px, transparent 1px);
+  background-image:
+    linear-gradient(to right, rgba(43, 139, 230, 0.16) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(43, 139, 230, 0.16) 1px, transparent 1px);
   background-size: 40px 24px;
   transform: rotateX(65deg);
   transform-origin: bottom center;
   animation: suvGridScroll 3.5s linear infinite;
-  mask-image: linear-gradient(to top, rgba(0,0,0.9) 15%, transparent 85%);
-  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0.9) 15%, transparent 85%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 15%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 15%, transparent 85%);
 }
 
 .suv-road__lanes {
@@ -84,13 +89,13 @@
 }
 
 .suv-road__lane-line {
-  stroke: var(--cyan);
+  stroke: var(--blue);
   stroke-width: 1.5;
   opacity: 0;
   stroke-dasharray: 6 10;
   animation: suvLaneDrift 2.4s linear infinite;
   animation-fill-mode: forwards;
-  filter: drop-shadow(0 0 5px var(--cyan));
+  filter: drop-shadow(0 0 4px var(--blue-soft));
 }
 
 /* Cruising Vector Cars */
@@ -116,9 +121,9 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, var(--chrome-700), var(--chrome-300));
+  background: linear-gradient(90deg, var(--blue-deep), var(--blue));
   border-radius: 5px 5px 2px 2px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 3px 8px rgba(15, 76, 138, 0.35);
 }
 
 .suv-car__roof {
@@ -127,7 +132,7 @@
   left: 7px;
   right: 7px;
   height: 6px;
-  background: var(--bg-2);
+  background: var(--ink-700);
   border-radius: 3px 3px 0 0;
 }
 
@@ -137,8 +142,8 @@
   left: 2px;
   width: 4px;
   height: 2px;
-  background: var(--cyan);
-  box-shadow: 0 0 6px var(--cyan);
+  background: #ffffff;
+  box-shadow: 0 0 6px #ffffff, 0 0 8px var(--blue);
   border-radius: 50%;
 }
 
@@ -149,15 +154,15 @@
   top: 0;
   width: 4px;
   height: 2px;
-  background: var(--cyan);
-  box-shadow: 0 0 6px var(--cyan);
+  background: #ffffff;
+  box-shadow: 0 0 6px #ffffff, 0 0 8px var(--blue);
   border-radius: 50%;
 }
 
 .suv-car__glow {
   position: absolute;
   inset: -3px;
-  background: radial-gradient(circle, var(--cyan-soft) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--blue-soft) 0%, transparent 70%);
   filter: blur(3px);
   z-index: -1;
 }
@@ -181,8 +186,8 @@
 }
 
 .suv-road__streak--cool {
-  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-  box-shadow: 0 0 10px 1px var(--cyan-soft);
+  background: linear-gradient(90deg, transparent, var(--blue), transparent);
+  box-shadow: 0 0 10px 1px var(--blue-soft);
 }
 
 .suv-hero__vignette {
@@ -190,8 +195,8 @@
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(180deg, rgba(3, 4, 6, 0.4) 0%, rgba(3, 4, 6, 0) 30%, rgba(3, 4, 6, 0.6) 100%),
-    radial-gradient(120% 90% at 50% 100%, rgba(3, 4, 6, 0.8) 0%, transparent 60%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 30%, rgba(214, 234, 251, 0.5) 100%),
+    radial-gradient(120% 90% at 50% 100%, rgba(214, 234, 251, 0.7) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -202,12 +207,12 @@
   bottom: 0;
   height: 35%;
   z-index: 1;
-  background: linear-gradient(180deg, transparent 0%, var(--bg-0) 90%);
+  background: linear-gradient(180deg, transparent 0%, var(--bg-0) 95%);
   pointer-events: none;
 }
 
 /* -------------------------------------------------------------------------
-   Interactive 3D Stage & Typography
+   Interactive Stage & Typography
    ------------------------------------------------------------------------- */
 
 .suv-hero__stage {
@@ -247,27 +252,26 @@
   display: inline-block;
   background: linear-gradient(
     100deg,
-    var(--chrome-500) 0%,
-    var(--chrome-100) 20%,
-    var(--cyan) 35%,
-    var(--chrome-500) 50%,
-    var(--chrome-300) 65%,
-    var(--chrome-100) 82%,
-    var(--chrome-500) 100%
+    var(--ink-900) 0%,
+    var(--blue-deep) 20%,
+    var(--blue) 38%,
+    var(--ink-900) 55%,
+    var(--blue-dark) 72%,
+    var(--blue-deep) 86%,
+    var(--ink-900) 100%
   );
   background-size: 260% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: suvChromeSweep 5s ease-in-out infinite;
-  text-shadow: 0 0 30px rgba(87, 211, 255, 0.15);
 }
 
 .suv-hero__subtitle {
   margin: 8px 0 0;
   font-size: clamp(0.88rem, 1vw + 0.5rem, 1.02rem);
-  font-weight: 400;
-  color: var(--chrome-500);
+  font-weight: 500;
+  color: var(--ink-500);
   max-width: 44ch;
   opacity: 0;
   transform: translateY(10px);
@@ -278,7 +282,7 @@
 }
 
 /* -------------------------------------------------------------------------
-   Ultra-Slim Breadcrumb Capsule
+   Breadcrumb Capsule
    ------------------------------------------------------------------------- */
 
 .suv-hero__breadcrumb-wrap {
@@ -302,12 +306,12 @@
   gap: 8px;
   margin: 0;
   padding: 6px 16px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.75);
   border: 1px solid var(--hairline);
   border-radius: 999px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(43, 139, 230, 0.15);
 }
 
 .suv-breadcrumb__item {
@@ -318,7 +322,7 @@
 
 .suv-breadcrumb__link {
   position: relative;
-  color: var(--chrome-500);
+  color: var(--ink-500);
   text-decoration: none;
   font-size: 0.84rem;
   font-weight: 500;
@@ -332,14 +336,14 @@
   bottom: -2px;
   width: 100%;
   height: 1px;
-  background: var(--cyan);
+  background: var(--blue);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .suv-breadcrumb__link:hover {
-  color: var(--chrome-100);
+  color: var(--blue-dark);
 }
 
 .suv-breadcrumb__link:hover::after,
@@ -348,19 +352,19 @@
 }
 
 .suv-breadcrumb__link:focus-visible {
-  outline: 2px solid var(--cyan);
+  outline: 2px solid var(--blue);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
 .suv-breadcrumb__current {
-  color: var(--chrome-100);
+  color: var(--ink-900);
   font-size: 0.84rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .suv-breadcrumb__sep {
-  color: var(--chrome-700);
+  color: var(--ink-300);
   flex-shrink: 0;
 }
 
@@ -369,10 +373,7 @@
    ------------------------------------------------------------------------- */
 
 @keyframes suvRiseIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes suvChromeSweep {
@@ -382,14 +383,8 @@
 }
 
 @keyframes suvHorizonPulse {
-  0%, 100% {
-    opacity: 0.8;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.06);
-  }
+  0%, 100% { opacity: 0.8; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.06); }
 }
 
 @keyframes suvGridScroll {
@@ -398,42 +393,24 @@
 }
 
 @keyframes suvLaneDrift {
-  0% {
-    opacity: 0;
-    stroke-dashoffset: 60;
-  }
-  15% { opacity: 0.4; }
-  85% { opacity: 0.4; }
-  100% {
-    opacity: 0;
-    stroke-dashoffset: 0;
-  }
+  0% { opacity: 0; stroke-dashoffset: 60; }
+  15% { opacity: 0.45; }
+  85% { opacity: 0.45; }
+  100% { opacity: 0; stroke-dashoffset: 0; }
 }
 
 @keyframes suvCarCruising {
-  0% {
-    opacity: 0;
-    transform: translate(var(--lane-offset), 90px) scale(0.12);
-  }
+  0% { opacity: 0; transform: translate(var(--lane-offset), 90px) scale(0.12); }
   15% { opacity: 1; }
   85% { opacity: 1; }
-  100% {
-    opacity: 0;
-    transform: translate(calc(var(--lane-offset) * 3.2), -100px) scale(1.2);
-  }
+  100% { opacity: 0; transform: translate(calc(var(--lane-offset) * 3.2), -100px) scale(1.2); }
 }
 
 @keyframes suvStreakTravel {
-  0% {
-    opacity: 0;
-    transform: translateX(0);
-  }
+  0% { opacity: 0; transform: translateX(0); }
   10% { opacity: 1; }
   85% { opacity: 1; }
-  100% {
-    opacity: 0;
-    transform: translateX(550%);
-  }
+  100% { opacity: 0; transform: translateX(550%); }
 }
 
 /* -------------------------------------------------------------------------
@@ -481,7 +458,7 @@
   }
 
   .suv-road__lane-line {
-    opacity: 0.25;
+    opacity: 0.3;
   }
 
   .suv-hero__stage {

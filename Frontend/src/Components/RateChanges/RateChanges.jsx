@@ -244,7 +244,7 @@ const RateChanges = () => {
 
       <header className="rate-section__header">
         <span className="rate-section__eyebrow">
-          Jagannath Explorer Travels
+          Shine Tour & Travels
         </span>
 
         <h1 className="rate-section__title">
@@ -252,7 +252,7 @@ const RateChanges = () => {
         </h1>
 
         <p className="rate-section__subtitle">
-          Jagannath Explorer Travels offers simple, reliable travel services
+          Shine Tour & Travels offers simple, reliable travel services
           for local rides, sightseeing, airport transfers, family trips,
           business travel, and outstation journeys. Choose a comfortable
           vehicle, check the tariff clearly, and plan your trip without

@@ -23,20 +23,20 @@ const Home = () => {
 
         {/* Primary SEO */}
         <title>
-          Best Tour and Travel Agency in Bhubaneswar | Jagannath Tours
+          Best Tour and Travel Agency in Bhubaneswar | Shine Tour & Travel
         </title>
 
         <meta
           name="description"
-          content="Looking for the best tour and travel agency in Bhubaneswar? Explore carefully planned tour packages, comfortable stays, car rentals and memorable travel experiences with Jagannath Tours."
+          content="Looking for the best tour and travel agency in Bhubaneswar? Explore carefully planned tour packages, comfortable stays, car rentals and memorable travel experiences with Shine Tours."
         />
 
         <meta
           name="keywords"
-          content="best tour and travel agency in Bhubaneswar, tour and travel agency in Bhubaneswar, travel agency in Bhubaneswar, best travel agency in Bhubaneswar, Bhubaneswar tour packages, Odisha tour packages, Jagannath tour packages, Odisha travel agency, Puri tour package, travel services in Bhubaneswar"
+          content="best tour and travel agency in Bhubaneswar, tour and travel agency in Bhubaneswar, travel agency in Bhubaneswar, best travel agency in Bhubaneswar, Bhubaneswar tour packages, Odisha tour packages, Shine tour packages, Odisha travel agency, Puri tour package, travel services in Bhubaneswar"
         />
 
-        <meta name="author" content="Jagannath Tours" />
+        <meta name="author" content="Shine Tours" />
 
         <meta
           name="robots"
@@ -52,12 +52,12 @@ const Home = () => {
         {/* Open Graph / Facebook */}
         <meta
           property="og:title"
-          content="Best Tour and Travel Agency in Bhubaneswar | Jagannath Tours"
+          content="Best Tour and Travel Agency in Bhubaneswar | Shine Tours"
         />
 
         <meta
           property="og:description"
-          content="Plan your next journey with a trusted tour and travel agency in Bhubaneswar. Discover Odisha, Puri, spiritual destinations and exciting tours with Jagannath Tours."
+          content="Plan your next journey with a trusted tour and travel agency in Bhubaneswar. Discover Odisha, Puri, spiritual destinations and exciting tours with Shine Tours."
         />
 
         <meta
@@ -72,7 +72,7 @@ const Home = () => {
 
         <meta
           property="og:site_name"
-          content="Jagannath Tours"
+          content="Shine Tours"
         />
 
         {/* Replace this with your actual website image */}
@@ -89,12 +89,12 @@ const Home = () => {
 
         <meta
           name="twitter:title"
-          content="Best Tour and Travel Agency in Bhubaneswar | Jagannath Tours"
+          content="Best Tour and Travel Agency in Bhubaneswar | Shine Tours"
         />
 
         <meta
           name="twitter:description"
-          content="Explore memorable destinations, Odisha tour packages, car rentals and travel experiences with Jagannath Tours in Bhubaneswar."
+          content="Explore memorable destinations, Odisha tour packages, car rentals and travel experiences with Shine Tours in Bhubaneswar."
         />
 
         <meta

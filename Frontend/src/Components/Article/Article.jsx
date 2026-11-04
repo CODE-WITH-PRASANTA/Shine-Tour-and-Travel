@@ -26,7 +26,7 @@ const Article = () => {
       image: articleImage1,
       day: "20",
       month: "August",
-      author: "Jagannath Explorer Travels",
+      author: "Shine Tour & Travels",
       category: "Odisha Tourism",
       title:
         "Top Places to Visit in Odisha: A Complete Travel Guide",
@@ -39,7 +39,7 @@ const Article = () => {
       image: articleImage2,
       day: "15",
       month: "June",
-      author: "Jagannath Explorer Travels",
+      author: "Shine Tour & Travels",
       category: "Travel Guide",
       title:
         "Best Odisha Tour Packages for an Unforgettable Holiday",
@@ -55,12 +55,12 @@ const Article = () => {
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "Jagannath Explorer Travels Travel Blog",
+    name: "Shine Tour & Travels Travel Blog",
     description:
-      "Travel guides, Odisha tourism information, tour packages and travel tips from Jagannath Explorer Travels in Bhubaneswar, Odisha.",
+      "Travel guides, Odisha tourism information, tour packages and travel tips from Shine Tour & Travels in Bhubaneswar, Odisha.",
     publisher: {
       "@type": "TravelAgency",
-      name: "Jagannath Explorer Travels",
+      name: "Shine Tour & Travels",
       telephone: "+91-9668892441",
       address: {
         "@type": "PostalAddress",
@@ -85,12 +85,12 @@ const Article = () => {
         {/* Primary SEO */}
 
         <title>
-          Odisha Travel Blog | Tour Packages & Travel Guide | Jagannath Explorer Travels
+          Odisha Travel Blog | Tour Packages & Travel Guide | Shine Tour & Travels
         </title>
 
         <meta
           name="description"
-          content="Explore Odisha travel guides, tourism destinations, tour packages and travel tips with Jagannath Explorer Travels, a tour and travel agency in Bhubaneswar, Odisha."
+          content="Explore Odisha travel guides, tourism destinations, tour packages and travel tips with Shine Tour & Travels, a tour and travel agency in Bhubaneswar, Odisha."
         />
 
         <meta
@@ -100,7 +100,7 @@ const Article = () => {
 
         <meta
           name="author"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta
@@ -122,7 +122,7 @@ const Article = () => {
 
         <link
           rel="canonical"
-          href="https://www.jagannathexplorertravels.com/blog"
+          href="https://www.ShineTour &travels.com/blog"
         />
 
         {/* =====================================================
@@ -136,27 +136,27 @@ const Article = () => {
 
         <meta
           property="og:title"
-          content="Odisha Travel Blog | Jagannath Explorer Travels"
+          content="Odisha Travel Blog | Shine Tour & Travels"
         />
 
         <meta
           property="og:description"
-          content="Discover Odisha tourism destinations, travel guides, tour packages and useful travel tips from Jagannath Explorer Travels."
+          content="Discover Odisha tourism destinations, travel guides, tour packages and useful travel tips from Shine Tour & Travels."
         />
 
         <meta
           property="og:url"
-          content="https://www.jagannathexplorertravels.com/blog"
+          content="https://www.ShineTour &travels.com/blog"
         />
 
         <meta
           property="og:site_name"
-          content="Jagannath Explorer Travels"
+          content="Shine Tour & Travels"
         />
 
         <meta
           property="og:image"
-          content="https://www.jagannathexplorertravels.com/assets/odisha23.webp"
+          content="https://www.ShineTour &travels.com/assets/odisha23.webp"
         />
 
         <meta
@@ -175,17 +175,17 @@ const Article = () => {
 
         <meta
           name="twitter:title"
-          content="Odisha Travel Blog | Jagannath Explorer Travels"
+          content="Odisha Travel Blog | Shine Tour & Travels"
         />
 
         <meta
           name="twitter:description"
-          content="Read Odisha travel guides, discover destinations and explore tour packages with Jagannath Explorer Travels."
+          content="Read Odisha travel guides, discover destinations and explore tour packages with Shine Tour & Travels."
         />
 
         <meta
           name="twitter:image"
-          content="https://www.jagannathexplorertravels.com/assets/odisha23.webp"
+          content="https://www.ShineTour &travels.com/assets/odisha23.webp"
         />
 
         {/* =====================================================
@@ -226,8 +226,8 @@ const Article = () => {
 
           <p className="Article__intro">
             Discover helpful travel guides, Odisha tourism information,
-            destination ideas and tour planning tips from Jagannath
-            Explorer Travels, a trusted tour and travel agency in
+            destination ideas and tour planning tips from Shine
+            Tour & Travels, a trusted tour and travel agency in
             Bhubaneswar, Odisha.
           </p>
 
@@ -254,7 +254,7 @@ const Article = () => {
 
                 <img
                   src={article.image}
-                  alt={`${article.title} - Jagannath Explorer Travels`}
+                  alt={`${article.title} - Shine Tour & Travels`}
                   className="Article__image"
                   loading="lazy"
                   decoding="async"

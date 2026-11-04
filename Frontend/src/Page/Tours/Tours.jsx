@@ -5,8 +5,8 @@ import BookTrip from '../../Components/BookTrip/BookTrip'
 const Tours = () => {
   return (
     <div>
-<ToursBreadCrumb/>
-<BookTrip/>
+      <ToursBreadCrumb/>
+      <BookTrip/>
     </div>
   )
 }

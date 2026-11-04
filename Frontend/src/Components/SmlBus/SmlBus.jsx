@@ -380,7 +380,7 @@ const SmlBus = () => {
 
           <p className="smlbus-description">
             Looking for a comfortable vehicle for a family holiday,
-            group outing or an outstation journey? Jagannath Explorer
+            group outing or an outstation journey? Shine Tour &
             Travels provides SML coaches in different seating
             capacities for travel from Bhubaneswar to destinations
             across Odisha. Choose a vehicle according to your group
@@ -402,7 +402,7 @@ const SmlBus = () => {
           </h2>
 
           <p>
-            Jagannath Explorer Travels offers practical transport
+            Shine Tour & Travels offers practical transport
             solutions for families, companies, schools, tour groups
             and large gatherings. Our SML coach range includes 13,
             19, 22, 28 and 36 seater options, making it easier to
@@ -593,7 +593,7 @@ const SmlBus = () => {
             Popular routes and travel plans can include Bhubaneswar,
             Puri, Konark, Chilika, Cuttack and other destinations
             across Odisha. Share your route, travel date and number
-            of passengers with Jagannath Explorer Travels to discuss
+            of passengers with Shine Tour & Travels to discuss
             vehicle availability and booking options.
           </p>
 
@@ -798,7 +798,7 @@ const SmlBus = () => {
                       </span>{" "}
                       from{" "}
                       <strong>
-                        Jagannath Explorer Travels
+                        Shine Tour & Travels
                       </strong>
                       .
                     </span>

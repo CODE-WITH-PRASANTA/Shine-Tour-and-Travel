@@ -1,50 +1,58 @@
 /* =========================================================
-   ARTICLE SECTION
+   ARTICLE SECTION — LIGHT BLUE THEME
 ========================================================= */
 
 .Article {
-  --Article-green: #61b341;
-  --Article-green-dark: #4fa034;
+  --Article-primary: #0284c7;
+  --Article-primary-dark: #0369a1;
+  --Article-primary-light: #e0f2fe;
+  --Article-primary-glow: rgba(2, 132, 199, 0.28);
 
-  --Article-black: #080706;
-  --Article-text: #111111;
+  --Article-black: #0f1f33;
+  --Article-text: #0f172a;
+  --Article-gray: #64748b;
+  --Article-border: rgba(56, 140, 224, 0.16);
 
-  --Article-gray: #777777;
-
+  position: relative;
   width: 100%;
+  padding: 65px 0 85px;
 
-  padding: 42px 0 65px;
-
-  background: #ffffff;
+  /* Ambient light-blue background consistent across all sections */
+  background:
+    radial-gradient(1100px 500px at 15% 15%, rgba(186, 226, 255, 0.42), transparent 60%),
+    radial-gradient(1000px 500px at 85% 85%, rgba(224, 242, 254, 0.52), transparent 60%),
+    linear-gradient(180deg, #f0f7fd 0%, #e8f3fc 100%);
 
   overflow: hidden;
-
-  font-family:
-    "Poppins",
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: "Plus Jakarta Sans", "Poppins", sans-serif;
 }
 
+/* Subtle dot-matrix ambient texture overlay */
+.Article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(56, 140, 224, 0.16) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  opacity: 0.5;
+  z-index: 0;
+}
 
 /* =========================================================
    HEADER
 ========================================================= */
 
 .Article__header {
+  position: relative;
+  z-index: 2;
   width: 100%;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   text-align: center;
-
-  margin-bottom: 53px;
+  margin-bottom: 52px;
 }
-
 
 /* =========================================================
    ARTICLE LABEL
@@ -52,81 +60,42 @@
 
 .Article__label {
   position: relative;
-
-  width: 145px;
-
-  height: 43px;
-
-  margin-bottom: 0;
-
+  width: 165px;
+  height: 44px;
+  margin-bottom: 10px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  background:
-    rgba(97, 179, 65, 0.22);
-
-  clip-path: polygon(
-    3% 26%,
-    15% 14%,
-    28% 19%,
-    43% 7%,
-    59% 16%,
-    76% 10%,
-    94% 26%,
-    98% 51%,
-    91% 72%,
-    77% 69%,
-    60% 88%,
-    43% 76%,
-    28% 88%,
-    13% 73%,
-    3% 78%,
-    7% 52%
-  );
-
-  animation:
-    ArticleLabelFloat 4s ease-in-out infinite;
+  background: rgba(2, 132, 199, 0.14);
+  border: 1px solid rgba(2, 132, 199, 0.28);
+  border-radius: 50px;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.1);
+  animation: ArticleLabelFloat 4s ease-in-out infinite;
 }
-
 
 .Article__label span {
-  color:
-    var(--Article-green);
-
-  font-family:
-    "Brush Script MT",
-    "Segoe Script",
-    cursive;
-
-  font-size: 18px;
-
-  font-weight: 600;
-
+  position: relative;
+  z-index: 2;
+  color: var(--Article-primary);
+  font-family: "Caveat", cursive;
+  font-size: 23px;
+  font-weight: 700;
   line-height: 1;
 }
-
 
 /* =========================================================
    LABEL ANIMATION
 ========================================================= */
 
 @keyframes ArticleLabelFloat {
-
   0%,
   100% {
-    transform:
-      translateY(0);
+    transform: translateY(0);
   }
-
   50% {
-    transform:
-      translateY(-3px);
+    transform: translateY(-3px);
   }
 }
-
 
 /* =========================================================
    MAIN HEADING
@@ -134,53 +103,27 @@
 
 .Article__heading {
   margin: 0;
-
-  color:
-    var(--Article-black);
-
-  font-family:
-    "Poppins",
-    Arial,
-    sans-serif;
-
-  /*
-    Slightly lighter than the screenshot's
-    extremely heavy appearance
-  */
-
-  font-size:
-    clamp(35px, 3.1vw, 49px);
-
-  font-weight: 600;
-
-  line-height: 1.15;
-
-  letter-spacing: -1px;
+  color: var(--Article-black);
+  font-family: inherit;
+  font-size: clamp(34px, 3.2vw, 48px);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.8px;
 }
-
 
 /* =========================================================
    ARTICLE GRID
 ========================================================= */
 
 .Article__grid {
-  width:
-    min(
-      calc(100% - 260px),
-      1450px
-    );
-
-  margin:
-    0 auto;
-
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - 200px), 1450px);
+  margin: 0 auto;
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 27px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
 }
-
 
 /* =========================================================
    ARTICLE CARD
@@ -188,31 +131,17 @@
 
 .Article__card {
   position: relative;
-
   width: 100%;
-
   min-width: 0;
-
-  height: 590px;
-
-  border-radius: 5px;
-
+  height: 600px;
+  border-radius: 18px;
   overflow: visible;
-
-  transition:
-    transform 0.4s ease;
+  transition: transform 0.4s ease;
 }
-
-
-/* =========================================================
-   CARD HOVER
-========================================================= */
 
 .Article__card:hover {
-  transform:
-    translateY(-4px);
+  transform: translateY(-5px);
 }
-
 
 /* =========================================================
    IMAGE WRAPPER
@@ -220,90 +149,50 @@
 
 .Article__image-wrapper {
   position: relative;
-
   width: 100%;
-
   height: 440px;
-
   overflow: hidden;
-
-  border-radius: 5px;
-
-  background:
-    #e8e8e8;
+  border-radius: 18px;
+  border: 1px solid var(--Article-border);
+  background: #0f172a;
+  box-shadow: 0 10px 30px rgba(18, 64, 107, 0.08);
 }
 
-
 /* =========================================================
-   ARTICLE IMAGE
+   ARTICLE IMAGE & SHINE EFFECT
 ========================================================= */
 
 .Article__image {
   width: 100%;
-
   height: 100%;
-
   display: block;
-
   object-fit: cover;
-
   object-position: center;
-
-  transition:
-    transform 0.7s
-      cubic-bezier(
-        0.2,
-        0.7,
-        0.2,
-        1
-      );
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-
-/* =========================================================
-   IMAGE HOVER
-========================================================= */
-
-.Article__card:hover
-.Article__image {
-  transform:
-    scale(1.045);
+.Article__card:hover .Article__image {
+  transform: scale(1.06);
 }
-
-
-/* =========================================================
-   IMAGE DARK OVERLAY
-========================================================= */
 
 .Article__image-wrapper::after {
   content: "";
-
   position: absolute;
-
   inset: 0;
-
   pointer-events: none;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.03),
-      rgba(0, 0, 0, 0.05) 45%,
-      rgba(0, 0, 0, 0.32)
-    );
-
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.04) 0%,
+    rgba(15, 23, 42, 0.12) 45%,
+    rgba(15, 23, 42, 0.5) 100%
+  );
   opacity: 0.65;
-
-  transition:
-    opacity 0.4s ease;
+  transition: opacity 0.4s ease;
 }
 
-
-.Article__card:hover
-.Article__image-wrapper::after {
-  opacity: 0.8;
+.Article__card:hover .Article__image-wrapper::after {
+  opacity: 0.82;
 }
-
 
 /* =========================================================
    DATE BADGE
@@ -311,89 +200,50 @@
 
 .Article__date {
   position: absolute;
-
-  left: 16px;
-
-  top: 15px;
-
+  left: 18px;
+  top: 18px;
   z-index: 5;
-
-  width: 73px;
-
-  height: 73px;
-
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
-  background:
-    var(--Article-green);
-
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
   color: #ffffff;
-
-  box-shadow:
-    0 6px 15px
-    rgba(97, 179, 65, 0.24);
-
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
   transition:
     transform 0.35s ease,
-    background-color 0.35s ease;
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
 }
 
-
-/* =========================================================
-   DATE HOVER
-========================================================= */
-
-.Article__card:hover
-.Article__date {
-  background:
-    var(--Article-green-dark);
-
-  transform:
-    scale(1.06);
+.Article__card:hover .Article__date {
+  filter: brightness(1.06);
+  transform: scale(1.08) rotate(-4deg);
+  box-shadow: 0 12px 26px rgba(2, 132, 199, 0.45);
 }
-
-
-/* =========================================================
-   DATE NUMBER
-========================================================= */
 
 .Article__date-day {
   display: block;
-
-  margin-bottom: 0;
-
   font-size: 25px;
-
-  font-weight: 700;
-
+  font-weight: 800;
   line-height: 0.95;
+  letter-spacing: -0.5px;
 }
-
-
-/* =========================================================
-   DATE MONTH
-========================================================= */
 
 .Article__date-month {
   display: block;
-
   margin-top: 3px;
-
-  font-size: 13px;
-
-  font-weight: 600;
-
+  font-size: 11.5px;
+  font-weight: 700;
   line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #e0f2fe;
 }
-
 
 /* =========================================================
    CONTENT BOX
@@ -401,49 +251,31 @@
 
 .Article__content {
   position: absolute;
-
   z-index: 10;
-
-  left: 5%;
-
+  left: 6%;
   bottom: 0;
-
-  width: 82%;
-
- max-height: 220px;
-
-  padding:
-    28px 23px 23px;
-
-  background:
-    #ffffff;
-
-  border-radius: 5px;
-
+  width: 88%;
+  min-height: 220px;
+  padding: 28px 26px 24px;
+  background: #ffffff;
+  border: 1px solid var(--Article-border);
+  border-radius: 18px;
   box-shadow:
-    0 13px 35px
-    rgba(0, 0, 0, 0.08);
-
+    0 16px 36px rgba(18, 64, 107, 0.09),
+    0 4px 12px rgba(18, 64, 107, 0.04);
   transition:
     transform 0.4s ease,
-    box-shadow 0.4s ease;
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
 }
 
-
-/* =========================================================
-   CONTENT HOVER
-========================================================= */
-
-.Article__card:hover
-.Article__content {
-  transform:
-    translateY(-3px);
-
+.Article__card:hover .Article__content {
+  transform: translateY(-4px);
+  border-color: rgba(56, 140, 224, 0.3);
   box-shadow:
-    0 18px 38px
-    rgba(0, 0, 0, 0.11);
+    0 22px 46px rgba(18, 64, 107, 0.13),
+    0 6px 16px rgba(18, 64, 107, 0.05);
 }
-
 
 /* =========================================================
    META
@@ -451,80 +283,42 @@
 
 .Article__meta {
   display: flex;
-
   align-items: center;
-
   flex-wrap: wrap;
-
-  gap: 11px;
-
-  margin-bottom: 15px;
-
-  color:
-    var(--Article-gray);
-
-  font-size: 12px;
-
-  font-weight: 400;
-
+  gap: 10px;
+  margin-bottom: 12px;
+  color: var(--Article-gray);
+  font-size: 12.5px;
+  font-weight: 500;
   line-height: 1.3;
 }
-
-
-/* =========================================================
-   AUTHOR
-========================================================= */
 
 .Article__author {
   white-space: nowrap;
 }
 
-
 .Article__author a {
-  color:
-    #777777;
-
-  text-decoration:
-    underline;
-
-  text-decoration-thickness:
-    1px;
-
-  text-underline-offset:
-    2px;
-
-  transition:
-    color 0.25s ease;
+  color: var(--Article-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 3px;
+  font-weight: 700;
+  transition: color 0.25s ease;
 }
-
 
 .Article__author a:hover {
-  color:
-    var(--Article-green);
+  color: var(--Article-primary-dark);
 }
 
-
-/* =========================================================
-   META DOT
-========================================================= */
-
 .Article__meta-dot {
-  color:
-    var(--Article-green);
-
+  color: #94a3b8;
   font-size: 10px;
 }
 
-
-/* =========================================================
-   CATEGORY
-========================================================= */
-
 .Article__category {
-  color:
-    #777777;
+  color: var(--Article-gray);
+  font-weight: 600;
 }
-
 
 /* =========================================================
    TITLE
@@ -532,128 +326,78 @@
 
 .Article__title {
   margin: 0;
-
   max-width: 100%;
-
-  color:
-    var(--Article-text);
-
-  font-family:
-    "Poppins",
-    Arial,
-    sans-serif;
-
-  font-size: 24px;
-
-  font-weight: 600;
-
-  line-height: 1.48;
-
-  letter-spacing:
-    -0.35px;
+  color: var(--Article-black);
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.42;
+  letter-spacing: -0.4px;
+  transition: color 0.25s ease;
 }
 
+.Article__card:hover .Article__title {
+  color: var(--Article-primary);
+}
 
 /* =========================================================
-   BOTTOM
+   BOTTOM ROW
 ========================================================= */
 
 .Article__bottom {
-  margin-top: 25px;
-
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #edf4fb;
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 15px;
 }
 
-
 /* =========================================================
-   VIEW POST
+   VIEW POST BUTTON
 ========================================================= */
 
 .Article__view {
   display: inline-flex;
-
   align-items: center;
-
-  gap: 9px;
-
-  color:
-    var(--Article-green);
-
-  font-size: 16px;
-
-  font-weight: 600;
-
+  gap: 8px;
+  color: var(--Article-primary);
+  font-size: 14.5px;
+  font-weight: 700;
   line-height: 1;
-
-  text-decoration:
-    underline;
-
-  text-underline-offset:
-    2px;
-
+  text-decoration: none;
   transition:
     color 0.3s ease,
     transform 0.3s ease;
 }
 
-
 .Article__view:hover {
-  color:
-    var(--Article-green-dark);
-
-  transform:
-    translateX(3px);
+  color: var(--Article-primary-dark);
+  transform: translateX(3px);
 }
 
-
-/* =========================================================
-   VIEW ICON
-========================================================= */
-
 .Article__view-icon {
-  width: 25px;
-
-  height: 25px;
-
+  width: 24px;
+  height: 24px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  border: 1px solid
-    rgba(97, 179, 65, 0.45);
-
+  border: 1.4px solid var(--Article-primary);
   border-radius: 50%;
-
-  font-size: 10px;
-
-  text-decoration: none;
-
+  font-size: 11px;
+  line-height: 1;
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
     transform 0.3s ease;
 }
 
-
-.Article__view:hover
-.Article__view-icon {
+.Article__view:hover .Article__view-icon {
   color: #ffffff;
-
-  background:
-    var(--Article-green);
-
-  transform:
-    rotate(8deg);
+  background: var(--Article-primary);
+  transform: rotate(8deg);
 }
-
 
 /* =========================================================
    READ TIME
@@ -661,390 +405,275 @@
 
 .Article__read {
   display: flex;
-
   align-items: center;
-
   gap: 6px;
-
-  color:
-    #6f6f6f;
-
+  color: var(--Article-gray);
   font-size: 12px;
-
-  font-weight: 400;
-
+  font-weight: 600;
   white-space: nowrap;
 }
 
-
 .Article__read svg {
-  color:
-    #888888;
-
-  font-size: 11px;
-
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+  color: #f59e0b;
+  font-size: 13px;
+  transition: transform 0.3s ease;
 }
 
-
-.Article__card:hover
-.Article__read svg {
-  color:
-    var(--Article-green);
-
-  transform:
-    translateY(-1px);
+.Article__card:hover .Article__read svg {
+  transform: translateY(-2px) scale(1.15);
 }
-
 
 /* =========================================================
    LARGE DESKTOP
 ========================================================= */
 
 @media (max-width: 1400px) {
-
   .Article__grid {
-    width:
-      min(
-        calc(100% - 180px),
-        1250px
-      );
+    width: min(calc(100% - 140px), 1250px);
+    gap: 28px;
   }
-
 
   .Article__card {
-    height: 555px;
+    height: 570px;
   }
-
 
   .Article__image-wrapper {
-    height: 415px;
+    height: 420px;
   }
-
 
   .Article__content {
     min-height: 215px;
-
-    padding:
-      25px 22px 21px;
+    padding: 24px 22px 20px;
   }
-
 
   .Article__title {
-    font-size: 22px;
-
-    line-height: 1.45;
+    font-size: 21px;
+    line-height: 1.4;
   }
 }
-
 
 /* =========================================================
    LAPTOP
 ========================================================= */
 
 @media (max-width: 1100px) {
-
   .Article {
-    padding:
-      38px 0 55px;
+    padding: 50px 0 65px;
   }
-
 
   .Article__header {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
-
 
   .Article__grid {
-    width:
-      calc(100% - 100px);
-
-    gap: 25px;
+    width: calc(100% - 80px);
+    gap: 24px;
   }
-
 
   .Article__card {
-    height: 520px;
+    height: 535px;
   }
-
 
   .Article__image-wrapper {
-    height: 390px;
+    height: 395px;
   }
-
 
   .Article__date {
-    width: 67px;
-
-    height: 67px;
+    width: 68px;
+    height: 68px;
   }
-
 
   .Article__date-day {
     font-size: 23px;
   }
 
-
   .Article__date-month {
-    font-size: 12px;
+    font-size: 11px;
   }
-
 
   .Article__content {
-    left: 7%;
-
-    width: 86%;
-
+    left: 6%;
+    width: 88%;
     min-height: 205px;
-
-    padding:
-      23px 20px 20px;
+    padding: 22px 20px 18px;
   }
-
 
   .Article__title {
-    font-size: 20px;
-
-    line-height: 1.42;
+    font-size: 19.5px;
+    line-height: 1.4;
   }
-
 
   .Article__bottom {
-    margin-top: 21px;
+    margin-top: 18px;
   }
 }
-
 
 /* =========================================================
    TABLET
 ========================================================= */
 
-@media (max-width: 800px) {
-
+@media (max-width: 850px) {
   .Article__grid {
-    width:
-      calc(100% - 70px);
-
-    grid-template-columns:
-      1fr;
-
-    gap: 35px;
+    width: min(100% - 50px, 600px);
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-
 
   .Article__card {
-    height: 525px;
+    height: 540px;
   }
-
 
   .Article__image-wrapper {
-    height: 405px;
+    height: 410px;
   }
-
 
   .Article__content {
-    left: 8%;
-
-    width: 84%;
+    left: 5%;
+    width: 90%;
   }
 }
-
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
-
   .Article {
-    padding:
-      32px 0 45px;
+    padding: 40px 0 50px;
   }
-
 
   .Article__header {
     margin-bottom: 32px;
   }
 
-
   .Article__label {
-    width: 135px;
-
+    width: 145px;
     height: 40px;
   }
 
-
   .Article__label span {
-    font-size: 16px;
+    font-size: 20px;
   }
-
 
   .Article__heading {
-    font-size: 29px;
-
-    font-weight: 600;
-
-    letter-spacing:
-      -0.5px;
+    font-size: 30px;
+    letter-spacing: -0.5px;
   }
-
 
   .Article__grid {
-    width:
-      calc(100% - 32px);
-
-    gap: 32px;
+    width: calc(100% - 28px);
+    gap: 34px;
   }
-
 
   .Article__card {
-    height: 480px;
+    height: 490px;
   }
-
 
   .Article__image-wrapper {
-    height: 360px;
+    height: 365px;
+    border-radius: 16px;
   }
-
 
   .Article__date {
-    left: 13px;
-
-    top: 13px;
-
-    width: 63px;
-
-    height: 63px;
+    left: 14px;
+    top: 14px;
+    width: 62px;
+    height: 62px;
   }
-
 
   .Article__date-day {
-    font-size: 21px;
+    font-size: 20px;
   }
-
 
   .Article__date-month {
-    font-size: 11px;
+    font-size: 10px;
   }
-
 
   .Article__content {
-    left: 5%;
-
-    width: 90%;
-
+    left: 4%;
+    width: 92%;
     min-height: 195px;
-
-    padding:
-      20px 18px 18px;
+    padding: 20px 18px 16px;
+    border-radius: 16px;
   }
-
 
   .Article__meta {
     gap: 8px;
-
-    margin-bottom: 12px;
-
-    font-size: 11px;
+    margin-bottom: 10px;
+    font-size: 11.5px;
   }
-
 
   .Article__title {
     font-size: 18px;
-
-    line-height: 1.4;
+    line-height: 1.38;
   }
 
-
   .Article__bottom {
-    margin-top: 19px;
-
+    margin-top: 16px;
+    padding-top: 14px;
     gap: 10px;
   }
 
-
   .Article__view {
-    font-size: 14px;
-
-    gap: 7px;
+    font-size: 13.5px;
+    gap: 6px;
   }
-
 
   .Article__view-icon {
     width: 22px;
-
     height: 22px;
-
-    font-size: 9px;
+    font-size: 9.5px;
   }
-
 
   .Article__read {
-    font-size: 11px;
+    font-size: 11.5px;
   }
 }
-
 
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 400px) {
-
   .Article__grid {
-    width:
-      calc(100% - 24px);
+    width: calc(100% - 20px);
   }
-
 
   .Article__heading {
     font-size: 26px;
   }
 
-
   .Article__card {
-    height: 455px;
+    height: 465px;
   }
-
 
   .Article__image-wrapper {
     height: 340px;
   }
 
-
   .Article__content {
-    min-height: 190px;
-
-    padding:
-      18px 16px 16px;
+    min-height: 185px;
+    padding: 16px 14px 14px;
   }
-
 
   .Article__title {
-    font-size: 17px;
+    font-size: 16.5px;
   }
-
 
   .Article__bottom {
-    margin-top: 16px;
+    margin-top: 14px;
   }
 }
-
 
 /* =========================================================
    REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   .Article *,
   .Article *::before,
   .Article *::after {
-
     animation: none !important;
-
     transition: none !important;
   }
 }

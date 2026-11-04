@@ -489,7 +489,7 @@ const Carrental = () => {
                       onChange={handleInputChange} 
                     />
                     <span>
-                      I agree to the <a href="#terms">Terms & Conditions</a> from <strong>Jagannath Explore Travel</strong>.
+                      I agree to the <a href="#terms">Terms & Conditions</a> from <strong>Shine Tour & Travel</strong>.
                     </span>
                   </label>
                 </div>

@@ -1,5 +1,36 @@
+/* =========================================================
+   LIGHT BLUE THEME - HURRY UP / DEALS SECTION
+========================================================= */
 
-* {
+:root {
+  --deal-bg-base: #f0f7ff;
+  --deal-bg-soft: #e0f2fe;
+  --deal-surface: #ffffff;
+  --deal-surface-subtle: #f8fafc;
+
+  --deal-primary: #0284c7;        /* Sky 600 */
+  --deal-primary-hover: #0369a1;  /* Sky 700 */
+  --deal-primary-dark: #0c4a6e;   /* Sky 900 */
+  --deal-accent: #0ea5e9;         /* Sky 500 */
+  --deal-accent-light: #e0f2fe;   /* Sky 100 */
+
+  --deal-text-main: #0f172a;      /* Slate 900 */
+  --deal-text-muted: #475569;     /* Slate 600 */
+  --deal-text-subtle: #64748b;    /* Slate 500 */
+  --deal-text-light: #94a3b8;     /* Slate 400 */
+
+  --deal-border: #cbd5e1;
+  --deal-border-light: #e2e8f0;
+  --deal-border-soft: #bae6fd;
+
+  --deal-shadow-sm: 0 4px 14px rgba(2, 132, 199, 0.05);
+  --deal-shadow-md: 0 16px 36px rgba(15, 23, 42, 0.08);
+  --deal-shadow-lg: 0 24px 50px rgba(2, 132, 199, 0.16);
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,10 +40,21 @@
 .hurryup-section {
   position: relative;
   width: 100%;
-  background-color: #ffffff;
-  padding: 85px 24px 105px 24px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #171d22;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(56, 189, 248, 0.16),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(2, 132, 199, 0.08),
+      transparent 35%
+    ),
+    var(--deal-bg-base);
+  padding: 90px 24px 105px 24px;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--deal-text-main);
   overflow: hidden;
 }
 
@@ -23,13 +65,14 @@
   z-index: 2;
 }
 
-/* Background Pine Tree Illustration */
+/* Background Illustration Tint */
 .bg-trees-art {
   position: absolute;
   top: 30px;
   left: 20px;
   width: 90px;
-  opacity: 0.7;
+  opacity: 0.35;
+  filter: hue-rotate(170deg) saturate(150%);
   pointer-events: none;
   z-index: 1;
 }
@@ -37,30 +80,34 @@
 /* ================= HEADER ================= */
 .hurryup-header {
   text-align: center;
-  margin-bottom: 50px;
+  max-width: 860px;
+  margin: 0 auto 52px auto;
 }
 
 .hurryup-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #5da943;
-  font-family: 'Caveat', cursive;
-  font-size: 25px;
+  color: var(--deal-primary);
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 26px;
   font-weight: 700;
   margin-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
 .badge-arrow,
 .badge-sparkle {
-  font-size: 16px;
+  font-size: 17px;
+  color: var(--deal-accent);
 }
 
 .hurryup-main-title {
-  font-size: 42px;
+  font-size: clamp(32px, 3.5vw, 44px);
   font-weight: 800;
-  color: #111827;
-  letter-spacing: -0.5px;
+  color: var(--deal-text-main);
+  letter-spacing: -1px;
+  line-height: 1.2;
 }
 
 /* ================= 3-COLUMN DEALS GRID ================= */
@@ -74,18 +121,20 @@
 /* Base Card Styling */
 .deal-card {
   position: relative;
-  border-radius: 14px;
+  border-radius: 18px;
   overflow: hidden;
-  background-color: #f3f5f2;
+  background-color: var(--deal-surface);
+  border: 1px solid var(--deal-border-light);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: var(--deal-shadow-md);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .deal-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px);
+  border-color: var(--deal-border-soft);
+  box-shadow: var(--deal-shadow-lg);
 }
 
 .card-img-container {
@@ -93,6 +142,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: var(--deal-bg-soft);
 }
 
 .deal-bg-img {
@@ -100,11 +150,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s ease;
+  transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .deal-card:hover .deal-bg-img {
-  transform: scale(1.06);
+  transform: scale(1.07);
 }
 
 /* ================= 1. LEFT CARD (TALL, 20% OFF) ================= */
@@ -117,10 +167,11 @@
   top: 14px;
   left: 14px;
   right: 14px;
-  bottom: 120px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 10px;
+  bottom: 125px;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 12px;
   pointer-events: none;
+  z-index: 1;
 }
 
 .green-torn {
@@ -128,10 +179,11 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #5da943;
+  background-color: var(--deal-primary);
   padding: 0 20px 24px 20px;
   text-align: center;
   z-index: 2;
+  box-shadow: 0 -4px 15px rgba(2, 132, 199, 0.2);
 }
 
 .torn-paper-svg {
@@ -141,29 +193,34 @@
   width: 100%;
   height: 32px;
   display: block;
+  fill: var(--deal-primary);
 }
 
 .green-torn .script-subtitle {
-  color: #ffffff;
-  font-family: 'Caveat', cursive;
+  color: var(--deal-bg-soft);
+  font-family: 'Caveat', cursive, sans-serif;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   display: block;
   margin-top: -6px;
+  letter-spacing: 0.5px;
 }
 
 .green-torn .discount-title {
-  color: #ffd43b;
+  color: #ffffff;
   font-size: 34px;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.1;
   margin: 2px 0 6px 0;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 8px rgba(12, 74, 110, 0.35);
 }
 
 .green-torn .deal-action-text {
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 700;
+  color: #f0f9ff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
 }
 
 /* ================= 2. MIDDLE COLUMN (2 CARDS) ================= */
@@ -184,9 +241,14 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #bd6a37;
+  background-color: var(--deal-primary-dark);
   padding: 0 22px 18px 22px;
   z-index: 2;
+  box-shadow: 0 -4px 15px rgba(12, 74, 110, 0.25);
+}
+
+.card-mid-top .torn-paper-svg {
+  fill: var(--deal-primary-dark);
 }
 
 .horizontal-layout {
@@ -197,9 +259,10 @@
 }
 
 .brown-torn .script-subtitle {
-  color: #fed7aa;
-  font-family: 'Caveat', cursive;
+  color: #7dd3fc;
+  font-family: 'Caveat', cursive, sans-serif;
   font-size: 22px;
+  font-weight: 700;
   display: block;
 }
 
@@ -207,36 +270,40 @@
   color: #ffffff;
   font-size: 17px;
   font-weight: 800;
+  letter-spacing: -0.3px;
 }
 
 .round-badge-disc {
-  background-color: #5da943;
+  background: linear-gradient(135deg, var(--deal-accent), var(--deal-primary));
   color: #ffffff;
-  width: 54px;
-  height: 54px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.35);
 }
 
 .round-badge-disc span {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .round-badge-disc small {
   font-size: 10px;
+  letter-spacing: 0.3px;
 }
 
 /* Card Mid Bottom */
 .card-mid-bottom {
   flex: 1;
-  background-color: #2f694d;
+  background: linear-gradient(135deg, #075985 0%, #0369a1 100%);
   flex-direction: row;
+  border: 1px solid var(--deal-border-soft);
 }
 
 .curve-right-img {
@@ -247,6 +314,8 @@
   height: 100%;
   border-radius: 65% 0 0 50% / 50% 0 0 50%;
   z-index: 1;
+  overflow: hidden;
+  box-shadow: -4px 0 15px rgba(12, 74, 110, 0.3);
 }
 
 .dark-green-panel {
@@ -261,9 +330,10 @@
 }
 
 .dark-green-panel .script-subtitle {
-  color: #fef08a;
-  font-family: 'Caveat', cursive;
+  color: #bae6fd;
+  font-family: 'Caveat', cursive, sans-serif;
   font-size: 22px;
+  font-weight: 700;
 }
 
 .panel-heading {
@@ -271,40 +341,44 @@
   font-size: 22px;
   font-weight: 800;
   margin: 2px 0 6px 0;
+  letter-spacing: -0.4px;
 }
 
 .yellow-accent {
-  color: #fca834;
+  color: #7dd3fc;
 }
 
 .panel-sub {
-  color: #e5e7eb;
-  font-size: 11px;
+  color: #e0f2fe;
+  font-size: 11.5px;
   font-weight: 600;
   margin-bottom: 14px;
 }
 
 .btn-pill-orange {
-  background-color: #fca834;
-  color: #ffffff;
+  background-color: var(--deal-surface);
+  color: var(--deal-primary-hover);
   border: none;
-  padding: 8px 22px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 700;
+  padding: 9px 22px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 800;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 12px rgba(12, 74, 110, 0.25);
+  transition: all 0.2s ease;
 }
 
 .btn-pill-orange:hover {
-  background-color: #e99522;
-  transform: translateY(-1px);
+  background-color: var(--deal-bg-soft);
+  color: var(--deal-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(12, 74, 110, 0.35);
 }
 
 /* ================= 3. RIGHT CARD (50% OFF BANNER + LAKE IMAGE) ================= */
 .card-tall-right {
   height: 480px;
-  background-color: #fca834;
+  background-color: var(--deal-primary);
 }
 
 .yellow-top-banner {
@@ -314,6 +388,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 2;
+  background-color: var(--deal-primary);
 }
 
 .torn-paper-bottom-svg {
@@ -323,43 +398,51 @@
   width: 100%;
   height: 24px;
   display: block;
+  fill: var(--deal-primary);
 }
 
 .banner-text-left .script-subtitle {
-  color: #ffffff;
-  font-family: 'Caveat', cursive;
-  font-size: 21px;
+  color: var(--deal-bg-soft);
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
   display: block;
 }
 
 .banner-heading {
   font-size: 32px;
   font-weight: 900;
-  color: #111827;
+  color: #ffffff;
   line-height: 1.1;
-  margin: 2px 0 2px 0;
+  margin: 2px 0 3px 0;
+  letter-spacing: -0.6px;
 }
 
 .banner-sub {
   font-size: 11.5px;
   font-weight: 700;
-  color: #4b5563;
+  color: #e0f2fe;
 }
 
 .btn-green-book {
-  background-color: #5da943;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: var(--deal-primary-hover);
   border: none;
-  padding: 9px 20px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 800;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(12, 74, 110, 0.2);
+  transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .btn-green-book:hover {
-  background-color: #4c8f35;
+  background-color: var(--deal-bg-soft);
+  color: var(--deal-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(12, 74, 110, 0.3);
 }
 
 .bottom-img-half {
@@ -367,10 +450,28 @@
   margin-top: auto;
 }
 
+/* ================= ACCESSIBILITY ================= */
+.btn-pill-orange:focus-visible,
+.btn-green-book:focus-visible {
+  outline: 3px solid rgba(2, 132, 199, 0.45);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deal-card,
+  .deal-bg-img,
+  .btn-pill-orange,
+  .btn-green-book {
+    transition: none;
+    animation: none;
+  }
+}
+
 /* ================= RESPONSIVE BREAKPOINTS ================= */
 @media (max-width: 1080px) {
   .deals-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .card-tall-left {
@@ -396,12 +497,19 @@
     padding: 60px 16px 70px 16px;
   }
 
+  .hurryup-header {
+    margin-bottom: 36px;
+  }
+
   .hurryup-main-title {
     font-size: 30px;
+    letter-spacing: -0.6px;
   }
 
   .deals-grid {
     grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
     gap: 20px;
   }
 
@@ -414,5 +522,11 @@
 
   .card-mid-bottom {
     min-height: 180px;
+  }
+
+  .btn-pill-orange,
+  .btn-green-book {
+    padding: 8px 18px;
+    font-size: 12px;
   }
 }

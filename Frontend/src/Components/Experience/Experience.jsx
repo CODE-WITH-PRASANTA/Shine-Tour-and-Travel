@@ -548,7 +548,7 @@ const Experience = () => {
         {/* HEADER */}
         <div className="exp-header">
           <div className="exp-header-content">
-            <span className="exp-eyebrow">JAGANNATH EXPLORE TRAVEL</span>
+            <span className="exp-eyebrow">SHINE TOUR & TRAVEL</span>
             <h1>
               Bhubaneswar Travel Agency <span>Tour Packages</span>
             </h1>
@@ -864,7 +864,7 @@ const Experience = () => {
                         <div className="exp-vehicle-title-row">
                           <div>
                             <span className="exp-vehicle-label">
-                              JAGANNATH EXPLORE
+                              Shine EXPLORE
                             </span>
                             <h3>{vehicle.name}</h3>
                           </div>

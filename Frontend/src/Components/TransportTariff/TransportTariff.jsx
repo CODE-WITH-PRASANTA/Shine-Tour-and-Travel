@@ -160,7 +160,7 @@ const TransportTariff = () => {
         ===================================================== */}
         <header className="TransportTariff-header">
           <span className="TransportTariff-tagline">
-            Jagannath Explorer Travels • Bhubaneswar, Odisha
+            Shine Tour & Travels • Bhubaneswar, Odisha
           </span>
 
           <h1 className="TransportTariff-title">
@@ -169,7 +169,7 @@ const TransportTariff = () => {
 
           <p className="TransportTariff-intro">
             Plan your local sightseeing, family trip, business journey or
-            outstation tour with <strong>Jagannath Explorer Travels</strong>.
+            outstation tour with <strong>Shine Tour & Travels</strong>.
             As a trusted <strong>Best Tour &amp; Travel Agency in Bhubaneswar
             Odisha</strong>, we provide practical vehicle options and clear
             transport tariffs for individuals, families and groups travelling
@@ -196,14 +196,14 @@ const TransportTariff = () => {
         ===================================================== */}
         <section
           className="TransportTariff-businessInfo"
-          aria-label="Jagannath Explorer Travels contact information"
+          aria-label="Shine Tour & Travels contact information"
         >
           <div className="TransportTariff-businessContent">
             <span className="TransportTariff-businessLabel">
               Tour &amp; Travel Agency in Bhubaneswar, Odisha
             </span>
 
-            <h2>Jagannath Explorer Travels</h2>
+            <h2>Shine Tour & Travels</h2>
 
             <p>
               Comfortable cars, tempo travellers and coaches for local and
@@ -243,7 +243,7 @@ const TransportTariff = () => {
           
         
           <p>
-            Jagannath Explorer Travels works as a{" "}
+            Shine Tour & Travels works as a{" "}
             <strong>Tour &amp; Travel Agency in Bhubaneswar, Odisha</strong>
             for local sightseeing, airport transfers, railway station
             transfers, family holidays, corporate travel, pilgrimage trips

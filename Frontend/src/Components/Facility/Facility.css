@@ -1,16 +1,59 @@
-* {
+/* =========================================================
+   LIGHT BLUE THEME - FACILITY SECTION
+========================================================= */
+
+:root {
+  --fac-bg-base: #f0f7ff;
+  --fac-bg-soft: #e0f2fe;
+  --fac-surface: #ffffff;
+  --fac-surface-subtle: #f8fafc;
+
+  --fac-primary: #0284c7;        /* Sky 600 */
+  --fac-primary-hover: #0369a1;  /* Sky 700 */
+  --fac-accent: #0ea5e9;         /* Sky 500 */
+  --fac-accent-light: #e0f2fe;   /* Sky 100 */
+
+  --fac-text-main: #0f172a;      /* Slate 900 */
+  --fac-text-muted: #475569;     /* Slate 600 */
+  --fac-text-subtle: #64748b;    /* Slate 500 */
+  --fac-text-light: #94a3b8;     /* Slate 400 */
+
+  --fac-border: #cbd5e1;
+  --fac-border-light: #e2e8f0;
+  --fac-border-soft: #bae6fd;
+
+  --fac-shadow-sm: 0 4px 14px rgba(2, 132, 199, 0.05);
+  --fac-shadow-md: 0 16px 36px rgba(15, 23, 42, 0.08);
+  --fac-shadow-lg: 0 24px 50px rgba(2, 132, 199, 0.16);
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 /* ================= SECTION & CONTAINER ================= */
+
 .facility-section {
   width: 100%;
-  background-color: #fbfbf9;
-  padding: 80px 24px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #171d22;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(56, 189, 248, 0.16),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(2, 132, 199, 0.08),
+      transparent 35%
+    ),
+    var(--fac-bg-base);
+  padding: 90px 24px;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: var(--fac-text-main);
   overflow: hidden;
   position: relative;
 }
@@ -19,33 +62,34 @@
   max-width: 1300px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 70px;
-  align-items: stretch;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 64px;
+  align-items: center;
 }
 
 /* ================= LEFT CONTENT & SOFT FADE BACKGROUND ================= */
+
 .facility-left-col {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  padding: 24px 0;
+  padding: 20px 0;
   z-index: 1;
 }
 
 .facility-left-col::before {
   content: '';
   position: absolute;
-  top: -10%;
-  left: -15%;
-  width: 130%;
-  height: 120%;
+  top: -12%;
+  left: -18%;
+  width: 135%;
+  height: 125%;
   background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  opacity: 0.12;
+  opacity: 0.09;
   z-index: -1;
   pointer-events: none;
 }
@@ -54,19 +98,22 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #5da943;
-  font-family: 'Caveat', cursive;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 12px;
+  color: var(--fac-primary);
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
 }
 
 .badge-arrow,
 .badge-wave {
-  font-size: 16px;
+  font-size: 17px;
+  color: var(--fac-accent);
 }
 
 /* ================= SLIDE TRANSITIONS ================= */
+
 .slide-content-wrapper {
   transition: all 0.45s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -94,52 +141,67 @@
 }
 
 .facility-title {
-  font-size: 44px;
+  font-size: clamp(32px, 3.5vw, 48px);
   font-weight: 800;
-  color: #111417;
+  color: var(--fac-text-main);
   margin-bottom: 20px;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
+  letter-spacing: -1.2px;
+  line-height: 1.15;
 }
 
 .facility-desc {
-  font-size: 14.5px;
+  font-size: 15px;
   line-height: 1.8;
-  color: #636e67;
-  margin-bottom: 32px;
-  max-width: 520px;
+  color: var(--fac-text-muted);
+  margin-bottom: 34px;
+  max-width: 530px;
 }
 
 /* 2-Column Features Grid */
 .facility-features-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 24px;
-  row-gap: 16px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 14px;
+  margin-bottom: 42px;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--fac-border-light);
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+}
+
+.feature-item:hover {
+  background: var(--fac-surface);
+  border-color: var(--fac-border-soft);
+  transform: translateY(-2px);
+  box-shadow: var(--fac-shadow-sm);
 }
 
 .bullet-dot {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: #5da943;
+  background-color: var(--fac-accent);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.22);
   flex-shrink: 0;
 }
 
 .feature-name {
   font-size: 13.5px;
   font-weight: 700;
-  color: #171d22;
+  color: var(--fac-text-main);
 }
 
 /* ================= PAGINATION ================= */
+
 .facility-pagination {
   display: inline-flex;
   align-items: center;
@@ -149,25 +211,33 @@
 }
 
 .page-arrow {
-  background: #ffffff;
-  border: 1px solid #e5e8e3;
-  color: #6a746e;
-  width: 38px;
-  height: 38px;
+  background: var(--fac-surface);
+  border: 1px solid var(--fac-border-light);
+  color: var(--fac-text-muted);
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  font-size: 13px;
+  font-size: 14px;
+  font-family: inherit;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s ease;
+  transition: all 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
+  box-shadow: var(--fac-shadow-sm);
 }
 
-.page-arrow:hover {
-  background-color: #5da943;
-  border-color: #5da943;
+.page-arrow:hover:not(:disabled) {
+  background-color: var(--fac-primary);
+  border-color: var(--fac-primary);
   color: #ffffff;
-  transform: scale(1.05);
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.3);
+}
+
+.page-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .page-numbers {
@@ -179,26 +249,33 @@
 }
 
 .num-btn {
+  background: transparent;
+  border: 0;
+  padding: 2px 4px;
+  font-family: inherit;
+  font-size: inherit;
   cursor: pointer;
-  color: #b5beb7;
+  color: var(--fac-text-light);
   transition: all 0.2s ease;
 }
 
 .num-btn:hover {
-  color: #5da943;
+  color: var(--fac-primary);
 }
 
 .num-btn.active {
-  color: #5da943;
+  color: var(--fac-primary);
   font-weight: 800;
+  position: relative;
 }
 
 .num-slash {
-  color: #d1d8d2;
-  font-size: 16px;
+  color: var(--fac-border);
+  font-size: 15px;
 }
 
 /* ================= RIGHT IMAGE COLUMN ================= */
+
 .facility-right-col {
   position: relative;
   display: flex;
@@ -210,11 +287,12 @@
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 600px;
+  min-height: 560px;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-  background-color: #1f2427;
+  box-shadow: var(--fac-shadow-lg);
+  border: 1px solid var(--fac-border-soft);
+  background-color: #0c1a29;
 }
 
 .facility-main-img {
@@ -225,7 +303,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.7s ease-in-out, transform 0.7s ease;
+  transition: opacity 0.7s ease-in-out, transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
   transform: scale(1.05);
 }
 
@@ -234,21 +312,27 @@
   transform: scale(1);
 }
 
-/* Tripadvisor Badge */
+/* Tripadvisor / Review Badge */
 .tripadvisor-badge {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  background-color: #ffffff;
-  border: 2px solid #5da943;
+  top: 26px;
+  right: 26px;
+  background-color: rgba(255, 255, 255, 0.96);
+  border: 2px solid var(--fac-primary);
   border-radius: 50%;
-  width: 86px;
-  height: 86px;
+  width: 88px;
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(8px);
   z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+.tripadvisor-badge:hover {
+  transform: scale(1.06) rotate(3deg);
 }
 
 .ta-inner {
@@ -256,42 +340,72 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 .ta-label-top {
   font-size: 7.5px;
   font-weight: 800;
-  color: #111417;
+  color: var(--fac-text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .ta-label-mid {
   font-size: 10px;
   font-weight: 900;
-  color: #111417;
+  color: var(--fac-primary-hover);
 }
 
 .ta-icon {
-  font-size: 22px;
-  color: #00af87;
+  font-size: 21px;
+  color: var(--fac-primary);
   margin: 3px 0;
 }
 
 .ta-label-bot {
   font-size: 7.5px;
   font-weight: 700;
-  color: #555e58;
+  color: var(--fac-text-subtle);
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+.page-arrow:focus-visible,
+.num-btn:focus-visible {
+  outline: 3px solid rgba(2, 132, 199, 0.45);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-content-wrapper,
+  .slide-fade-in,
+  .facility-main-img,
+  .page-arrow,
+  .tripadvisor-badge {
+    transition: none;
+    animation: none;
+  }
 }
 
 /* ================= RESPONSIVE ================= */
+
 @media (max-width: 1024px) {
+  .facility-section {
+    padding: 70px 20px;
+  }
+
   .facility-container {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 48px;
+  }
+
+  .facility-desc {
+    max-width: 100%;
   }
 
   .facility-img-wrapper {
-    min-height: 480px;
+    min-height: 460px;
   }
 }
 
@@ -301,15 +415,55 @@
   }
 
   .facility-title {
-    font-size: 32px;
+    font-size: 30px;
+    letter-spacing: -0.8px;
+    margin-bottom: 16px;
+  }
+
+  .facility-desc {
+    font-size: 13.5px;
+    line-height: 1.65;
+    margin-bottom: 26px;
   }
 
   .facility-features-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
+    margin-bottom: 30px;
   }
 
   .facility-img-wrapper {
-    min-height: 380px;
+    min-height: 360px;
+    border-radius: 18px;
+  }
+
+  .tripadvisor-badge {
+    top: 18px;
+    right: 18px;
+    width: 76px;
+    height: 76px;
+  }
+
+  .ta-icon {
+    font-size: 18px;
+  }
+
+  .page-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .page-numbers {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .facility-title {
+    font-size: 26px;
+  }
+
+  .facility-img-wrapper {
+    min-height: 310px;
   }
 }
