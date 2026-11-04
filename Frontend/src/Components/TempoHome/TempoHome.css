@@ -1,14 +1,15 @@
 /* =========================================================
-   TEMPO HOME HERO - LIGHT BLUE THEME
-   ========================================================= */
+   TEMPO HOME HERO - BLUE & WHITE THEME
+========================================================= */
 
 .tempo-home-hero {
-  --th-sky-50: #f0f9ff;
-  --th-sky-100: #e0f2fe;
-  --th-sky-200: #bae6fd;
-  --th-sky-500: #0ea5e9;
-  --th-sky-700: #0369a1;
+  --th-blue-50: #f0f9ff;
+  --th-blue-100: #e0f2fe;
+  --th-blue-200: #bae6fd;
+  --th-blue-500: #0ea5e9;
+  --th-blue-700: #0369a1;
   --th-navy: #0c4a6e;
+  --th-white: #ffffff;
 
   position: relative;
   width: 100%;
@@ -33,23 +34,19 @@
   box-sizing: border-box;
 }
 
-/* Light-blue frosted overlay */
+/* Blue + white frosted overlay */
 .tempo-home-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.55), transparent 45%),
-    linear-gradient(
-      180deg,
-      rgba(224, 242, 254, 0.82) 0%,
-      rgba(186, 230, 253, 0.88) 100%
-    );
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.6), transparent 45%),
+    linear-gradient(180deg, rgba(224, 242, 254, 0.85) 0%, rgba(186, 230, 253, 0.9) 100%);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }
 
-/* Soft wave at the bottom that blends into the next section */
+/* White curved edge blending into the next section */
 .tempo-home-hero::after {
   content: "";
   position: absolute;
@@ -58,7 +55,7 @@
   width: 100%;
   height: 60px;
   z-index: 2;
-  background: #f0f9ff;
+  background: var(--th-blue-50);
   clip-path: ellipse(75% 100% at 50% 100%);
 }
 
@@ -86,11 +83,11 @@
   font-weight: 800;
   letter-spacing: -1px;
   font-family: 'Sora', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  text-shadow: 0 2px 14px rgba(255, 255, 255, 0.6);
+  text-shadow: 0 2px 14px rgba(255, 255, 255, 0.7);
   animation: tempoTitleFloat 1s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Breadcrumb as a pill */
+/* Breadcrumb as a white pill */
 .tempo-home-breadcrumb {
   display: inline-flex;
   align-items: center;
@@ -98,8 +95,8 @@
   gap: 10px;
   margin-top: 18px;
   padding: 8px 18px;
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid var(--th-sky-200);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--th-blue-200);
   border-radius: 999px;
   box-shadow: 0 8px 24px rgba(3, 105, 161, 0.12);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -107,7 +104,7 @@
 }
 
 .tempo-home-breadcrumb-link {
-  color: var(--th-sky-700);
+  color: var(--th-blue-700);
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
@@ -115,7 +112,7 @@
 }
 
 .tempo-home-breadcrumb-link:hover {
-  color: var(--th-sky-500);
+  color: var(--th-blue-500);
 }
 
 .tempo-home-arrow {
@@ -129,6 +126,7 @@
   font-weight: 700;
 }
 
+/* Animations */
 @keyframes tempoHeroReveal {
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -144,6 +142,7 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .tempo-home-hero { min-height: 300px; }
   .tempo-home-title { font-size: clamp(32px, 7vw, 44px); }
@@ -152,6 +151,7 @@
   .tempo-home-breadcrumb-current { font-size: 14px; }
 }
 
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .tempo-home-hero,
   .tempo-home-title,

@@ -1,6 +1,6 @@
 /* =========================================================
-   SML HOME HERO - LUXURY DARK & GOLD AMBIENT THEME
-   ========================================================= */
+   SML HOME HERO - PREMIUM LIGHT BLUE AMBIENT THEME
+========================================================= */
 
 .sml-home-hero {
   position: relative;
@@ -27,17 +27,29 @@
   box-sizing: border-box;
 }
 
-/* Deep Cinematic Gradient Overlay */
+/* Blue Cinematic Gradient Overlay */
 .sml-home-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(10, 14, 23, 0.88) 0%,
-    rgba(18, 24, 38, 0.92) 50%,
-    rgba(10, 14, 23, 0.95) 100%
+    rgba(10, 63, 107, 0.85) 0%,
+    rgba(6, 105, 168, 0.72) 50%,
+    rgba(14, 165, 233, 0.6) 100%
   );
   z-index: 1;
+}
+
+/* soft light glow at the bottom for a premium fade */
+.sml-home-overlay::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45%;
+  background: linear-gradient(180deg, transparent 0%, rgba(8, 60, 105, 0.45) 100%);
+  pointer-events: none;
 }
 
 /* Animated Light Flares */
@@ -45,7 +57,7 @@
   position: absolute;
   width: 250px;
   height: 4px;
-  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.6), transparent);
+  background: linear-gradient(90deg, transparent, rgba(186, 230, 253, 0.85), transparent);
   filter: blur(2px);
   pointer-events: none;
   z-index: 2;
@@ -85,7 +97,7 @@
 /* Subtitle */
 .sml-home-subtitle {
   margin-bottom: 10px;
-  color: #c5a059;
+  color: #bae6fd;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -104,7 +116,7 @@
   font-weight: 800;
   letter-spacing: -1.2px;
   font-family: 'Sora', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 10px 30px rgba(6, 60, 110, 0.55);
 
   animation: smlElementSlideDown 0.8s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
@@ -113,10 +125,11 @@
 .sml-home-description {
   margin: 0 0 24px 0;
   max-width: 580px;
-  color: #94a3b8;
+  color: #e0f4ff;
   font-size: 15px;
   line-height: 1.5;
   font-weight: 400;
+  text-shadow: 0 2px 10px rgba(6, 60, 110, 0.4);
 
   animation: smlElementSlideDown 0.8s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
@@ -127,24 +140,26 @@
   align-items: center;
   gap: 12px;
   padding: 10px 22px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(197, 160, 89, 0.25);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 999px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(6, 60, 110, 0.3);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   animation: smlElementSlideDown 0.8s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .sml-home-breadcrumb-box:hover {
-  border-color: rgba(197, 160, 89, 0.6);
-  box-shadow: 0 15px 35px rgba(197, 160, 89, 0.15);
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 15px 35px rgba(125, 211, 252, 0.35);
 }
 
 .sml-home-breadcrumb-link {
-  color: #cbd5e1;
+  color: #e0f4ff;
   font-size: 14px;
   font-weight: 500;
   transition: color 0.2s ease;
@@ -155,12 +170,12 @@
 }
 
 .sml-home-arrow {
-  color: #c5a059;
+  color: #7dd3fc;
   font-size: 14px;
 }
 
 .sml-home-breadcrumb-current {
-  color: #f8fafc;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 600;
 }

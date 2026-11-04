@@ -21,7 +21,7 @@ import {
 
 import Nandankanan from "../../assets/Nandankanan.png";
 import Jaganathmandir from "../../assets/heroimg-2.png";
-import kalijaee from "../../assets/kalijaee.webp";
+import kalijaee from "../../assets/homehero-3.png";
 import Dhauli from "../../assets/heroimg-3.png";
 import SunTemple from "../../assets/Kohinur.webp";
 

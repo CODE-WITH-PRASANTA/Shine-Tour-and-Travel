@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Journey.css';
 
-import brazilImg from '../../assets/Lingaraja temple (1).webp';
-import italyImg from '../../assets/Silver City Boat club (1).webp';
-import newYorkImg from '../../assets/khandagiri (1).webp';
-import saudiArabImg from '../../assets/Maa Tarini Keounjhar (1).webp';
-import europeImg from '../../assets/Koraput.webp';
+import brazilImg from '../../assets/homejourny-1.png';
+import italyImg from '../../assets/homejourny-2.png';
+import newYorkImg from '../../assets/homejourny-3.png';
+import saudiArabImg from '../../assets/homejourny-4.png';
+import europeImg from '../../assets/homejourny-5.webp';
 
 const Journey = () => {
   // डिफ़ॉल्ट रूप से New York (id: 3) एक्टिव रहेगा

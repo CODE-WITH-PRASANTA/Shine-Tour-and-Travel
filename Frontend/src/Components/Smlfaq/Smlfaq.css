@@ -1,36 +1,32 @@
 /* =========================================================
    SML FAQ SECTION
-   PREMIUM BLACK & WHITE TRAVEL THEME
+   PREMIUM LIGHT BLUE TRAVEL THEME
 ========================================================= */
 
 .smlfaq-section {
-  --fq-black: #0f172a;
-  --fq-black-light: #1e293b;
+  --fq-primary: #0ea5e9;
+  --fq-primary-dark: #0b7fc4;
+  --fq-grad: linear-gradient(135deg, #22b3f0 0%, #0669a8 100%);
+
+  --fq-black: #0a3f6b;          /* navy (replaces black) */
   --fq-white: #ffffff;
-  --fq-gray-bg: #f8fafc;
-  --fq-gray-soft: #f1f5f9;
-  --fq-gray-border: #e2e8f0;
-  --fq-text-main: #0f172a;
-  --fq-text-muted: #64748b;
+  --fq-gray-bg: #f4faff;
+  --fq-gray-soft: #eaf6fe;
+  --fq-gray-border: #d3e9f8;
+  --fq-line-strong: #8fd0f3;
+  --fq-text-main: #0a3f6b;
+  --fq-text-muted: #4f7391;
 
   width: 100%;
   padding: 75px 24px;
-
-  background: var(--fq-white);
+  background:
+    radial-gradient(800px 420px at 100% 0%, rgba(125, 211, 252, 0.28), transparent 60%),
+    radial-gradient(700px 400px at 0% 100%, rgba(186, 230, 253, 0.45), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f1f8fe 100%);
   color: var(--fq-text-main);
-
   box-sizing: border-box;
   overflow: hidden;
-
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .smlfaq-section *,
@@ -56,19 +52,14 @@
 .smlfaq-header {
   max-width: 850px;
   margin: 0 auto 30px;
-
   text-align: center;
-
   animation: fqFadeInUp 0.8s ease both;
 }
 
 .smlfaq-subtitle {
   display: inline-block;
-
   margin-bottom: 11px;
-
-  color: var(--fq-black);
-
+  color: var(--fq-primary-dark);
   font-family: Georgia, serif;
   font-size: 16px;
   font-style: italic;
@@ -78,13 +69,10 @@
 .smlfaq-title {
   max-width: 850px;
   margin: 0 auto;
-
   color: var(--fq-black);
-
   font-size: clamp(31px, 4.3vw, 48px);
   line-height: 1.12;
   font-weight: 800;
-
   letter-spacing: -1.2px;
 }
 
@@ -92,47 +80,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 12px;
-
   margin-top: 20px;
 }
 
 .smlfaq-title-line span {
   width: 60px;
   height: 2px;
-
   border-radius: 10px;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--fq-black)
-  );
+  background: linear-gradient(90deg, transparent, var(--fq-primary));
 }
 
 .smlfaq-title-line span:last-child {
-  background: linear-gradient(
-    90deg,
-    var(--fq-black),
-    transparent
-  );
+  background: linear-gradient(90deg, var(--fq-primary), transparent);
 }
 
 .smlfaq-title-line i {
-  color: var(--fq-black);
-
+  color: var(--fq-primary);
   font-size: 11px;
   font-style: normal;
 }
 
 .smlfaq-description {
   max-width: 680px;
-
   margin: 20px auto 0;
-
   color: var(--fq-text-muted);
-
   font-size: 16px;
   line-height: 1.7;
   font-weight: 450;
@@ -143,22 +115,20 @@
 ========================================================= */
 
 .smlfaq-intro {
+  position: relative;
   max-width: 920px;
-
   margin: 0 auto 42px;
   padding: 28px 32px;
-
   border: 1px solid var(--fq-gray-border);
-  border-radius: 12px;
-
-  background: var(--fq-gray-bg);
+  border-left: 4px solid var(--fq-primary);
+  border-radius: 16px;
+  background: linear-gradient(160deg, #eaf6fe 0%, #f8fcff 100%);
+  box-shadow: 0 10px 28px rgba(14, 140, 214, 0.1);
 }
 
 .smlfaq-intro p {
   margin: 0 0 12px;
-
   color: var(--fq-text-muted);
-
   font-size: 15px;
   line-height: 1.75;
 }
@@ -168,7 +138,7 @@
 }
 
 .smlfaq-intro strong {
-  color: var(--fq-black);
+  color: var(--fq-primary-dark);
   font-weight: 700;
 }
 
@@ -178,10 +148,7 @@
 
 .smlfaq-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px 22px;
 }
 
@@ -191,33 +158,48 @@
 
 .smlfaq-item {
   position: relative;
-
   border: 1px solid var(--fq-gray-border);
-  border-radius: 13px;
-
+  border-radius: 16px;
   background: var(--fq-white);
-
   overflow: hidden;
+  box-shadow: 0 4px 14px rgba(14, 140, 214, 0.06);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
 
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
+.smlfaq-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--fq-grad);
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
 .smlfaq-item:hover {
-  border-color: #94a3b8;
+  border-color: var(--fq-line-strong);
+  box-shadow: 0 10px 26px rgba(14, 140, 214, 0.14);
+  transform: translateY(-2px);
+}
+
+.smlfaq-item:hover::before {
+  opacity: 1;
 }
 
 .smlfaq-item-active {
-  border-color: var(--fq-black);
+  border-color: var(--fq-primary);
+  background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+  box-shadow: 0 14px 32px rgba(14, 140, 214, 0.2);
+}
 
-  box-shadow:
-    0 14px 32px rgba(15, 23, 42, 0.09);
+.smlfaq-item-active::before {
+  opacity: 1;
 }
 
 .smlfaq-item-active:hover {
-  border-color: var(--fq-black);
+  border-color: var(--fq-primary);
 }
 
 /* =========================================================
@@ -226,34 +208,30 @@
 
 .smlfaq-question-btn {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 16px;
-
   padding: 21px 22px;
-
   border: none;
-
   background: transparent;
-
   color: inherit;
-
   cursor: pointer;
-
   text-align: left;
-
   font-family: inherit;
 }
 
 .smlfaq-question-text {
   color: var(--fq-black);
-
   font-size: 16px;
   line-height: 1.45;
   font-weight: 700;
+  transition: color 0.25s ease;
+}
+
+.smlfaq-item-active .smlfaq-question-text,
+.smlfaq-question-btn:hover .smlfaq-question-text {
+  color: var(--fq-primary-dark);
 }
 
 /* =========================================================
@@ -264,39 +242,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex-shrink: 0;
-
-  width: 32px;
-  height: 32px;
-
+  width: 34px;
+  height: 34px;
   border: 1px solid var(--fq-gray-border);
   border-radius: 50%;
-
-  transition:
-    background 0.3s ease,
-    border-color 0.3s ease;
+  background: var(--fq-gray-soft);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .smlfaq-icon {
   width: 16px;
   height: 16px;
-
   color: var(--fq-black);
+  transition: transform 0.35s cubic-bezier(0.4, 0.2, 0.2, 1), color 0.3s ease;
+}
 
-  transition:
-    transform 0.35s cubic-bezier(0.4, 0.2, 0.2, 1);
+.smlfaq-question-btn:hover .smlfaq-icon-wrapper {
+  border-color: var(--fq-primary);
 }
 
 .smlfaq-item-active .smlfaq-icon-wrapper {
-  border-color: var(--fq-black);
-
-  background: var(--fq-black);
+  border-color: transparent;
+  background: var(--fq-grad);
+  box-shadow: 0 8px 18px rgba(6, 105, 168, 0.35);
 }
 
 .smlfaq-item-active .smlfaq-icon {
   color: var(--fq-white);
-
   transform: rotate(180deg);
 }
 
@@ -306,11 +279,8 @@
 
 .smlfaq-answer-wrapper {
   display: grid;
-
   grid-template-rows: 0fr;
-
-  transition:
-    grid-template-rows 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
 .smlfaq-item-active .smlfaq-answer-wrapper {
@@ -322,12 +292,10 @@
 }
 
 .smlfaq-answer-text {
-  margin: 0;
-
-  padding: 0 22px 22px;
-
+  margin: 0 22px 22px;
+  padding: 14px 0 0;
+  border-top: 1px dashed var(--fq-line-strong);
   color: var(--fq-text-muted);
-
   font-size: 14.5px;
   line-height: 1.7;
   font-weight: 450;
@@ -338,15 +306,33 @@
 ========================================================= */
 
 .smlfaq-bottom-content {
+  position: relative;
+  overflow: hidden;
   max-width: 1000px;
-
   margin: 55px auto 0;
   padding: 36px 40px;
-
   border: 1px solid var(--fq-gray-border);
-  border-radius: 14px;
+  border-radius: 20px;
+  background: linear-gradient(160deg, #eaf6fe 0%, #ffffff 100%);
+  box-shadow: 0 16px 38px rgba(14, 140, 214, 0.14);
+}
 
-  background: var(--fq-gray-bg);
+.smlfaq-bottom-content::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: #cfe8fb;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.smlfaq-bottom-content > * {
+  position: relative;
+  z-index: 1;
 }
 
 .smlfaq-bottom-heading {
@@ -355,35 +341,26 @@
 
 .smlfaq-bottom-label {
   display: block;
-
   margin-bottom: 8px;
-
-  color: var(--fq-text-muted);
-
+  color: var(--fq-primary-dark);
   font-size: 11px;
   font-weight: 800;
-
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 
 .smlfaq-bottom-heading h2 {
   margin: 0;
-
   color: var(--fq-black);
-
   font-size: clamp(25px, 3vw, 34px);
   line-height: 1.2;
   font-weight: 800;
-
   letter-spacing: -0.6px;
 }
 
 .smlfaq-bottom-content > p {
   margin: 0 0 13px;
-
   color: var(--fq-text-muted);
-
   font-size: 15px;
   line-height: 1.75;
 }
@@ -393,7 +370,7 @@
 }
 
 .smlfaq-bottom-content strong {
-  color: var(--fq-black);
+  color: var(--fq-primary-dark);
   font-weight: 700;
 }
 
@@ -404,41 +381,29 @@
 .smlfaq-destination-list {
   display: flex;
   flex-wrap: wrap;
-
   gap: 9px;
 }
 
 .smlfaq-destination-list span {
   display: inline-flex;
   align-items: center;
-
   min-height: 34px;
-
-  padding: 6px 13px;
-
+  padding: 6px 15px;
   border: 1px solid var(--fq-gray-border);
-  border-radius: 5px;
-
+  border-radius: 999px;
   background: var(--fq-white);
-
   color: var(--fq-black);
-
   font-size: 12px;
   font-weight: 700;
-
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .smlfaq-destination-list span:hover {
-  border-color: var(--fq-black);
-
-  background: var(--fq-black);
+  border-color: transparent;
+  background: var(--fq-grad);
   color: var(--fq-white);
-
   transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(14, 165, 233, 0.3);
 }
 
 /* =========================================================
@@ -446,15 +411,8 @@
 ========================================================= */
 
 @keyframes fqFadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* =========================================================
@@ -462,11 +420,7 @@
 ========================================================= */
 
 @media (max-width: 860px) {
-
-  .smlfaq-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .smlfaq-grid { grid-template-columns: 1fr; }
 }
 
 /* =========================================================
@@ -474,19 +428,14 @@
 ========================================================= */
 
 @media (max-width: 640px) {
-
-  .smlfaq-section {
-    padding: 50px 16px;
-  }
+  .smlfaq-section { padding: 50px 16px; }
 
   .smlfaq-title {
     font-size: 31px;
     letter-spacing: -0.7px;
   }
 
-  .smlfaq-description {
-    font-size: 14.5px;
-  }
+  .smlfaq-description { font-size: 14.5px; }
 
   .smlfaq-intro {
     margin-bottom: 30px;
@@ -498,17 +447,9 @@
     line-height: 1.7;
   }
 
-  .smlfaq-grid {
-    gap: 13px;
-  }
-
-  .smlfaq-question-btn {
-    padding: 18px;
-  }
-
-  .smlfaq-question-text {
-    font-size: 14.5px;
-  }
+  .smlfaq-grid { gap: 13px; }
+  .smlfaq-question-btn { padding: 18px; }
+  .smlfaq-question-text { font-size: 14.5px; }
 
   .smlfaq-icon-wrapper {
     width: 30px;
@@ -516,8 +457,7 @@
   }
 
   .smlfaq-answer-text {
-    padding: 0 18px 18px;
-
+    margin: 0 18px 18px;
     font-size: 13.8px;
     line-height: 1.7;
   }
@@ -525,16 +465,11 @@
   .smlfaq-bottom-content {
     margin-top: 38px;
     padding: 25px 20px;
+    border-radius: 16px;
   }
 
-  .smlfaq-bottom-heading h2 {
-    font-size: 26px;
-  }
-
-  .smlfaq-bottom-content > p {
-    font-size: 14px;
-  }
-
+  .smlfaq-bottom-heading h2 { font-size: 26px; }
+  .smlfaq-bottom-content > p { font-size: 14px; }
 }
 
 /* =========================================================
@@ -542,37 +477,23 @@
 ========================================================= */
 
 @media (max-width: 400px) {
-
-  .smlfaq-section {
-    padding: 42px 13px;
-  }
-
-  .smlfaq-title {
-    font-size: 28px;
-  }
-
-  .smlfaq-title-line span {
-    width: 42px;
-  }
+  .smlfaq-section { padding: 42px 13px; }
+  .smlfaq-title { font-size: 28px; }
+  .smlfaq-title-line span { width: 42px; }
 
   .smlfaq-question-btn {
     gap: 10px;
     padding: 16px;
   }
 
-  .smlfaq-question-text {
-    font-size: 14px;
-  }
+  .smlfaq-question-text { font-size: 14px; }
 
   .smlfaq-answer-text {
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
-  .smlfaq-destination-list {
-    gap: 7px;
-  }
-
+  .smlfaq-destination-list { gap: 7px; }
 }
 
 /* =========================================================
@@ -580,12 +501,12 @@
 ========================================================= */
 
 .smlfaq-question-btn:focus-visible {
-  outline: 2px solid var(--fq-black);
-  outline-offset: -2px;
+  outline: 3px solid rgba(14, 165, 233, 0.4);
+  outline-offset: -3px;
+  border-radius: 16px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   .smlfaq-section *,
   .smlfaq-section *::before,
   .smlfaq-section *::after {
@@ -593,5 +514,4 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-
 }

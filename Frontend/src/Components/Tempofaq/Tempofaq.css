@@ -1,19 +1,20 @@
 /* =========================================================
-   COMPACT & CLEAN FAQ THEME
+   TEMPO FAQ PAGE - BLUE & WHITE THEME
 ========================================================= */
 
 .tempofaq-page {
-  --tf-black: #0f172a;
+  --tf-navy: #0c4a6e;
+  --tf-blue: #0369a1;
+  --tf-blue-bright: #0ea5e9;
   --tf-white: #ffffff;
-  --tf-gray-bg: #f8fafc;
-  --tf-gray-border: #e2e8f0;
-  --tf-text-muted: #64748b;
-  --tf-accent: #f97316;
+  --tf-gray-bg: #f0f9ff;
+  --tf-gray-border: #bae6fd;
+  --tf-text-muted: #4b6a88;
 
   width: 100%;
   min-height: 100vh;
-  background: var(--tf-gray-bg);
-  color: var(--tf-black);
+  background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 280px, #f0f9ff 100%);
+  color: var(--tf-navy);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   box-sizing: border-box;
 }
@@ -30,7 +31,7 @@
   margin: 0 auto;
 }
 
-/* HEADER */
+/* ---------- HEADER ---------- */
 .tempofaq-header {
   padding: 40px 16px 20px;
   text-align: center;
@@ -39,7 +40,7 @@
 .tempofaq-subtitle {
   display: inline-block;
   margin-bottom: 6px;
-  color: var(--tf-accent);
+  color: var(--tf-blue-bright);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1.2px;
@@ -48,6 +49,7 @@
 
 .tempofaq-title {
   margin: 0 0 8px;
+  color: var(--tf-navy);
   font-size: clamp(24px, 3.5vw, 36px);
   font-weight: 800;
   letter-spacing: -0.8px;
@@ -61,10 +63,8 @@
   line-height: 1.5;
 }
 
-/* INTRO */
-.tempofaq-intro-section {
-  padding: 15px 16px 25px;
-}
+/* ---------- INTRO ---------- */
+.tempofaq-intro-section { padding: 15px 16px 25px; }
 
 .tempofaq-intro-card {
   display: grid;
@@ -74,12 +74,14 @@
   background: var(--tf-white);
   border: 1px solid var(--tf-gray-border);
   border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.08);
 }
 
 .tempofaq-intro-content h2,
 .tempofaq-section-heading h2,
 .tempofaq-cta-content h2 {
   margin: 0 0 8px;
+  color: var(--tf-navy);
   font-size: clamp(18px, 2vw, 24px);
   font-weight: 800;
   letter-spacing: -0.4px;
@@ -88,7 +90,7 @@
 .tempofaq-section-label {
   display: inline-block;
   margin-bottom: 4px;
-  color: var(--tf-accent);
+  color: var(--tf-blue-bright);
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 1.1px;
@@ -102,10 +104,10 @@
   line-height: 1.5;
 }
 
-/* BUSINESS BOX */
+/* ---------- BUSINESS BOX ---------- */
 .tempofaq-business-box {
   padding: 18px;
-  background: var(--tf-black);
+  background: linear-gradient(135deg, var(--tf-blue-bright) 0%, var(--tf-blue) 100%);
   border-radius: 10px;
   color: var(--tf-white);
 }
@@ -127,18 +129,14 @@
   align-items: flex-start;
   gap: 8px;
   margin-bottom: 10px;
-  color: #cbd5e1;
+  color: #e0f2fe;
   font-size: 12px;
   line-height: 1.4;
 }
 
-.tempofaq-business-row:last-child {
-  margin-bottom: 0;
-}
+.tempofaq-business-row:last-child { margin-bottom: 0; }
 
-.tempofaq-business-icon {
-  flex-shrink: 0;
-}
+.tempofaq-business-icon { flex-shrink: 0; }
 
 .tempofaq-phone-links {
   display: flex;
@@ -153,14 +151,10 @@
   font-weight: 700;
 }
 
-.tempofaq-phone-links a:hover {
-  color: #fdba74;
-}
+.tempofaq-phone-links a:hover { color: var(--tf-gray-border); }
 
-/* FAQ SECTION */
-.tempofaq-content-section {
-  padding: 20px 16px 40px;
-}
+/* ---------- FAQ SECTION ---------- */
+.tempofaq-content-section { padding: 20px 16px 40px; }
 
 .tempofaq-section-heading {
   max-width: 500px;
@@ -179,15 +173,15 @@
   border: 1px solid var(--tf-gray-border);
   border-radius: 8px;
   overflow: hidden;
-  transition: border-color 0.2s ease;
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.08);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.tempofaq-card:hover {
-  border-color: #94a3b8;
-}
+.tempofaq-card:hover { border-color: #7dd3fc; }
 
 .tempofaq-card-active {
-  border-color: var(--tf-black);
+  border-color: var(--tf-blue-bright);
+  box-shadow: 0 10px 28px rgba(14, 165, 233, 0.18);
 }
 
 .tempofaq-card-question {
@@ -199,21 +193,22 @@
   padding: 12px 16px;
   border: none;
   background: transparent;
-  color: var(--tf-black);
+  color: var(--tf-navy);
   cursor: pointer;
   text-align: left;
   font-size: 13px;
   font-weight: 700;
 }
 
+.tempofaq-card-active .tempofaq-card-question { color: var(--tf-blue); }
+
 .tempofaq-icon-wrapper {
+  color: var(--tf-blue-bright);
   font-size: 10px;
   transition: transform 0.25s ease;
 }
 
-.tempofaq-card-active .tempofaq-icon-wrapper {
-  transform: rotate(180deg);
-}
+.tempofaq-card-active .tempofaq-icon-wrapper { transform: rotate(180deg); }
 
 .tempofaq-card-answer-wrapper {
   max-height: 0;
@@ -221,9 +216,7 @@
   transition: max-height 0.25s ease;
 }
 
-.tempofaq-card-answer {
-  padding: 0 16px 14px;
-}
+.tempofaq-card-answer { padding: 0 16px 14px; }
 
 .tempofaq-card-answer p {
   margin: 0;
@@ -234,10 +227,8 @@
   line-height: 1.5;
 }
 
-/* CTA SECTION */
-.tempofaq-cta-section {
-  padding: 0 16px 50px;
-}
+/* ---------- CTA ---------- */
+.tempofaq-cta-section { padding: 0 16px 50px; }
 
 .tempofaq-cta {
   display: flex;
@@ -245,18 +236,15 @@
   justify-content: space-between;
   gap: 20px;
   padding: 24px;
-  background: var(--tf-black);
+  background: linear-gradient(135deg, var(--tf-blue-bright) 0%, var(--tf-blue) 100%);
   border-radius: 12px;
   color: var(--tf-white);
+  box-shadow: 0 18px 40px rgba(3, 105, 161, 0.25);
 }
 
-.tempofaq-cta-content {
-  max-width: 500px;
-}
+.tempofaq-cta-content { max-width: 500px; }
 
-.tempofaq-cta-content .tempofaq-section-label {
-  color: #fb923c;
-}
+.tempofaq-cta-content .tempofaq-section-label { color: var(--tf-gray-border); }
 
 .tempofaq-cta-content h2 {
   margin-bottom: 6px;
@@ -265,13 +253,14 @@
 
 .tempofaq-cta-content p {
   margin: 0;
-  color: #cbd5e1;
+  color: #e0f2fe;
   font-size: 13px;
   line-height: 1.5;
 }
 
 .tempofaq-cta-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -283,20 +272,26 @@
   padding: 0 14px;
   border-radius: 6px;
   background: var(--tf-white);
-  color: var(--tf-black);
+  color: var(--tf-blue);
   text-decoration: none;
   font-size: 12.5px;
   font-weight: 800;
   white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .tempofaq-call-button-light {
   background: transparent;
   color: var(--tf-white);
-  border: 1px solid var(--tf-white);
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* RESPONSIVE */
+.tempofaq-call-button-light:hover {
+  background: var(--tf-white);
+  color: var(--tf-blue);
+}
+
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 800px) {
   .tempofaq-intro-card,
   .tempofaq-grid,
@@ -305,7 +300,6 @@
     flex-direction: column;
     align-items: stretch;
   }
-  .tempofaq-cta-actions {
-    flex-direction: column;
-  }
+
+  .tempofaq-cta-actions { flex-direction: column; }
 }

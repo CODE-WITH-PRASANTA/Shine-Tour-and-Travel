@@ -1,36 +1,35 @@
 /* =========================================================
    SML BUS SECTION
-   PREMIUM BLACK / WHITE / BLUE THEME
+   PREMIUM LIGHT BLUE THEME
 ========================================================= */
 
 .smlbus-section {
-  --sb-primary: #20a6df;
-  --sb-primary-dark: #1189bd;
-  --sb-primary-soft: #eef9fe;
+  --sb-primary: #0ea5e9;
+  --sb-primary-dark: #0b7fc4;
+  --sb-primary-soft: #eaf6fe;
+  --sb-grad: linear-gradient(135deg, #22b3f0 0%, #0669a8 100%);
 
-  --sb-black: #000000;
+  --sb-navy: #0a3f6b;
   --sb-white: #ffffff;
 
-  --sb-gray-light: #f8f9fa;
-  --sb-gray-border: #e5e7eb;
-  --sb-gray-border-light: #eef1f4;
+  --sb-gray-light: #f4faff;
+  --sb-gray-border: #d3e9f8;
+  --sb-gray-border-light: #e6f4fd;
+  --sb-line-strong: #8fd0f3;
 
-  --sb-text-main: #111827;
-  --sb-text-dark: #1f2937;
-  --sb-text-muted: #6b7280;
+  --sb-text-main: #0a3f6b;
+  --sb-text-dark: #123f66;
+  --sb-text-muted: #4f7391;
 
   width: 100%;
   min-height: 100vh;
   padding: 70px 24px 80px;
-  background: #ffffff;
+  background:
+    radial-gradient(800px 420px at 100% 0%, rgba(125, 211, 252, 0.28), transparent 60%),
+    radial-gradient(700px 400px at 0% 100%, rgba(186, 230, 253, 0.45), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f1f8fe 100%);
   color: var(--sb-text-main);
-  font-family:
-    "Inter",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
   position: relative;
@@ -67,7 +66,7 @@
 .smlbus-subtitle {
   display: block;
   margin-bottom: 9px;
-  color: var(--sb-primary);
+  color: var(--sb-primary-dark);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -96,21 +95,13 @@
 
 .smlbus-title-divider span {
   width: 44px;
-  height: 1px;
+  height: 2px;
   border-radius: 10px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--sb-primary)
-  );
+  background: linear-gradient(90deg, transparent, var(--sb-primary));
 }
 
 .smlbus-title-divider span:last-child {
-  background: linear-gradient(
-    90deg,
-    var(--sb-primary),
-    transparent
-  );
+  background: linear-gradient(90deg, var(--sb-primary), transparent);
 }
 
 .smlbus-title-divider i {
@@ -138,19 +129,22 @@
 ========================================================= */
 
 .smlbus-seo-content {
+  position: relative;
   max-width: 1080px;
   margin: 0 auto 32px;
   padding: 27px 30px;
-  background: #f8fcfe;
-  border: 1px solid #e0f0f6;
-  border-radius: 14px;
+  background: linear-gradient(160deg, #eaf6fe 0%, #f8fcff 100%);
+  border: 1px solid var(--sb-gray-border);
+  border-left: 4px solid var(--sb-primary);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(14, 140, 214, 0.1);
 }
 
 .smlbus-seo-label,
 .smlbus-bottom-label {
   display: block;
   margin-bottom: 6px;
-  color: var(--sb-primary);
+  color: var(--sb-primary-dark);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.2px;
@@ -181,7 +175,7 @@
 
 .smlbus-seo-content strong,
 .smlbus-bottom-content strong {
-  color: var(--sb-text-dark);
+  color: var(--sb-primary-dark);
   font-weight: 600;
 }
 
@@ -218,11 +212,10 @@
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px -12px rgba(14, 140, 214, 0.28);
   transform-style: preserve-3d;
-  transition:
-    transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
 .smlbus-card-inner.is-flipped {
@@ -241,27 +234,22 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-
   background: var(--sb-white);
   border: 1px solid var(--sb-gray-border);
-  border-radius: 16px;
-
+  border-radius: 18px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .smlbus-card-face:hover {
   border-color: var(--sb-primary);
-  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 18px 40px -12px rgba(14, 140, 214, 0.35);
 }
 
 .smlbus-card-back {
   padding: 24px;
-  background: var(--sb-gray-light);
+  background: linear-gradient(180deg, #f4faff 0%, #eaf6fe 100%);
   transform: rotateY(180deg);
 }
 
@@ -273,14 +261,11 @@
   position: relative;
   width: 100%;
   height: 220px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 12px;
-
-  background: #f3f4f6;
+  background: linear-gradient(160deg, #eaf6fe 0%, #d6ecfb 100%);
   overflow: hidden;
 }
 
@@ -300,18 +285,15 @@
   position: absolute;
   top: 14px;
   right: 14px;
-
-  padding: 5px 10px;
-
-  background: var(--sb-black);
+  padding: 5px 11px;
+  background: var(--sb-grad);
   color: var(--sb-white);
-
   border-radius: 999px;
-
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+  box-shadow: 0 6px 14px rgba(6, 105, 168, 0.3);
 }
 
 /* =========================================================
@@ -340,11 +322,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-
   margin-bottom: 13px;
   padding-bottom: 11px;
-
-  border-bottom: 1px dashed var(--sb-gray-border);
+  border-bottom: 1px dashed var(--sb-line-strong);
 }
 
 .smlbus-back-header .smlbus-card-title {
@@ -368,11 +348,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-
   padding-bottom: 8px;
-
   border-bottom: 1px solid var(--sb-gray-border);
-
   font-size: 12.5px;
   line-height: 1.45;
 }
@@ -401,16 +378,13 @@
 }
 
 .smlbus-feat-chip {
-  padding: 5px 8px;
-
-  background: var(--sb-white);
+  padding: 5px 9px;
+  background: var(--sb-primary-soft);
   border: 1px solid var(--sb-gray-border);
-  border-radius: 6px;
-
-  color: var(--sb-text-muted);
-
+  border-radius: 999px;
+  color: var(--sb-primary-dark);
   font-size: 10.5px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* =========================================================
@@ -422,10 +396,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-
   margin-top: auto;
   padding-top: 13px;
-
   border-top: 1px solid var(--sb-gray-border);
 }
 
@@ -450,55 +422,40 @@
 .smlbus-action-btn,
 .smlbus-book-now-btn {
   border: none;
-  border-radius: 9px;
-  padding: 10px 15px;
-
-  background: var(--sb-black);
+  border-radius: 999px;
+  padding: 10px 17px;
+  background: var(--sb-grad);
   color: var(--sb-white);
-
   font-size: 12px;
   font-weight: 700;
-
   cursor: pointer;
-
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  box-shadow: 0 8px 18px rgba(14, 165, 233, 0.28);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .smlbus-action-btn:hover,
 .smlbus-book-now-btn:hover {
-  background: var(--sb-primary);
-  box-shadow: 0 7px 18px rgba(32, 166, 223, 0.2);
+  background: var(--sb-navy);
+  box-shadow: 0 10px 22px rgba(10, 63, 107, 0.3);
   transform: translateY(-2px);
 }
 
 .smlbus-close-btn {
   flex-shrink: 0;
-
-  padding: 5px 10px;
-
+  padding: 5px 11px;
   background: var(--sb-white);
   border: 1px solid var(--sb-gray-border);
-  border-radius: 8px;
-
+  border-radius: 999px;
   color: var(--sb-text-muted);
-
   font-size: 11px;
   font-weight: 600;
-
   cursor: pointer;
-
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .smlbus-close-btn:hover {
-  background: var(--sb-black);
-  border-color: var(--sb-black);
+  background: var(--sb-navy);
+  border-color: var(--sb-navy);
   color: var(--sb-white);
 }
 
@@ -515,23 +472,15 @@
 }
 
 .smlbus-page-btn {
-  padding: 9px 18px;
-
+  padding: 9px 20px;
   background: var(--sb-white);
   border: 1px solid var(--sb-gray-border);
-  border-radius: 8px;
-
+  border-radius: 999px;
   color: var(--sb-text-main);
-
   font-size: 12px;
   font-weight: 600;
-
   cursor: pointer;
-
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .smlbus-page-btn:hover:not(:disabled) {
@@ -560,12 +509,10 @@
   max-width: 1080px;
   margin: 32px auto 0;
   padding: 28px 30px;
-
-  background: var(--sb-white);
+  background: linear-gradient(160deg, #ffffff 0%, #eaf6fe 100%);
   border: 1px solid var(--sb-gray-border);
-  border-radius: 14px;
-
-  box-shadow: 0 7px 24px rgba(15, 23, 42, 0.035);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(14, 140, 214, 0.12);
 }
 
 .smlbus-contact-buttons {
@@ -579,31 +526,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  min-height: 41px;
-  padding: 0 17px;
-
-  background: var(--sb-primary);
-  border: 1px solid var(--sb-primary);
-  border-radius: 8px;
-
+  min-height: 42px;
+  padding: 0 20px;
+  background: var(--sb-grad);
+  border: 1px solid transparent;
+  border-radius: 999px;
   color: var(--sb-white);
-
   font-size: 12px;
   font-weight: 700;
-
   text-decoration: none;
-
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  box-shadow: 0 8px 18px rgba(14, 165, 233, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .smlbus-contact-buttons a:hover {
-  background: var(--sb-primary-dark);
-  border-color: var(--sb-primary-dark);
-  box-shadow: 0 7px 18px rgba(32, 166, 223, 0.2);
+  background: var(--sb-navy);
+  box-shadow: 0 10px 22px rgba(10, 63, 107, 0.3);
   transform: translateY(-2px);
 }
 
@@ -637,28 +575,18 @@
 .smlbus-arrow-btn {
   width: 42px;
   height: 42px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: 1px solid var(--sb-gray-border);
   border-radius: 50%;
-
   background: var(--sb-white);
-  color: var(--sb-black);
-
+  color: var(--sb-navy);
   font-size: 21px;
   line-height: 1;
-
   cursor: pointer;
-
-  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.15);
-
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+  box-shadow: 0 6px 16px -6px rgba(14, 140, 214, 0.35);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .smlbus-arrow-btn:hover:not(:disabled) {
@@ -681,19 +609,12 @@
 .smlbus-dot {
   width: 8px;
   height: 8px;
-
   padding: 0;
-
   border: none;
   border-radius: 50%;
-
   background: var(--sb-gray-border);
-
   cursor: pointer;
-
-  transition:
-    width 0.3s ease,
-    background-color 0.3s ease;
+  transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .smlbus-dot-active {
@@ -705,13 +626,10 @@
 .smlbus-mobile-counter {
   display: block;
   margin-top: 11px;
-
   color: var(--sb-text-muted);
-
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.5px;
-
   text-align: center;
 }
 
@@ -723,38 +641,27 @@
   position: fixed;
   inset: 0;
   z-index: 1000;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 16px;
-
-  background: rgba(15, 23, 42, 0.65);
-
+  background: rgba(10, 63, 107, 0.55);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
-
   animation: sbOverlayFade 0.25s ease both;
 }
 
 .smlbus-modal-content {
   position: relative;
-
   width: 100%;
   max-width: 580px;
   max-height: calc(100vh - 32px);
-
   overflow-y: auto;
-
   padding: 32px;
-
-  background: var(--sb-white);
-  border: 1px solid rgba(229, 231, 235, 0.8);
-  border-radius: 20px;
-
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.3);
-
+  background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+  border: 1px solid var(--sb-gray-border);
+  border-radius: 22px;
+  box-shadow: 0 28px 64px -16px rgba(6, 60, 110, 0.4);
   animation: sbModalPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
@@ -763,47 +670,33 @@
   top: 14px;
   right: 14px;
   z-index: 10;
-
-  width: 31px;
-  height: 31px;
-
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: none;
   border-radius: 50%;
-
-  background: #f3f4f6;
-  color: #6b7280;
-
+  background: var(--sb-primary-soft);
+  color: var(--sb-primary-dark);
   font-size: 13px;
-
   cursor: pointer;
-
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .smlbus-modal-close:hover {
-  background: var(--sb-black);
+  background: var(--sb-navy);
   color: var(--sb-white);
   transform: rotate(90deg);
 }
 
 .smlbus-modal-heading {
   margin: 0 0 22px;
-
   color: var(--sb-text-main);
-
   font-size: 23px;
   font-weight: 800;
   line-height: 1.3;
-
   text-align: center;
-
   font-family: "Sora", "Inter", sans-serif;
 }
 
@@ -811,24 +704,19 @@
   display: flex;
   align-items: center;
   gap: 14px;
-
   margin-bottom: 20px;
   padding: 10px 14px;
-
-  background: var(--sb-gray-light);
+  background: var(--sb-primary-soft);
   border: 1px solid var(--sb-gray-border);
-  border-radius: 11px;
+  border-radius: 12px;
 }
 
 .smlbus-selected-vehicle-banner img {
   width: 70px;
   height: 45px;
-
   padding: 2px;
-
   background: var(--sb-white);
   border-radius: 6px;
-
   object-fit: contain;
 }
 
@@ -855,9 +743,7 @@
 .smlbus-form-group label {
   display: block;
   margin-bottom: 6px;
-
-  color: #374151;
-
+  color: var(--sb-text-dark);
   font-size: 12px;
   font-weight: 600;
 }
@@ -865,29 +751,21 @@
 .smlbus-form-group input,
 .smlbus-form-group textarea {
   width: 100%;
-
   padding: 11px 13px;
-
-  border: 1px solid #d1d5db;
-  border-radius: 9px;
-
+  border: 1px solid #c4e2f6;
+  border-radius: 10px;
   background: #ffffff;
-  color: #111827;
-
+  color: var(--sb-text-main);
   outline: none;
-
   font-family: inherit;
   font-size: 13px;
-
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .smlbus-form-group input:focus,
 .smlbus-form-group textarea:focus {
   border-color: var(--sb-primary);
-  box-shadow: 0 0 0 3px rgba(32, 166, 223, 0.1);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.16);
 }
 
 .smlbus-form-group textarea {
@@ -907,11 +785,8 @@
   position: absolute;
   top: 50%;
   right: 13px;
-
-  color: #9ca3af;
-
+  color: #7aa9c9;
   font-size: 15px;
-
   transform: translateY(-50%);
   pointer-events: none;
 }
@@ -922,9 +797,7 @@
 
 .smlbus-checkbox-row {
   margin: 18px 0;
-
-  color: #4b5563;
-
+  color: var(--sb-text-muted);
   font-size: 12px;
   line-height: 1.6;
 }
@@ -939,17 +812,14 @@
 .smlbus-checkbox-row input[type="checkbox"] {
   width: 16px;
   height: 16px;
-
   flex: 0 0 16px;
-
   margin-top: 2px;
-
   accent-color: var(--sb-primary);
   cursor: pointer;
 }
 
 .smlbus-link-text {
-  color: var(--sb-primary);
+  color: var(--sb-primary-dark);
   font-weight: 600;
 }
 
@@ -961,7 +831,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 12px;
   margin-top: 22px;
 }
@@ -973,22 +842,14 @@
 .smlbus-action-submit-btn,
 .smlbus-submit-btn,
 .smlbus-prev-btn {
-  min-height: 43px;
-
+  min-height: 44px;
   border: none;
   border-radius: 999px;
-
-  padding: 0 24px;
-
+  padding: 0 26px;
   font-size: 13px;
   font-weight: 700;
-
   cursor: pointer;
-
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .smlbus-action-submit-btn,
@@ -997,25 +858,27 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-
-  background: var(--sb-primary);
+  background: var(--sb-grad);
   color: var(--sb-white);
+  box-shadow: 0 10px 22px rgba(14, 165, 233, 0.32);
 }
 
 .smlbus-action-submit-btn:hover,
 .smlbus-submit-btn:hover {
-  background: var(--sb-primary-dark);
-  box-shadow: 0 7px 18px rgba(32, 166, 223, 0.2);
+  background: var(--sb-navy);
+  box-shadow: 0 12px 26px rgba(10, 63, 107, 0.34);
   transform: translateY(-1px);
 }
 
 .smlbus-prev-btn {
-  background: var(--sb-black);
-  color: var(--sb-white);
+  background: var(--sb-primary-soft);
+  border: 1px solid var(--sb-gray-border);
+  color: var(--sb-navy);
 }
 
 .smlbus-prev-btn:hover {
-  opacity: 0.85;
+  background: var(--sb-navy);
+  color: var(--sb-white);
   transform: translateY(-1px);
 }
 
@@ -1024,49 +887,23 @@
 ========================================================= */
 
 @keyframes sbHeaderReveal {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes sbOverlayFade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes sbModalPop {
-  from {
-    opacity: 0;
-    transform: scale(0.9) translateY(15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
+  from { opacity: 0; transform: scale(0.9) translateY(15px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 @keyframes sbCardSlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(14px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(14px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 /* =========================================================
@@ -1084,13 +921,8 @@
 ========================================================= */
 
 @media (max-width: 768px) {
-  .smlbus-section {
-    padding: 45px 16px 60px;
-  }
-
-  .smlbus-header-area {
-    margin-bottom: 27px;
-  }
+  .smlbus-section { padding: 45px 16px 60px; }
+  .smlbus-header-area { margin-bottom: 27px; }
 
   .smlbus-subtitle {
     font-size: 10px;
@@ -1107,23 +939,14 @@
     line-height: 1.7;
   }
 
-  .smlbus-desktop-grid-wrapper {
-    display: none;
-  }
-
-  .smlbus-mobile-slider-wrapper {
-    display: block;
-  }
+  .smlbus-desktop-grid-wrapper { display: none; }
+  .smlbus-mobile-slider-wrapper { display: block; }
 
   .smlbus-seo-content,
-  .smlbus-bottom-content {
-    padding: 21px 18px;
-  }
+  .smlbus-bottom-content { padding: 21px 18px; }
 
   .smlbus-seo-content h2,
-  .smlbus-bottom-content h2 {
-    font-size: 19px;
-  }
+  .smlbus-bottom-content h2 { font-size: 19px; }
 
   .smlbus-seo-content p,
   .smlbus-bottom-content p {
@@ -1131,9 +954,7 @@
     line-height: 1.7;
   }
 
-  .smlbus-card-wrapper {
-    height: 480px;
-  }
+  .smlbus-card-wrapper { height: 480px; }
 
   .smlbus-modal-content {
     max-width: 390px;
@@ -1141,9 +962,7 @@
     border-radius: 18px;
   }
 
-  .smlbus-modal-heading {
-    font-size: 20px;
-  }
+  .smlbus-modal-heading { font-size: 20px; }
 }
 
 /* =========================================================
@@ -1156,83 +975,46 @@
     gap: 0;
   }
 
-  .smlbus-contact-buttons {
-    flex-direction: column;
-  }
+  .smlbus-contact-buttons { flex-direction: column; }
+  .smlbus-contact-buttons a { width: 100%; }
 
-  .smlbus-contact-buttons a {
-    width: 100%;
-  }
-
-  .smlbus-step2-btns {
-    flex-direction: column-reverse;
-  }
+  .smlbus-step2-btns { flex-direction: column-reverse; }
 
   .smlbus-action-submit-btn,
   .smlbus-submit-btn,
-  .smlbus-prev-btn {
-    width: 100%;
-  }
+  .smlbus-prev-btn { width: 100%; }
 }
 
 @media (max-width: 480px) {
-  .smlbus-section {
-    padding: 35px 11px 50px;
-  }
-
-  .smlbus-main-title {
-    font-size: 25px;
-  }
-
-  .smlbus-description {
-    font-size: 12.5px;
-  }
+  .smlbus-section { padding: 35px 11px 50px; }
+  .smlbus-main-title { font-size: 25px; }
+  .smlbus-description { font-size: 12.5px; }
 
   .smlbus-seo-content,
   .smlbus-bottom-content {
     padding: 19px 15px;
-    border-radius: 11px;
+    border-radius: 12px;
   }
 
   .smlbus-seo-content h2,
-  .smlbus-bottom-content h2 {
-    font-size: 18px;
-  }
+  .smlbus-bottom-content h2 { font-size: 18px; }
 
   .smlbus-seo-content p,
-  .smlbus-bottom-content p {
-    font-size: 12.5px;
-  }
+  .smlbus-bottom-content p { font-size: 12.5px; }
 
-  .smlbus-card-wrapper {
-    height: 470px;
-  }
-
-  .smlbus-front-content {
-    padding: 17px;
-  }
-
-  .smlbus-card-back {
-    padding: 18px;
-  }
-
-  .smlbus-card-title {
-    font-size: 16px;
-  }
-
-  .smlbus-spec-row {
-    font-size: 11.5px;
-  }
+  .smlbus-card-wrapper { height: 470px; }
+  .smlbus-front-content { padding: 17px; }
+  .smlbus-card-back { padding: 18px; }
+  .smlbus-card-title { font-size: 16px; }
+  .smlbus-spec-row { font-size: 11.5px; }
 
   .smlbus-action-btn,
   .smlbus-book-now-btn {
-    padding: 9px 11px;
+    padding: 9px 12px;
     font-size: 11px;
   }
 
-  .smlbus-modal-overlay {
-    padding: 10px;
-  }
+  .smlbus-modal-overlay { padding: 10px; }
 
   .smlbus-modal-content {
     max-height: calc(100vh - 20px);
@@ -1244,13 +1026,8 @@
     font-size: 18px;
   }
 
-  .smlbus-selected-vehicle-banner span {
-    font-size: 13px;
-  }
-
-  .smlbus-mobile-pagination-premium {
-    gap: 12px;
-  }
+  .smlbus-selected-vehicle-banner span { font-size: 13px; }
+  .smlbus-mobile-pagination-premium { gap: 12px; }
 }
 
 /* =========================================================
@@ -1261,7 +1038,7 @@
 .smlbus-section a:focus-visible,
 .smlbus-section input:focus-visible,
 .smlbus-section textarea:focus-visible {
-  outline: 3px solid rgba(32, 166, 223, 0.25);
+  outline: 3px solid rgba(14, 165, 233, 0.35);
   outline-offset: 3px;
 }
 

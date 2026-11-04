@@ -12,8 +12,8 @@ import "./Article.css";
 // IMPORT ARTICLE IMAGES
 // =====================================================
 
-import articleImage1 from "../../assets/wedo.webp";
-import articleImage2 from "../../assets/odisha23.webp";
+import articleImage1 from "../../assets/wedo.png";
+import articleImage2 from "../../assets/odisha23.png";
 
 // =====================================================
 // ARTICLE COMPONENT

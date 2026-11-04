@@ -1,31 +1,29 @@
-
 /* =========================================================
-   TRANSPORT TARIFF
-   Premium Black / White / Blue Theme
+   TRANSPORT TARIFF - BLUE & WHITE THEME
+   (layout unchanged; colours only)
 ========================================================= */
 
 .TransportTariff {
-  --tt-primary: #20a6df;
-  --tt-primary-dark: #1189bd;
-  --tt-primary-soft: #eef9fe;
+  --tt-primary: #0ea5e9;
+  --tt-primary-dark: #0369a1;
+  --tt-primary-soft: #e0f2fe;
 
-  --tt-black: #111827;
-  --tt-dark: #1f2937;
-  --tt-text: #374151;
-  --tt-muted: #6b7280;
+  --tt-black: #0c4a6e;
+  --tt-dark: #075985;
+  --tt-text: #3b5b7a;
+  --tt-muted: #5b7c99;
 
   --tt-white: #ffffff;
-  --tt-bg: #f8fafc;
-  --tt-border: #e5e7eb;
-  --tt-border-light: #eef1f4;
+  --tt-bg: #f0f9ff;
+  --tt-border: #bae6fd;
+  --tt-border-light: #e0f2fe;
 
   width: 100%;
   min-height: 100vh;
   padding: 60px 20px 80px;
-  background: #fcfcfd;
+  background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 300px, #f0f9ff 100%);
   color: var(--tt-text);
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, sans-serif;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow: hidden;
 }
 
@@ -36,19 +34,13 @@
   box-sizing: border-box;
 }
 
-/* =========================================================
-   CONTAINER
-========================================================= */
-
+/* ---------- CONTAINER ---------- */
 .TransportTariff-container {
   width: min(100%, 1180px);
   margin: 0 auto;
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
-
+/* ---------- HEADER ---------- */
 .TransportTariff-header {
   width: 100%;
   max-width: 1080px;
@@ -86,12 +78,10 @@
   line-height: 1.8;
 }
 
-.TransportTariff-introSecondary {
-  margin-bottom: 0;
-}
+.TransportTariff-introSecondary { margin-bottom: 0; }
 
 .TransportTariff-intro strong {
-  color: var(--tt-dark);
+  color: var(--tt-primary-dark);
   font-weight: 600;
 }
 
@@ -106,19 +96,11 @@
 .TransportTariff-titleLine span {
   width: 55px;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--tt-primary)
-  );
+  background: linear-gradient(90deg, transparent, var(--tt-primary));
 }
 
 .TransportTariff-titleLine span:last-child {
-  background: linear-gradient(
-    90deg,
-    var(--tt-primary),
-    transparent
-  );
+  background: linear-gradient(90deg, var(--tt-primary), transparent);
 }
 
 .TransportTariff-titleLine i {
@@ -127,10 +109,7 @@
   font-style: normal;
 }
 
-/* =========================================================
-   BUSINESS INFORMATION
-========================================================= */
-
+/* ---------- BUSINESS INFORMATION ---------- */
 .TransportTariff-businessInfo {
   width: 100%;
   display: flex;
@@ -142,12 +121,10 @@
   background: var(--tt-white);
   border: 1px solid var(--tt-border);
   border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 10px 28px rgba(14, 165, 233, 0.1);
 }
 
-.TransportTariff-businessContent {
-  min-width: 0;
-}
+.TransportTariff-businessContent { min-width: 0; }
 
 .TransportTariff-businessLabel {
   display: block;
@@ -208,17 +185,14 @@
   justify-content: center;
   min-height: 38px;
   padding: 0 13px;
-  border: 1px solid #d9eaf2;
+  border: 1px solid var(--tt-border);
   border-radius: 8px;
   background: var(--tt-primary-soft);
   color: var(--tt-primary-dark);
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .TransportTariff-phoneList a:hover {
@@ -227,16 +201,13 @@
   transform: translateY(-1px);
 }
 
-/* =========================================================
-   CONTENT INTRO
-========================================================= */
-
+/* ---------- CONTENT INTRO ---------- */
 .TransportTariff-contentIntro {
   width: 100%;
   margin-bottom: 28px;
   padding: 28px 30px;
-  background: #f9fcfe;
-  border: 1px solid #e1f0f6;
+  background: #e8f6fe;
+  border: 1px solid var(--tt-border);
   border-radius: 14px;
 }
 
@@ -248,7 +219,7 @@
   margin-bottom: 10px;
   padding: 0 10px;
   border-radius: 20px;
-  background: var(--tt-primary-soft);
+  background: var(--tt-white);
   color: var(--tt-primary-dark);
   font-size: 11px;
   font-weight: 600;
@@ -271,26 +242,21 @@
   line-height: 1.75;
 }
 
-.TransportTariff-contentIntro p:last-child {
-  margin-bottom: 0;
-}
+.TransportTariff-contentIntro p:last-child { margin-bottom: 0; }
 
 .TransportTariff-contentIntro strong {
-  color: var(--tt-dark);
+  color: var(--tt-primary-dark);
   font-weight: 600;
 }
 
-/* =========================================================
-   TARIFF CARD
-========================================================= */
-
+/* ---------- TARIFF CARD ---------- */
 .TransportTariff-card {
   width: 100%;
   overflow: hidden;
   background: var(--tt-white);
   border: 1px solid var(--tt-border);
   border-radius: 16px;
-  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 14px 38px rgba(14, 165, 233, 0.12);
 }
 
 .TransportTariff-cardHeader {
@@ -323,8 +289,8 @@
   flex-shrink: 0;
   padding: 8px 13px;
   border-radius: 7px;
-  background: #f3f4f6;
-  color: var(--tt-dark);
+  background: var(--tt-primary-soft);
+  color: var(--tt-primary-dark);
   font-size: 12px;
   font-weight: 600;
   white-space: nowrap;
@@ -332,11 +298,7 @@
 
 .TransportTariff-banner {
   padding: 13px 20px;
-  background: linear-gradient(
-    135deg,
-    var(--tt-primary),
-    var(--tt-primary-dark)
-  );
+  background: linear-gradient(135deg, var(--tt-primary), var(--tt-primary-dark));
   color: var(--tt-white);
   font-size: 12px;
   font-weight: 600;
@@ -346,10 +308,7 @@
   text-transform: uppercase;
 }
 
-/* =========================================================
-   TABLE
-========================================================= */
-
+/* ---------- TABLE ---------- */
 .TransportTariff-tableResponsive {
   width: 100%;
   overflow-x: auto;
@@ -378,9 +337,9 @@
 
 .TransportTariff-table th {
   padding: 14px 14px;
-  background: #f8fafc;
-  border-bottom: 1px solid var(--tt-border);
-  color: var(--tt-text);
+  background: var(--tt-primary-soft);
+  border-bottom: 2px solid var(--tt-primary);
+  color: var(--tt-black);
   font-size: 12px;
   font-weight: 600;
   line-height: 1.4;
@@ -393,17 +352,9 @@
   text-align: left;
 }
 
-.TransportTariff-row {
-  transition: background-color 0.2s ease;
-}
-
-.TransportTariff-row:nth-child(even) {
-  background: #fcfdfe;
-}
-
-.TransportTariff-row:hover {
-  background: #f1faff;
-}
+.TransportTariff-row { transition: background-color 0.2s ease; }
+.TransportTariff-row:nth-child(even) { background: #f5fbff; }
+.TransportTariff-row:hover { background: #e0f2fe; }
 
 .TransportTariff-cell,
 .TransportTariff-cellVehicle {
@@ -419,22 +370,15 @@
 
 .TransportTariff-cellVehicle {
   padding: 13px 14px 13px 24px;
-  color: var(--tt-dark);
+  color: var(--tt-black);
   font-weight: 600;
   text-align: left;
 }
 
-.TransportTariff-notAvailable {
-  color: #9ca3af;
-}
+.TransportTariff-notAvailable { color: #7aa3c4; }
 
-/* =========================================================
-   MOBILE TARIFF CARDS
-========================================================= */
-
-.TransportTariff-mobileList {
-  display: none;
-}
+/* ---------- MOBILE TARIFF CARDS ---------- */
+.TransportTariff-mobileList { display: none; }
 
 .TransportTariff-mobileCard {
   margin: 12px;
@@ -442,7 +386,7 @@
   background: var(--tt-white);
   border: 1px solid var(--tt-border);
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.035);
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.1);
 }
 
 .TransportTariff-mobileHeader {
@@ -478,8 +422,8 @@
 .TransportTariff-mobilePrices div {
   min-height: 62px;
   padding: 10px;
-  background: #f8fafc;
-  border: 1px solid #eef1f4;
+  background: #f0f9ff;
+  border: 1px solid var(--tt-border);
   border-radius: 8px;
 }
 
@@ -492,15 +436,12 @@
 }
 
 .TransportTariff-mobilePrices strong {
-  color: var(--tt-dark);
+  color: var(--tt-primary-dark);
   font-size: 14px;
   font-weight: 650;
 }
 
-/* =========================================================
-   PACKAGE SECTION
-========================================================= */
-
+/* ---------- PACKAGE SECTION ---------- */
 .TransportTariff-packageSection {
   width: 100%;
   margin-top: 30px;
@@ -508,7 +449,7 @@
   background: var(--tt-white);
   border: 1px solid var(--tt-border);
   border-radius: 14px;
-  box-shadow: 0 7px 24px rgba(15, 23, 42, 0.035);
+  box-shadow: 0 10px 28px rgba(14, 165, 233, 0.1);
 }
 
 .TransportTariff-packageSection h2 {
@@ -527,12 +468,10 @@
   line-height: 1.75;
 }
 
-.TransportTariff-packageSection p:last-of-type {
-  margin-bottom: 18px;
-}
+.TransportTariff-packageSection p:last-of-type { margin-bottom: 18px; }
 
 .TransportTariff-packageSection strong {
-  color: var(--tt-dark);
+  color: var(--tt-primary-dark);
   font-weight: 600;
 }
 
@@ -549,27 +488,21 @@
   min-height: 42px;
   padding: 0 18px;
   border-radius: 8px;
-  background: var(--tt-primary);
+  background: linear-gradient(135deg, var(--tt-primary), var(--tt-primary-dark));
   color: var(--tt-white);
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: filter 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .TransportTariff-packageActions a:hover {
-  background: var(--tt-primary-dark);
+  filter: brightness(1.08);
   transform: translateY(-2px);
-  box-shadow: 0 7px 18px rgba(32, 166, 223, 0.22);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.32);
 }
 
-/* =========================================================
-   TERMS & CONDITIONS
-========================================================= */
-
+/* ---------- TERMS & CONDITIONS ---------- */
 .TransportTariff-termsSection {
   width: 100%;
   margin-top: 30px;
@@ -577,12 +510,10 @@
   background: var(--tt-white);
   border: 1px solid var(--tt-border);
   border-radius: 14px;
-  box-shadow: 0 7px 24px rgba(15, 23, 42, 0.035);
+  box-shadow: 0 10px 28px rgba(14, 165, 233, 0.1);
 }
 
-.TransportTariff-termsHeader {
-  margin-bottom: 19px;
-}
+.TransportTariff-termsHeader { margin-bottom: 19px; }
 
 .TransportTariff-termsHeader > span {
   display: block;
@@ -645,14 +576,11 @@
 }
 
 .TransportTariff-termsText strong {
-  color: var(--tt-dark);
+  color: var(--tt-black);
   font-weight: 600;
 }
 
-/* =========================================================
-   FINAL CTA
-========================================================= */
-
+/* ---------- FINAL CTA ---------- */
 .TransportTariff-cta {
   width: 100%;
   display: flex;
@@ -661,19 +589,18 @@
   gap: 25px;
   margin-top: 30px;
   padding: 28px 30px;
-  background: var(--tt-black);
+  background: linear-gradient(135deg, var(--tt-primary) 0%, var(--tt-primary-dark) 100%);
   border-radius: 14px;
+  box-shadow: 0 20px 42px rgba(3, 105, 161, 0.28);
   color: var(--tt-white);
 }
 
-.TransportTariff-cta > div:first-child {
-  max-width: 720px;
-}
+.TransportTariff-cta > div:first-child { max-width: 720px; }
 
 .TransportTariff-cta > div:first-child > span {
   display: block;
   margin-bottom: 5px;
-  color: #7dd3fc;
+  color: #e0f2fe;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -690,7 +617,7 @@
 
 .TransportTariff-cta p {
   margin: 0;
-  color: #cbd5e1;
+  color: #e0f2fe;
   font-size: 13px;
   line-height: 1.7;
 }
@@ -708,37 +635,30 @@
   justify-content: center;
   min-height: 42px;
   padding: 0 15px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--tt-white);
   border-radius: 8px;
-  background: var(--tt-primary);
-  color: var(--tt-white);
+  background: var(--tt-white);
+  color: var(--tt-primary-dark);
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .TransportTariff-ctaButtons a:hover {
-  background: var(--tt-primary-dark);
+  background: transparent;
+  color: var(--tt-white);
   transform: translateY(-2px);
 }
 
-/* =========================================================
-   FOCUS ACCESSIBILITY
-========================================================= */
-
+/* ---------- FOCUS ACCESSIBILITY ---------- */
 .TransportTariff a:focus-visible {
-  outline: 3px solid rgba(32, 166, 223, 0.35);
+  outline: 3px solid rgba(14, 165, 233, 0.4);
   outline-offset: 3px;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
-
+/* ---------- TABLET ---------- */
 @media (max-width: 900px) {
   .TransportTariff-businessInfo {
     align-items: flex-start;
@@ -759,23 +679,13 @@
     flex-direction: column;
   }
 
-  .TransportTariff-ctaButtons {
-    width: 100%;
-  }
+  .TransportTariff-ctaButtons { width: 100%; }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
+/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
-  .TransportTariff {
-    padding: 40px 12px 55px;
-  }
-
-  .TransportTariff-header {
-    margin-bottom: 25px;
-  }
+  .TransportTariff { padding: 40px 12px 55px; }
+  .TransportTariff-header { margin-bottom: 25px; }
 
   .TransportTariff-tagline {
     font-size: 11px;
@@ -793,24 +703,15 @@
     line-height: 1.7;
   }
 
-  .TransportTariff-titleLine {
-    margin-top: 17px;
-  }
+  .TransportTariff-titleLine { margin-top: 17px; }
 
   .TransportTariff-businessInfo,
   .TransportTariff-contentIntro,
   .TransportTariff-packageSection,
-  .TransportTariff-termsSection {
-    padding: 20px 17px;
-  }
+  .TransportTariff-termsSection { padding: 20px 17px; }
 
-  .TransportTariff-businessContent h2 {
-    font-size: 19px;
-  }
-
-  .TransportTariff-businessContent address {
-    font-size: 12px;
-  }
+  .TransportTariff-businessContent h2 { font-size: 19px; }
+  .TransportTariff-businessContent address { font-size: 12px; }
 
   .TransportTariff-phoneList a {
     flex: 1;
@@ -818,14 +719,10 @@
   }
 
   .TransportTariff-contentIntro h2,
-  .TransportTariff-packageSection h2 {
-    font-size: 19px;
-  }
+  .TransportTariff-packageSection h2 { font-size: 19px; }
 
   .TransportTariff-contentIntro p,
-  .TransportTariff-packageSection p {
-    font-size: 13px;
-  }
+  .TransportTariff-packageSection p { font-size: 13px; }
 
   .TransportTariff-cardHeader {
     align-items: flex-start;
@@ -833,93 +730,53 @@
     padding: 20px 17px 16px;
   }
 
-  .TransportTariff-cardHeader h2 {
-    font-size: 18px;
-  }
+  .TransportTariff-cardHeader h2 { font-size: 18px; }
+  .TransportTariff-cardNote { font-size: 11px; }
 
-  .TransportTariff-cardNote {
-    font-size: 11px;
-  }
-
-  .TransportTariff-tableResponsive {
-    display: none;
-  }
+  .TransportTariff-tableResponsive { display: none; }
 
   .TransportTariff-mobileList {
     display: block;
     padding: 3px 0 8px;
   }
 
-  .TransportTariff-termsHeader h2 {
-    font-size: 19px;
-  }
+  .TransportTariff-termsHeader h2 { font-size: 19px; }
 
   .TransportTariff-termsText {
     font-size: 12.5px;
     line-height: 1.6;
   }
 
-  .TransportTariff-cta {
-    padding: 23px 19px;
-  }
+  .TransportTariff-cta { padding: 23px 19px; }
+  .TransportTariff-cta h2 { font-size: 19px; }
+  .TransportTariff-cta p { font-size: 12.5px; }
 
-  .TransportTariff-cta h2 {
-    font-size: 19px;
-  }
-
-  .TransportTariff-cta p {
-    font-size: 12.5px;
-  }
-
-  .TransportTariff-ctaButtons {
-    flex-direction: column;
-  }
-
-  .TransportTariff-ctaButtons a {
-    width: 100%;
-  }
+  .TransportTariff-ctaButtons { flex-direction: column; }
+  .TransportTariff-ctaButtons a { width: 100%; }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
+/* ---------- SMALL MOBILE ---------- */
 @media (max-width: 420px) {
   .TransportTariff {
     padding-right: 10px;
     padding-left: 10px;
   }
 
-  .TransportTariff-mobilePrices {
-    grid-template-columns: 1fr 1fr;
-  }
+  .TransportTariff-mobilePrices { grid-template-columns: 1fr 1fr; }
 
   .TransportTariff-mobilePrices div {
     min-height: 58px;
     padding: 8px;
   }
 
-  .TransportTariff-mobilePrices span {
-    font-size: 9px;
-  }
+  .TransportTariff-mobilePrices span { font-size: 9px; }
+  .TransportTariff-mobilePrices strong { font-size: 13px; }
 
-  .TransportTariff-mobilePrices strong {
-    font-size: 13px;
-  }
-
-  .TransportTariff-phoneList {
-    flex-direction: column;
-  }
-
-  .TransportTariff-phoneList a {
-    width: 100%;
-  }
+  .TransportTariff-phoneList { flex-direction: column; }
+  .TransportTariff-phoneList a { width: 100%; }
 }
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
+/* ---------- REDUCED MOTION ---------- */
 @media (prefers-reduced-motion: reduce) {
   .TransportTariff *,
   .TransportTariff *::before,
