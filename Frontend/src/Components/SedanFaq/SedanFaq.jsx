@@ -159,7 +159,7 @@ const SedanFaq = () => {
           </span>
 
           <div className="sedan-faq__phones">
-            <a href="tel:9668892441">9668892441</a>
+            <a href="tel:93375 94808">93375 94808</a>
             <span>|</span>
             <a href="tel:9556355446">9556355446</a>
           </div>
@@ -184,7 +184,7 @@ const SedanFaq = () => {
         </p>
 
         <a
-          href="tel:9668892441"
+          href="tel:93375 94808"
           className="sedan-faq__cta"
         >
           Talk to Our Travel Team

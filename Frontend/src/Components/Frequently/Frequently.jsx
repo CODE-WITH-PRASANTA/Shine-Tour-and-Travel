@@ -221,12 +221,12 @@ const Frequently = () => {
           </p>
 
           <div className="faq-contact-buttons">
-            <a href="tel:9668892441">
-              Call 9668892441
+            <a href="tel:93375 94808">
+              Call 93375 94808
             </a>
 
             <a href="tel:9556355446">
-              Call 9556355446
+              Call
             </a>
           </div>
         </div>

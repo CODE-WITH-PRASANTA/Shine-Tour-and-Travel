@@ -9,8 +9,8 @@ import "./Questionluxury.css";
 const BUSINESS = {
   name: "Shine Tour & Travels",
   address:
-    "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha, Pin - 751002",
-  phones: ["9668892441", "9556355446"],
+    "Plot No-101, Janpath, Near Swosti Hotel, Kharavela Nagar, Master Canteen, Bhubaneswar, Odisha 751001",
+  phones: ["93375 94808"],
 };
 
 /* =========================================================
@@ -66,7 +66,7 @@ const FAQ_ITEMS = [
   {
     question: "Where is Shine Tour & Travels located?",
     answer:
-      "Our office is located at Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantray Pur, Bhubaneswar, Odisha, Pin - 751002. Customers can contact us on 9668892441 or 9556355446 for travel and vehicle booking enquiries.",
+      "Our office is located at Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantray Pur, Bhubaneswar, Odisha, Pin - 751002. Customers can contact us on 93375 94808 or for travel and vehicle booking enquiries.",
   },
 ];
 
@@ -436,14 +436,14 @@ const Questionluxury = () => {
           </p>
 
           <div className="question-luxury-contact-details">
-            <a href="tel:+919668892441">
+            <a href="tel:+9193375 94808">
               <span>Call</span>
-              9668892441
+              93375 94808
             </a>
 
             <a href="tel:+919556355446">
               <span>Call</span>
-              9556355446
+             
             </a>
           </div>
 

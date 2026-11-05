@@ -77,7 +77,7 @@ const TourDetailsReview = ({ tour }) => {
           <button 
             type="button"
             className="TourDetailsReview-ratingBtn"
-            onClick={() => window.location.href = "tel:9668892441"}
+            onClick={() => window.location.href = "tel:93375 94808"}
           >
             GIVE A RATING
           </button>

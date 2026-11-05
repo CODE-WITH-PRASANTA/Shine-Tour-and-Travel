@@ -131,7 +131,7 @@ const FloatingSupport = () => {
         `Message: ${message}`;
 
       const smsUrl =
-        `sms:+919668892441?body=${encodeURIComponent(
+        `sms:+9193375 94808?body=${encodeURIComponent(
           smsMessage
         )}`;
 

@@ -461,7 +461,7 @@ const Experience = () => {
       navigate(`/tours/${item.slug || item.id}`);
       return;
     }
-    window.location.href = "tel:9668892441";
+    window.location.href = "tel:93375 94808";
   };
 
   const handleCheckAvailability = (item) => {
@@ -482,7 +482,7 @@ const Experience = () => {
       navigate(item.path);
       return;
     }
-    window.location.href = "tel:9668892441";
+    window.location.href = "tel:93375 94808";
   };
 
   const openBookingModal = (vehicle) => {

@@ -115,15 +115,6 @@
   display: block;
 }
 
-/* Divider */
-.topbar-divider {
-  width: 1px;
-  height: 16px;
-  margin: 0 14px;
-  background-color: #444444;
-  flex-shrink: 0;
-}
-
 /* Responsive Styles */
 @media (max-width: 850px) {
   .topbar-location {
@@ -149,10 +140,6 @@
   .topbar-contact {
     font-size: 11px;
     gap: 4px;
-  }
-
-  .topbar-divider {
-    margin: 0 8px;
   }
 
   .topbar-phone-icon {

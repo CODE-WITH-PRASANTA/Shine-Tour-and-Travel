@@ -159,7 +159,7 @@ const SedanCar = () => {
 
             url: "https://ShineTour &travels.com",
 
-            telephone: "+91-9668892441",
+            telephone: "+91-93375 94808",
 
             address: {
               "@type": "PostalAddress",

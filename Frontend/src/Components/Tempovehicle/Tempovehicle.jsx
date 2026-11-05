@@ -9,9 +9,9 @@ import image3 from "../../assets/TempoTraveller3.webp";
 const BUSINESS = {
   name: "Shine Tour & Travels",
   address:
-    "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha, Pin - 751002",
-  phone1: "9668892441",
-  phone2: "9556355446",
+    "Plot No-101, Janpath, Near Swosti Hotel, Kharavela Nagar, Master Canteen, Bhubaneswar, Odisha 751001",
+  phone1: "93375 94808",
+  
 };
 
 const VEHICLE_LIST = [

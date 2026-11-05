@@ -221,12 +221,12 @@ const TransportTariff = () => {
             <span>For Booking &amp; Enquiry</span>
 
             <div className="TransportTariff-phoneList">
-              <a href="tel:9668892441" aria-label="Call 9668892441">
-                9668892441
+              <a href="tel:93375 94808" aria-label="Call 93375 94808">
+                93375 94808
               </a>
 
-              <a href="tel:9556355446" aria-label="Call 9556355446">
-                9556355446
+              <a href="tel:9556355446" aria-label="Call">
+               
               </a>
             </div>
           </div>
@@ -411,12 +411,12 @@ const TransportTariff = () => {
           </p>
 
           <div className="TransportTariff-packageActions">
-            <a href="tel:9668892441">
-              Call 9668892441
+            <a href="tel:93375 94808">
+              Call 93375 94808
             </a>
 
             <a href="tel:9556355446">
-              Call 9556355446
+              Call
             </a>
           </div>
         </section>
@@ -484,12 +484,12 @@ const TransportTariff = () => {
           </div>
 
           <div className="TransportTariff-ctaButtons">
-            <a href="tel:9668892441">
-              9668892441
+            <a href="tel:93375 94808">
+              93375 94808
             </a>
 
             <a href="tel:9556355446">
-              9556355446
+             
             </a>
           </div>
         </section>

@@ -18,27 +18,25 @@ const ContactMain = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Handle form submission logic here
   };
 
   // =========================================================
-  // OFFICE ADDRESS
+  // OFFICE ADDRESS & EMBED URL
   // =========================================================
   const fullAddress =
-    "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantray Pur, Bhubaneswar, Odisha, Pin - 751002";
+    "Plot No-101, Janpath, Near Swosti Hotel, Master Canteen, Kharabela Nagar, Bhubaneswar, Odisha";
 
   const encodedAddress = encodeURIComponent(fullAddress);
-
   const mapEmbedUrl = `https://maps.google.com/maps?q=${encodedAddress}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
 
   return (
     <section className="ContactMain">
       <div className="ContactMain__wrapper">
-
         {/* =====================================================
             LEFT SIDE - CONTACT INFORMATION
         ====================================================== */}
         <div className="ContactMain__infoList">
-
           {/* PHONE */}
           <div className="ContactMain__infoCard">
             <span className="ContactMain__infoTag">Phone</span>
@@ -58,8 +56,9 @@ const ContactMain = () => {
             </div>
 
             <div className="ContactMain__infoDetails">
-              <p>(+91) 9668892441</p>
-              <p>(+91) 9556355446</p>
+              <p>
+                <a href="tel:+919337594808">(+91) 93375 94808</a>
+              </p>
             </div>
           </div>
 
@@ -83,8 +82,11 @@ const ContactMain = () => {
             </div>
 
             <div className="ContactMain__infoDetails">
-              <p>ShineTour&travels@gmail.com</p>
-             
+              <p>
+                <a href="mailto:Samantarays35@gmail.com">
+                  Samantarays35@gmail.com
+                </a>
+              </p>
             </div>
           </div>
 
@@ -109,8 +111,8 @@ const ContactMain = () => {
 
             <div className="ContactMain__infoDetails ContactMain__locationDetails">
               <p className="ContactMain__address">
-                Plot No - 001, Mahaveer Nagar, Road No. - 18,
-                Samantarapur, Bhubaneswar, Odisha, Pin - 751002
+                Plot No - 101, Janpath, Near Swosti Hotel, Master Canteen,
+                Kharabela Nagar, Bhubaneswar, Odisha
               </p>
             </div>
           </div>
@@ -148,37 +150,24 @@ const ContactMain = () => {
             RIGHT SIDE - CONTACT FORM
         ====================================================== */}
         <div className="ContactMain__formCard">
-
-          {/* PREMIUM BRAND HEADER */}
+          {/* BRAND HEADER */}
           <div className="ContactMain__formHeader">
-
             <div className="ContactMain__brandLine">
               <span className="ContactMain__brandDot"></span>
-
               <span className="ContactMain__brandName">
                 Shine Tour & TRAVELS
               </span>
-
               <span className="ContactMain__brandLineAfter"></span>
             </div>
 
-            <h2 className="ContactMain__formTitle">
-              Reach Us Anytime
-            </h2>
-
+            <h2 className="ContactMain__formTitle">Reach Us Anytime</h2>
           </div>
 
           {/* FORM */}
-          <form
-            className="ContactMain__form"
-            onSubmit={handleSubmit}
-          >
+          <form className="ContactMain__form" onSubmit={handleSubmit}>
             {/* NAME */}
             <div className="ContactMain__fieldGroup">
-              <label className="ContactMain__label">
-                Name*
-              </label>
-
+              <label className="ContactMain__label">Name*</label>
               <input
                 type="text"
                 name="name"
@@ -192,14 +181,10 @@ const ContactMain = () => {
 
             {/* PHONE + EMAIL */}
             <div className="ContactMain__inputRow">
-
               <div className="ContactMain__fieldGroup">
-                <label className="ContactMain__label">
-                  Phone
-                </label>
-
+                <label className="ContactMain__label">Phone</label>
                 <input
-                  type="text"
+                  type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
@@ -209,10 +194,7 @@ const ContactMain = () => {
               </div>
 
               <div className="ContactMain__fieldGroup">
-                <label className="ContactMain__label">
-                  Email
-                </label>
-
+                <label className="ContactMain__label">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -222,7 +204,6 @@ const ContactMain = () => {
                   className="ContactMain__input"
                 />
               </div>
-
             </div>
 
             {/* MESSAGE */}
@@ -230,7 +211,6 @@ const ContactMain = () => {
               <label className="ContactMain__label">
                 Write Your Message*
               </label>
-
               <textarea
                 name="message"
                 value={formData.message}
@@ -242,25 +222,17 @@ const ContactMain = () => {
               ></textarea>
             </div>
 
-            {/* SUBMIT */}
-            <button
-              type="submit"
-              className="ContactMain__submitBtn"
-            >
-              <span className="ContactMain__btnText">
-                Submit Now
-              </span>
-
-              <span className="ContactMain__btnArrow">
-                →
-              </span>
+            {/* SUBMIT BUTTON */}
+            <button type="submit" className="ContactMain__submitBtn">
+              <span className="ContactMain__btnText">Submit Now</span>
+              <span className="ContactMain__btnArrow">→</span>
             </button>
           </form>
         </div>
       </div>
 
       {/* =====================================================
-          GOOGLE MAP
+          GOOGLE MAP EMBED
       ====================================================== */}
       <div className="ContactMain__mapWrapper">
         <iframe

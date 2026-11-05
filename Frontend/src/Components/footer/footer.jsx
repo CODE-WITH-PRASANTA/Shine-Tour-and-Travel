@@ -42,6 +42,23 @@ const Footer = () => {
   ];
 
   /* =========================================================
+     PHONE NUMBERS & SOCIAL URLS
+  ========================================================= */
+
+  const phoneNumbers = [
+    { label: "+91 93375 94808", href: "tel:+919337594808" },
+  ];
+
+  const whatsappUrl =
+    "https://wa.me/919337594808?text=Hello%20Shine%20Tour%20%26%20Travels%2C%20I%20want%20to%20know%20about%20Odisha%20tours.";
+
+  const facebookUrl = "https://www.facebook.com/share/1HzhRuFmdo/";
+  const instagramUrl =
+    "https://www.instagram.com/sunilkumar.samantaray.7165?mdxt=ajVsaHNpZTB2Z2Ro";
+  const youtubeUrl =
+    "https://youtube.com/@sunilkumarsamantaray3519?si=Thit7enwz9Yp2omL";
+
+  /* =========================================================  
      NAVIGATION
   ========================================================= */
 
@@ -96,7 +113,6 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-
       {/* =====================================================
           TOP WAVE
       ====================================================== */}
@@ -117,16 +133,12 @@ const Footer = () => {
       ====================================================== */}
 
       <div className="footer-main">
-
         <div className="footer-container">
-
           {/* =================================================
               BRAND
           ================================================== */}
 
           <div className="footer-brand">
-
-            {/* Logo without box */}
             <Link
               to="/"
               className="footer-logo-link"
@@ -143,22 +155,20 @@ const Footer = () => {
               />
             </Link>
 
-            <h2 className="footer-brand-title">
-              Shine Tour & Travels
-            </h2>
+            <h2 className="footer-brand-title">Shine Tour & Travels</h2>
 
             <p className="footer-description">
-              Your trusted travel partner for memorable journeys
-              across Odisha and beyond. Travel with comfort,
-              care and confidence.
+              Your trusted travel partner for memorable journeys across Odisha
+              and beyond. Travel with comfort, care and confidence.
             </p>
 
             {/* Social Media */}
 
             <div className="footer-social">
-
               <a
-                href="#"
+                href={facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="facebook"
                 aria-label="Facebook"
               >
@@ -166,7 +176,9 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href={instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="instagram"
                 aria-label="Instagram"
               >
@@ -174,7 +186,9 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="whatsapp"
                 aria-label="WhatsApp"
               >
@@ -182,13 +196,14 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href={youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="youtube"
                 aria-label="YouTube"
               >
                 <FaYoutube />
               </a>
-
             </div>
           </div>
 
@@ -197,18 +212,13 @@ const Footer = () => {
           ================================================== */}
 
           <div className="footer-column">
-
-            <h3 className="footer-title">
-              Quick Links
-            </h3>
+            <h3 className="footer-title">Quick Links</h3>
 
             <span className="footer-title-line"></span>
 
             <ul className="footer-links">
-
               {quickLinks.map((link) => (
                 <li key={link.name}>
-
                   <Link
                     to={link.path}
                     onClick={(e) => {
@@ -222,12 +232,9 @@ const Footer = () => {
 
                     <span>{link.name}</span>
                   </Link>
-
                 </li>
               ))}
-
             </ul>
-
           </div>
 
           {/* =================================================
@@ -235,15 +242,11 @@ const Footer = () => {
           ================================================== */}
 
           <div className="footer-column">
-
-            <h3 className="footer-title">
-              Explore Odisha
-            </h3>
+            <h3 className="footer-title">Explore Odisha</h3>
 
             <span className="footer-title-line"></span>
 
             <div className="footer-destinations">
-
               {odishaLocations.map((location) => (
                 <a
                   key={location.name}
@@ -252,20 +255,14 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="footer-destination"
                 >
-                  <span className="destination-icon">
-                    {location.icon}
-                  </span>
+                  <span className="destination-icon">{location.icon}</span>
 
-                  <span className="destination-name">
-                    {location.name}
-                  </span>
+                  <span className="destination-name">{location.name}</span>
 
                   <FaArrowRight className="destination-arrow" />
                 </a>
               ))}
-
             </div>
-
           </div>
 
           {/* =================================================
@@ -273,95 +270,73 @@ const Footer = () => {
           ================================================== */}
 
           <div className="footer-column footer-contact">
-
-            <h3 className="footer-title">
-              Contact Us
-            </h3>
+            <h3 className="footer-title">Contact Us</h3>
 
             <span className="footer-title-line"></span>
 
             {/* PHONE */}
 
             <div className="contact-item">
-
               <div className="contact-icon phone-icon">
                 <FaPhoneAlt />
               </div>
 
               <div className="contact-content">
-
-                <a href="tel:+919668892441">
-                  +91 96688 92441
-                </a>
-
-                <a href="tel:+919556355446">
-                  +91 95563 55446
-                </a>
-
+                {phoneNumbers.map((phone) => (
+                  <a key={phone.href} href={phone.href}>
+                    {phone.label}
+                  </a>
+                ))}
               </div>
-
             </div>
 
             {/* EMAIL */}
 
             <div className="contact-item">
-
               <div className="contact-icon email-icon">
                 <FaEnvelope />
               </div>
 
               <div className="contact-content">
-
-                <a href="mailto:ShineTour &travels@gmail.com">
-                  ShineTour &travels@gmail.com
+                <a href="mailto:Samantarays35@gmail.com">
+                  Samantarays35@gmail.com
                 </a>
-
               </div>
-
             </div>
 
             {/* ADDRESS */}
 
             <div className="contact-item">
-
               <div className="contact-icon location-icon">
                 <FaMapMarkerAlt />
               </div>
 
               <div className="contact-content">
-
                 <p>
-                  Plot No - 001, Mahaveer Nagar,
+                  Plot No - 101, Janpath,
                   <br />
-                  Road No. - 18, Samantarapur,
+                  Near Swosti Hotel, Kharavela Nagar,
                   <br />
-                  Bhubaneswar, Odisha - 751002
+                  Master Canteen, Bhubaneswar, Odisha - 751001
                 </p>
-
               </div>
-
             </div>
 
             {/* WORKING HOURS */}
 
             <div className="contact-item">
-
               <div className="contact-icon clock-icon">
                 <FaClock />
               </div>
 
               <div className="contact-content">
-
                 <p>
                   Mon - Sat: 10:00 AM - 9:00 PM
                   <br />
                   Sunday: Closed
                 </p>
-
               </div>
-
             </div>
-
           </div>
         </div>
 
@@ -370,41 +345,37 @@ const Footer = () => {
         ==================================================== */}
 
         <div className="footer-cta">
-
           <div className="footer-cta-left">
-
             <div className="footer-cta-icon">
               <FaSuitcaseRolling />
             </div>
 
             <div className="footer-cta-content">
+              <h4>Plan Your Next Journey</h4>
 
-              <h4>
-                Plan Your Next Journey
-              </h4>
-
-              <p>
-                Discover unforgettable Odisha tours with us.
-              </p>
-
+              <p>Discover unforgettable Odisha tours with us.</p>
             </div>
-
           </div>
 
-          <Link
-            to="/contact"
-            className="footer-cta-button"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavigation("/contact");
-            }}
-          >
-            <span>Contact Us</span>
-            <FaArrowRight />
-          </Link>
+          <div className="footer-cta-actions">
+            <a href="tel:+919337594808" className="footer-cta-call">
+              <FaPhoneAlt />
+              <span>+91 93375 94808</span>
+            </a>
 
+            <Link
+              to="/contact"
+              className="footer-cta-button"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("/contact");
+              }}
+            >
+              <span>Contact Us</span>
+              <FaArrowRight />
+            </Link>
+          </div>
         </div>
-
       </div>
 
       {/* =====================================================
@@ -412,10 +383,8 @@ const Footer = () => {
       ====================================================== */}
 
       <div className="footer-bottom">
-
         <p className="copyright-text">
           2026 &copy; Copyright by{" "}
-
           <a
             href="https://prwebstock.com/"
             target="_blank"
@@ -426,9 +395,7 @@ const Footer = () => {
             <FaExternalLinkAlt />
           </a>
         </p>
-
       </div>
-
     </footer>
   );
 };

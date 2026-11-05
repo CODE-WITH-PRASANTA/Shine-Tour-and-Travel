@@ -131,7 +131,7 @@ const Tourpackage = () => {
     if (pkg.slug || pkg._id) {
       navigate(`/tours/${pkg.slug || pkg._id}`);
     } else {
-      window.location.href = 'tel:9668892441';
+      window.location.href = 'tel:93375 94808';
     }
   };
 

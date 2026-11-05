@@ -8,8 +8,8 @@ import "./SuvFaq.css";
 const BUSINESS = {
   name: "Shine Tour & Travels",
   address:
-    "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha - 751002",
-  phones: ["9668892441", "9556355446"],
+    "Plot No-101, Janpath, Near Swosti Hotel, Kharavela Nagar, Master Canteen, Bhubaneswar, Odisha 751001",
+  phones: ["93375 94808"],
 };
 
 /* ---------------------------------------------------------------------------
@@ -43,7 +43,7 @@ const FAQS = [
   },
   {
     q: "How can I book a car or SUV?",
-    a: "Booking is simple. You can call us directly on 9668892441 or 9556355446 and share your travel date, pickup location, destination, number of passengers and preferred vehicle. Our team can then guide you about availability, vehicle options and applicable charges.",
+    a: "Booking is simple. You can call us directly on 93375 94808 or and share your travel date, pickup location, destination, number of passengers and preferred vehicle. Our team can then guide you about availability, vehicle options and applicable charges.",
   },
   {
     q: "Do you provide Tour & Travel Agency services across Odisha?",

@@ -190,7 +190,7 @@ const WhatWeDo = () => {
       "Shine Tour & Travels is a tour and travel agency in Bhubaneswar, Odisha offering Odisha tour packages, pilgrimage tours, sightseeing tours, cultural experiences and customized travel services.",
 
     telephone: [
-      "+91-9668892441",
+      "+91-93375 94808",
       "+91-9556355446",
     ],
 

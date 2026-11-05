@@ -21,14 +21,14 @@ const UrbaniaTraveller = () => {
     "@type": "TravelAgency",
     name: "Shine Tour & Travels",
     description: pageDescription,
-    telephone: ["+91-9668892441", "+91-9556355446"],
+    telephone: "+91-9337594808",
     address: {
       "@type": "PostalAddress",
       streetAddress:
-        "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantray Pur",
+        "Plot No-101, Janpath, Near Swosti Hotel, Kharavela Nagar, Master Canteen",
       addressLocality: "Bhubaneswar",
       addressRegion: "Odisha",
-      postalCode: "751002",
+      postalCode: "751001",
       addressCountry: "IN",
     },
     areaServed: {
@@ -55,15 +55,9 @@ const UrbaniaTraveller = () => {
 
         <title>{pageTitle}</title>
 
-        <meta
-          name="description"
-          content={pageDescription}
-        />
+        <meta name="description" content={pageDescription} />
 
-        <meta
-          name="keywords"
-          content={keywords}
-        />
+        <meta name="keywords" content={keywords} />
 
         <meta name="robots" content="index, follow" />
 
@@ -72,48 +66,35 @@ const UrbaniaTraveller = () => {
           content="index, follow, max-image-preview:large"
         />
 
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta
-          name="author"
-          content="Shine Tour & Travels"
-        />
+        <meta name="author" content="Shine Tour & Travels" />
 
-        <meta
-          name="publisher"
-          content="Shine Tour & Travels"
-        />
+        <meta name="publisher" content="Shine Tour & Travels" />
 
         {/* =========================
             LOCAL SEO
         ========================= */}
 
-        <meta
-          name="geo.region"
-          content="IN-OR"
-        />
+        <meta name="geo.region" content="IN-OR" />
 
-        <meta
-          name="geo.placename"
-          content="Bhubaneswar, Odisha"
-        />
+        <meta name="geo.placename" content="Bhubaneswar, Odisha" />
 
         <meta
           name="business:contact_data:locality"
           content="Bhubaneswar"
         />
 
-        <meta
-          name="business:contact_data:region"
-          content="Odisha"
-        />
+        <meta name="business:contact_data:region" content="Odisha" />
 
         <meta
           name="business:contact_data:country_name"
           content="India"
+        />
+
+        <meta
+          name="business:contact_data:phone_number"
+          content="+91 9337594808"
         />
 
         {/* =========================
@@ -130,30 +111,15 @@ const UrbaniaTraveller = () => {
             OPEN GRAPH
         ========================= */}
 
-        <meta
-          property="og:type"
-          content="website"
-        />
+        <meta property="og:type" content="website" />
 
-        <meta
-          property="og:title"
-          content={pageTitle}
-        />
+        <meta property="og:title" content={pageTitle} />
 
-        <meta
-          property="og:description"
-          content={pageDescription}
-        />
+        <meta property="og:description" content={pageDescription} />
 
-        <meta
-          property="og:site_name"
-          content="Shine Tour & Travels"
-        />
+        <meta property="og:site_name" content="Shine Tour & Travels" />
 
-        <meta
-          property="og:locale"
-          content="en_IN"
-        />
+        <meta property="og:locale" content="en_IN" />
 
         {/* Add your actual image URL */}
         <meta
@@ -170,20 +136,11 @@ const UrbaniaTraveller = () => {
             TWITTER / SOCIAL
         ========================= */}
 
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-        />
+        <meta name="twitter:card" content="summary_large_image" />
 
-        <meta
-          name="twitter:title"
-          content={pageTitle}
-        />
+        <meta name="twitter:title" content={pageTitle} />
 
-        <meta
-          name="twitter:description"
-          content={pageDescription}
-        />
+        <meta name="twitter:description" content={pageDescription} />
 
         <meta
           name="twitter:image"
@@ -194,10 +151,7 @@ const UrbaniaTraveller = () => {
             THEME
         ========================= */}
 
-        <meta
-          name="theme-color"
-          content="#20a6df"
-        />
+        <meta name="theme-color" content="#20a6df" />
 
         {/* =========================
             STRUCTURED DATA

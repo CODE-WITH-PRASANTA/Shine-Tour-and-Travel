@@ -10,7 +10,7 @@ import API from "../../api/axios";
 
 import travelImage from "../../assets/images.webp";
 
-const CALL_NUMBER = "+919668892441";
+const CALL_NUMBER = "+9193375 94808";
 
 const FloatingForm = ({
   triggerOnLoad = false,
@@ -501,7 +501,7 @@ const FloatingForm = ({
                     ☎
                   </span>
                   <span>
-                    Call Now <strong>+91 96688 92441</strong>
+                    Call Now <strong>+91 93375 94808</strong>
                   </span>
                 </button>
               </div>

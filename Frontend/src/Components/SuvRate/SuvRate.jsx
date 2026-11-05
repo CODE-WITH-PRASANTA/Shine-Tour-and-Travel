@@ -492,7 +492,7 @@ const SuvRate = () => {
             <div>
               <strong>Call for SUV Booking</strong>
               <span>
-                9668892441&nbsp;&nbsp;|&nbsp;&nbsp;9556355446
+                93375 94808&nbsp;&nbsp;|&nbsp;&nbsp;9556355446
               </span>
             </div>
           </div>

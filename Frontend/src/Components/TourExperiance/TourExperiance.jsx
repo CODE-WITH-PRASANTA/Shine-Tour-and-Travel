@@ -467,7 +467,7 @@ const TourExperiance = ({ tour }) => {
       `Please share confirmation and itinerary details.`;
 
     const whatsappURL =
-      `https://wa.me/919668892441?text=` +
+      `https://wa.me/9193375 94808?text=` +
       encodeURIComponent(message);
 
     window.open(whatsappURL, "_blank");
@@ -1155,7 +1155,7 @@ const TourExperiance = ({ tour }) => {
                 </span>
 
                 <a
-                  href="tel:+919668892441"
+                  href="tel:+9193375 94808"
                   className="TourExperience-phoneNumber"
                 >
                   +91 96688 92441

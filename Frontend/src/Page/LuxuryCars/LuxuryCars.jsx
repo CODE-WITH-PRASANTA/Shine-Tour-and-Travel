@@ -12,7 +12,7 @@ const LuxuryCars = () => {
     "@type": "TravelAgency",
     name: "Shine Tour & Travels",
     url: "https://ShineTour&travels.com/luxury-cars",
-    telephone: ["+919668892441", "+919556355446"],
+    telephone: ["+9193375 94808", "+919556355446"],
     description:
       "Shine Tour & Travels is a trusted Tour & Travel Agency in Bhubaneswar, Odisha, offering luxury car rentals, wedding cars, local and outstation travel, airport transfers and comfortable transportation services.",
     address: {

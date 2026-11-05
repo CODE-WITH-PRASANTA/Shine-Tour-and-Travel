@@ -15,7 +15,7 @@ const TempoTravell = () => {
       "Shine Explorer Travels is a tour and travel agency in Bhubaneswar, Odisha, providing car rentals, Tempo Traveller, Urbania, SML Coach, local sightseeing and outstation travel services.",
     url: "https://Jagannathexplorertravels.com/",
     telephone: [
-      "+91-9668892441",
+      "+91-93375 94808",
       "+91-9556355446",
     ],
     address: {

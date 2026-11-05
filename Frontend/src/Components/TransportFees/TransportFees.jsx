@@ -9,11 +9,11 @@ import "./TransportFees.css";
 const BUSINESS = {
   name: "Shine Tour & Travels",
   address:
-    "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha, Pin - 751002",
-  phones: ["9668892441", "9556355446"],
+    "Plot No-101, Janpath, Near Swosti Hotel, Kharavela Nagar, Master Canteen, Bhubaneswar, Odisha 751001",
+  phones: ["93375 94808"],
   city: "Bhubaneswar",
   state: "Odisha",
-  pin: "751002",
+  pin: "751001",
 };
 
 /* =========================================================
@@ -25,14 +25,14 @@ const structuredData = {
   "@type": "TravelAgency",
   name: BUSINESS.name,
   url: "https://ShineTour &travels.com/transport-fees",
-  telephone: ["+919668892441", "+919556355446"],
+  telephone: ["+9193375 94808"],
   address: {
     "@type": "PostalAddress",
     streetAddress:
-      "Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantray Pur",
+      "Plot No-101, Janpath, Near Swosti Hotel, Kharavela Nagar, Master Canteen",
     addressLocality: "Bhubaneswar",
     addressRegion: "Odisha",
-    postalCode: "751002",
+    postalCode: "751001",
     addressCountry: "IN",
   },
   areaServed: [
@@ -397,14 +397,14 @@ const TransportFees = () => {
           <div className="transport-fees-business-item">
             <span>☎</span>
             <p>
-              <a href="tel:+919668892441">
-                9668892441
+              <a href="tel:+9193375 94808">
+                93375 94808
               </a>
               <span className="transport-fees-phone-separator">
                 |
               </span>
               <a href="tel:+919556355446">
-                9556355446
+               
               </a>
             </p>
           </div>
@@ -837,17 +837,17 @@ const TransportFees = () => {
           <div className="transport-fees-contact-buttons">
 
             <a
-              href="tel:+919668892441"
+              href="tel:+9193375 94808"
               className="transport-fees-contact-btn"
             >
-              Call 9668892441
+              Call 93375 94808
             </a>
 
             <a
               href="tel:+919556355446"
               className="transport-fees-contact-btn transport-fees-contact-btn-outline"
             >
-              Call 9556355446
+              Call
             </a>
 
           </div>

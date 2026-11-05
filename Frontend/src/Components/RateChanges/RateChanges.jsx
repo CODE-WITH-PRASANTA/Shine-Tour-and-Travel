@@ -278,7 +278,7 @@ const RateChanges = () => {
 
           <div className="business-info__item">
             <span className="business-info__icon" aria-hidden="true">📞</span>
-            <a href="tel:9668892441">9668892441</a>
+            <a href="tel:93375 94808">93375 94808</a>
             <span aria-hidden="true">|</span>
             <a href="tel:9556355446">9556355446</a>
           </div>

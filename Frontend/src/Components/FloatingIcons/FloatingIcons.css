@@ -1,110 +1,326 @@
-/* Container */
+/* =========================================================
+   CONTAINER
+========================================================= */
 .FloatingIcons {
   position: fixed;
   bottom: 24px;
   right: 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-end;
+  gap: 14px;
   z-index: 9999;
 }
 
-/* Base Button Styles */
+/* =========================================================
+   BASE BUTTON
+========================================================= */
 .FloatingIcons__btn {
-  width: 48px;
-  height: 48px;
+  position: relative;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  border: none;
+  border: 3px solid #ffffff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   cursor: pointer;
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease, background-color 0.2s ease;
+  box-shadow: 0 10px 24px rgba(11, 132, 243, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    opacity 0.25s ease, filter 0.25s ease;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
 
 .FloatingIcons__btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 14px 30px rgba(11, 132, 243, 0.38);
 }
 
 .FloatingIcons__btn:active {
   transform: translateY(0) scale(0.95);
 }
 
-/* Base SVG Icon Sizing */
 .FloatingIcons__svg {
-  width: 22px;
-  height: 22px;
-}
-
-/* WhatsApp Variant */
-.FloatingIcons__btn--whatsapp {
-  background-color: #25d366;
-}
-
-.FloatingIcons__btn--whatsapp:hover {
-  background-color: #1eb857;
-}
-
-.FloatingIcons__btn--whatsapp .FloatingIcons__svg {
+  position: relative;
+  z-index: 2;
   width: 24px;
   height: 24px;
 }
 
-/* Call Variant */
+/* =========================================================
+   PULSE RING (eye catching)
+========================================================= */
+.FloatingIcons__pulse {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  animation: floatingPulse 2s ease-out infinite;
+}
+
+@keyframes floatingPulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--pulse-color);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* =========================================================
+   HOVER LABEL (slides out to the left)
+========================================================= */
+.FloatingIcons__label {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 8px 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffffff 0%, #e6f3ff 100%);
+  border: 1px solid #cfe5fa;
+  box-shadow: 0 12px 28px rgba(11, 132, 243, 0.2);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(12px, -50%);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  font-family: "Poppins", "Outfit", system-ui, sans-serif;
+  z-index: 3;
+}
+
+.FloatingIcons__label small {
+  color: #5f7391;
+  font-size: 10.5px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.FloatingIcons__label strong {
+  color: #0a3477;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.2px;
+}
+
+/* little arrow tip */
+.FloatingIcons__label::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  background: #e6f3ff;
+  border-right: 1px solid #cfe5fa;
+  border-top: 1px solid #cfe5fa;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.FloatingIcons__btn:hover .FloatingIcons__label,
+.FloatingIcons__btn:focus-visible .FloatingIcons__label {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -50%);
+}
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+.FloatingIcons__btn--whatsapp {
+  --pulse-color: rgba(37, 211, 102, 0.55);
+  background: linear-gradient(135deg, #4ff08a 0%, #25d366 50%, #12a84a 100%);
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+}
+
+.FloatingIcons__btn--whatsapp:hover {
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.55);
+  filter: brightness(1.05);
+}
+
+.FloatingIcons__btn--whatsapp .FloatingIcons__svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* =========================================================
+   CALL
+========================================================= */
 .FloatingIcons__btn--call {
-  background-color: #0d6efd;
+  --pulse-color: rgba(11, 132, 243, 0.5);
+  background: linear-gradient(135deg, #5ab8ff 0%, #0b84f3 55%, #0668c4 100%);
+  box-shadow: 0 10px 24px rgba(11, 132, 243, 0.4);
 }
 
 .FloatingIcons__btn--call:hover {
-  background-color: #0b5ed7;
+  box-shadow: 0 14px 30px rgba(11, 132, 243, 0.55);
+  filter: brightness(1.05);
 }
 
-/* Scroll Variant (Hidden by default, smooth appearance on scroll) */
+.FloatingIcons__svg--ring {
+  animation: floatingRing 2.6s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes floatingRing {
+  0%, 60%, 100% {
+    transform: rotate(0deg);
+  }
+  65% {
+    transform: rotate(-16deg);
+  }
+  70% {
+    transform: rotate(14deg);
+  }
+  75% {
+    transform: rotate(-12deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  85% {
+    transform: rotate(-6deg);
+  }
+}
+
+/* =========================================================
+   SCROLL TO TOP (with progress ring)
+========================================================= */
 .FloatingIcons__btn--scroll {
-  background-color: #212529;
+  width: 52px;
+  height: 52px;
+  align-self: center;
+  background: #ffffff;
+  color: #0b84f3;
+  border: none;
+  padding: 0;
+  box-shadow: 0 10px 24px rgba(11, 132, 243, 0.25);
   opacity: 0;
   pointer-events: none;
-  transform: translateY(12px);
+  transform: translateY(14px) scale(0.85);
+}
+
+/* Soft light-blue inner disc */
+.FloatingIcons__btn--scroll::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff 0%, #e6f3ff 100%);
+  transition: background 0.3s ease;
+}
+
+.FloatingIcons__btn--scroll .FloatingIcons__svg {
+  position: relative;
+  z-index: 2;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Progress ring */
+.FloatingIcons__ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform: rotate(-90deg); /* start from the top */
+  pointer-events: none;
+}
+
+.FloatingIcons__ring-track,
+.FloatingIcons__ring-fill {
+  fill: none;
+  stroke-width: 3;
+}
+
+.FloatingIcons__ring-track {
+  stroke: #d6ebff;
+}
+
+.FloatingIcons__ring-fill {
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.12s linear;
 }
 
 .FloatingIcons__btn--scroll.FloatingIcons__btn--visible {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .FloatingIcons__btn--scroll.FloatingIcons__btn--visible:hover {
-  background-color: #000000;
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 14px 30px rgba(11, 132, 243, 0.4);
 }
 
-/* Responsive Styles for Tablet & Mobile Devices */
+.FloatingIcons__btn--scroll.FloatingIcons__btn--visible:hover::before {
+  background: linear-gradient(135deg, #36a2ff 0%, #0668c4 100%);
+}
+
+.FloatingIcons__btn--scroll.FloatingIcons__btn--visible:hover .FloatingIcons__svg {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   TABLET & MOBILE
+========================================================= */
 @media (max-width: 768px) {
   .FloatingIcons {
     bottom: 16px;
-    right: 16px;
-    gap: 10px;
+    right: 14px;
+    gap: 12px;
   }
 
   .FloatingIcons__btn {
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .FloatingIcons__btn--scroll {
+    width: 46px;
+    height: 46px;
   }
 
   .FloatingIcons__svg {
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
   }
 
   .FloatingIcons__btn--whatsapp .FloatingIcons__svg {
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
+  }
+
+  /* hover labels are not needed on touch screens */
+  .FloatingIcons__label {
+    display: none;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .FloatingIcons__pulse,
+  .FloatingIcons__svg--ring {
+    animation: none !important;
+  }
+
+  .FloatingIcons__btn {
+    transition: none !important;
   }
 }

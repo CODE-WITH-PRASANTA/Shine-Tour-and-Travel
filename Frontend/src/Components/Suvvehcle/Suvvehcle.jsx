@@ -225,11 +225,11 @@ const Suvvehcle = () => {
         <div className="Suvvehcle-business-info">
           <div className="info-item">
             <span className="info-icon">📍</span>
-            <span>Plot No - 001, Mahaveer Nagar, Road No. - 18, Samantarapur, Bhubaneswar, Odisha - 751002</span>
+            <span>Plot No-101, Janpath, Near Swosti Hotel, Kharavela Nagar, Master Canteen, Bhubaneswar, Odisha 751001</span>
           </div>
           <div className="info-item">
             <span className="info-icon">📞</span>
-            <span className="phone-highlight">9668892441 &nbsp;|&nbsp; 9556355446</span>
+            <span className="phone-highlight">+91 93375 94808 </span>
           </div>
         </div>
 
