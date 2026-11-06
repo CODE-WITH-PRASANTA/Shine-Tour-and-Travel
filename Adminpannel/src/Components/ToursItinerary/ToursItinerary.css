@@ -1,16 +1,21 @@
+/* =========================================================
+   TOURS ITINERARY SECTION
+   PREMIUM ADMIN DASHBOARD UI - LIGHT BLUE & WHITE THEME
+   Backend / State Logic Unchanged
+   ========================================================= */
 
 :root {
-  --iti-primary: #554cf0;
-  --iti-primary-light: #eef2ff;
-  --iti-primary-border: #d9ddff;
+  --iti-primary: #0284c7;           /* Sky / Ocean Blue */
+  --iti-primary-light: #f0f9ff;     /* Very soft icy blue */
+  --iti-primary-border: #bae6fd;    /* Soft pastel blue border */
 
-  --iti-green: #38a169;
+  --iti-green: #059669;
 
-  --iti-text: #16233b;
-  --iti-muted: #71809a;
+  --iti-text: #032b43;              /* Deep midnight blue */
+  --iti-muted: #537188;             /* Slate blue-gray */
 
-  --iti-border: #dfe5ee;
-  --iti-border-soft: #edf1f6;
+  --iti-border: #d7e7f5;            /* Subtle light blue-gray border */
+  --iti-border-soft: #eaf3fa;
 
   --iti-bg: #ffffff;
 }
@@ -36,8 +41,16 @@
   border-radius: 18px;
   overflow: hidden;
   box-shadow:
-    0 15px 40px rgba(20, 32, 58, 0.055),
-    0 3px 10px rgba(20, 32, 58, 0.025);
+    0 15px 40px rgba(2, 132, 199, 0.05),
+    0 3px 10px rgba(15, 23, 42, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ToursItinerary-container:hover {
+  border-color: #bcd9f2;
+  box-shadow:
+    0 18px 45px rgba(2, 132, 199, 0.08),
+    0 4px 12px rgba(15, 23, 42, 0.025);
 }
 
 /* ================= HEADER ================= */
@@ -50,7 +63,12 @@
   justify-content: space-between;
   cursor: pointer;
   user-select: none;
-  background: #fff;
+  background: #ffffff;
+  transition: background 0.2s ease;
+}
+
+.ToursItinerary-header:hover {
+  background: #f8fbff;
 }
 
 .ToursItinerary-header-left {
@@ -68,8 +86,9 @@
   align-items: center;
   justify-content: center;
   color: var(--iti-primary);
-  background: linear-gradient(145deg, #f2f3ff, #e9ebff);
+  background: linear-gradient(145deg, #f0f9ff, #e0f2fe);
   border: 1px solid var(--iti-primary-border);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
 }
 
 .ToursItinerary-header-text {
@@ -103,11 +122,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #64748b;
+  color: #7b96b2;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.ToursItinerary-section-toggle-btn:hover {
-  background: #f3f5f8;
+.ToursItinerary-header:hover .ToursItinerary-section-toggle-btn {
+  background: #edf6fd;
+  color: var(--iti-primary);
 }
 
 .ToursItinerary-section-chevron {
@@ -140,12 +161,17 @@
   border: 1px solid var(--iti-border);
   border-radius: 14px;
   overflow: hidden;
-  background: #fff;
-  transition: 0.2s ease;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ToursItinerary-accordion-card:hover {
+  border-color: #93c5fd;
 }
 
 .ToursItinerary-accordion-card-expanded {
-  box-shadow: 0 8px 24px rgba(30, 41, 59, 0.05);
+  border-color: #7dd3fc;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.07);
 }
 
 .ToursItinerary-accordion-header {
@@ -155,7 +181,12 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  background: #fff;
+  background: #ffffff;
+  transition: background 0.2s ease;
+}
+
+.ToursItinerary-accordion-header:hover {
+  background: #f8fbff;
 }
 
 .ToursItinerary-accordion-left {
@@ -165,13 +196,13 @@
 }
 
 .ToursItinerary-day-tag {
-  background: linear-gradient(135deg, #3da65a, #2f8f4d);
-  color: #fff;
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   padding: 9px 16px;
   border-radius: 9px;
-  box-shadow: 0 5px 12px rgba(56, 161, 105, 0.18);
+  box-shadow: 0 5px 12px rgba(2, 132, 199, 0.2);
 }
 
 .ToursItinerary-day-title-preview {
@@ -185,13 +216,26 @@
   background: transparent;
   cursor: pointer;
   padding: 5px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s ease;
+}
+
+.ToursItinerary-row-toggle-btn:hover {
+  background: #edf6fd;
 }
 
 .ToursItinerary-chevron-icon {
   width: 21px;
   height: 21px;
-  color: #64748b;
-  transition: 0.25s ease;
+  color: #7b96b2;
+  transition: 0.25s ease, color 0.2s ease;
+}
+
+.ToursItinerary-accordion-header:hover .ToursItinerary-chevron-icon {
+  color: var(--iti-primary);
 }
 
 .ToursItinerary-chevron-icon-open {
@@ -203,6 +247,7 @@
 .ToursItinerary-accordion-body {
   padding: 22px;
   border-top: 1px solid var(--iti-border-soft);
+  background: #ffffff;
 }
 
 .ToursItinerary-form-group {
@@ -228,32 +273,47 @@
   width: 100%;
   height: 48px;
   padding: 0 15px;
-  border: 1px solid var(--iti-border);
+  border: 1px solid #cde0f0;
   border-radius: 10px;
   font-family: inherit;
   font-size: 14.5px;
   font-weight: 500;
   outline: none;
+  background: #ffffff;
   color: var(--iti-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ToursItinerary-input::placeholder {
+  color: #9cb3c9;
+}
+
+.ToursItinerary-input:hover {
+  border-color: #93c5fd;
 }
 
 .ToursItinerary-input:focus {
   border-color: var(--iti-primary);
-  box-shadow: 0 0 0 4px rgba(85, 76, 240, 0.08);
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
 }
 
 /* ================= EDITOR ================= */
 
 .ToursItinerary-editor-card {
-  border: 1px solid var(--iti-border);
+  border: 1px solid #cde0f0;
   border-radius: 10px;
   overflow: hidden;
-  background: #fff;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ToursItinerary-editor-card:hover {
+  border-color: #93c5fd;
 }
 
 .ToursItinerary-editor-card:focus-within {
   border-color: var(--iti-primary);
-  box-shadow: 0 0 0 4px rgba(85, 76, 240, 0.08);
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
 }
 
 .ToursItinerary-editor-toolbar {
@@ -263,7 +323,7 @@
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  background: #fff;
+  background: #f8fbff;
   border-bottom: 1px solid var(--iti-border-soft);
 }
 
@@ -272,15 +332,23 @@
   outline: none;
   font-family: inherit;
   font-size: 13.5px;
-  color: #64748b;
+  color: #537188;
   background: transparent;
   padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.ToursItinerary-editor-select:hover {
+  color: var(--iti-primary);
+  background: #e0f2fe;
 }
 
 .ToursItinerary-toolbar-divider {
   width: 1px;
   height: 20px;
-  background: #e4e7ec;
+  background: #d7e7f5;
 }
 
 .ToursItinerary-editor-btn {
@@ -290,14 +358,18 @@
   border-radius: 6px;
   background: transparent;
   cursor: pointer;
-  color: #64748b;
+  color: #537188;
   font-size: 14px;
   font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.15s ease;
 }
 
 .ToursItinerary-editor-btn:hover {
-  background: #f1f3f7;
-  color: #1f2937;
+  background: #e0f2fe;
+  color: var(--iti-primary);
 }
 
 .ToursItinerary-editor-btn.italic {
@@ -318,7 +390,7 @@
   font-family: inherit;
   font-size: 14.5px;
   line-height: 1.7;
-  color: #334155;
+  color: #0f172a;
 }
 
 /* ================= HIGHLIGHTS ================= */
@@ -335,13 +407,19 @@
   align-items: center;
   gap: 10px;
   padding: 8px 12px;
-  border: 1px solid var(--iti-border);
+  border: 1px solid #cde0f0;
   border-radius: 10px;
-  background: #fff;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ToursItinerary-highlight-item:hover {
+  border-color: #93c5fd;
 }
 
 .ToursItinerary-highlight-item:focus-within {
   border-color: var(--iti-primary);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.08);
 }
 
 .ToursItinerary-highlight-check {
@@ -351,9 +429,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ecfdf3;
+  background: #f0fdf4;
   color: #16a34a;
+  border: 1px solid #bbf7d0;
   font-weight: 800;
+  font-size: 12px;
 }
 
 .ToursItinerary-highlight-input {
@@ -363,21 +443,32 @@
   font-family: inherit;
   font-size: 14px;
   color: var(--iti-text);
+  background: transparent;
+}
+
+.ToursItinerary-highlight-input::placeholder {
+  color: #9cb3c9;
 }
 
 .ToursItinerary-highlight-delete-btn {
   width: 30px;
   height: 30px;
-  border: none;
+  border: 1px solid #fecdd3;
   background: #fff1f2;
   color: #ef4444;
   border-radius: 7px;
   cursor: pointer;
   font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
 }
 
 .ToursItinerary-highlight-delete-btn:hover {
-  background: #fee2e2;
+  background: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
 }
 
 /* ================= BUTTONS ================= */
@@ -387,21 +478,26 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid #5b5ce2;
-  background: #fff;
-  color: #4f46e5;
+  gap: 8px;
+  border: 1.5px solid var(--iti-primary-border);
+  background: var(--iti-primary-light);
+  color: var(--iti-primary);
   font-family: inherit;
   font-size: 14px;
   font-weight: 700;
   padding: 10px 18px;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.2s ease;
+  box-shadow: 0 3px 8px rgba(2, 132, 199, 0.05);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.18s ease;
 }
 
 .ToursItinerary-btn-add-highlight:hover,
 .ToursItinerary-btn-add-day:hover {
-  background: #eef2ff;
+  background: var(--iti-primary);
+  border-color: var(--iti-primary);
+  color: #ffffff;
+  box-shadow: 0 6px 15px rgba(2, 132, 199, 0.22);
   transform: translateY(-1px);
 }
 

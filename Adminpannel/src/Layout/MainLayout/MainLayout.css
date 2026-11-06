@@ -1,3 +1,18 @@
+/* =========================================================
+   MainLayout.css
+   Clean Light Blue + White Theme
+   Fully Responsive (Matches Sidebar.css & Topbar.css)
+========================================================= */
+
+:root {
+  --ml-bg: #f8fafc;
+  --ml-surface: #ffffff;
+  --ml-border: rgba(148, 163, 184, 0.25);
+  --ml-text: #475569;
+  --ml-heading: #0284c7;
+  --ml-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
 .MainLayout {
   /* Single source of truth for the sidebar's current width.
      Values match Sidebar.css exactly (270px / 76px). */
@@ -6,8 +21,8 @@
   display: flex;
   min-height: 100vh;
   width: 100%;
-  background-color: #f8fafc;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--ml-bg);
+  font-family: inherit;
 
   /* Prevent horizontal overflow */
   overflow-x: hidden;
@@ -68,20 +83,21 @@
    ========================================================= */
 
 .MainLayout-placeholder {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: var(--ml-surface);
+  border: 1px solid var(--ml-border);
   border-radius: 12px;
   padding: 40px;
   text-align: center;
-  color: #64748b;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  color: var(--ml-text);
+  box-shadow: var(--ml-shadow);
 
   width: 100%;
   box-sizing: border-box;
 }
 
 .MainLayout-placeholder h2 {
-  color: #0066cc;
+  color: var(--ml-heading);
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -100,9 +116,9 @@
   width: 100vw;
   height: 100vh;
 
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background-color: rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
   z-index: 98;
 

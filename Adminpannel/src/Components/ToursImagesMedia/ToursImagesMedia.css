@@ -1,6 +1,7 @@
-
 /* =========================================================
    MAIN CARD
+   LIGHT BLUE & WHITE THEME
+   Backend / State Logic Unchanged
 ========================================================= */
 
 .tours-images-media-card {
@@ -10,7 +11,7 @@
 
   background: #ffffff;
 
-  border: 1px solid #e1e7f0;
+  border: 1px solid #d7e7f5;
   border-radius: 17px;
 
   overflow: hidden;
@@ -23,13 +24,24 @@
     Roboto,
     sans-serif;
 
-  color: #172033;
+  color: #032b43;
 
   box-shadow:
-    0 14px 38px rgba(20, 32, 58, 0.055),
-    0 3px 10px rgba(20, 32, 58, 0.025);
+    0 14px 38px rgba(2, 132, 199, 0.05),
+    0 3px 10px rgba(15, 23, 42, 0.02);
 
   box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tours-images-media-card:hover {
+  border-color: #bcd9f2;
+  box-shadow:
+    0 18px 42px rgba(2, 132, 199, 0.08),
+    0 4px 12px rgba(15, 23, 42, 0.025);
 }
 
 .tours-images-media-card *,
@@ -62,7 +74,7 @@
 }
 
 .tours-images-media-header:hover {
-  background: #fcfdff;
+  background: #f8fbff;
 }
 
 .tours-images-media-header-left {
@@ -82,22 +94,22 @@
   align-items: center;
   justify-content: center;
 
-  color: #5148e8;
+  color: #0284c7;
 
   background:
     linear-gradient(
       145deg,
-      #f0f2ff 0%,
-      #e7eaff 100%
+      #f0f9ff 0%,
+      #e0f2fe 100%
     );
 
-  border: 1px solid #dfe4ff;
+  border: 1px solid #bae6fd;
 
   border-radius: 12px;
 
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    0 5px 14px rgba(79, 70, 229, 0.07);
+    0 5px 14px rgba(2, 132, 199, 0.08);
 }
 
 .tours-images-media-header-icon {
@@ -114,7 +126,7 @@
 .tours-images-media-header-title {
   margin: 0;
 
-  color: #14203a;
+  color: #032b43;
 
   font-size: 19px;
   line-height: 1.25;
@@ -125,7 +137,7 @@
 }
 
 .tours-images-media-header-subtitle {
-  color: #8792a5;
+  color: #537188;
 
   font-size: 12.5px;
   line-height: 1.4;
@@ -143,7 +155,7 @@
 
   padding: 0;
 
-  color: #64748b;
+  color: #7b96b2;
 
   background: transparent;
 
@@ -156,15 +168,16 @@
 
   transition:
     background 0.18s ease,
-    color 0.18s ease;
+    color 0.18s ease,
+    border-color 0.18s ease;
 }
 
 .tours-images-media-collapse-btn:hover {
-  color: #26344d;
+  color: #0284c7;
 
-  background: #f2f4f8;
+  background: #edf6fd;
 
-  border-color: #e6eaf0;
+  border-color: #bae6fd;
 }
 
 /* =========================================================
@@ -187,8 +200,8 @@
   background:
     linear-gradient(
       90deg,
-      rgba(79, 70, 229, 0.15),
-      rgba(79, 70, 229, 0.04),
+      rgba(2, 132, 199, 0.25),
+      rgba(2, 132, 199, 0.05),
       transparent
     );
 }
@@ -213,11 +226,6 @@
 
     gap: 24px;
   }
-
-  /*
-    KEEPING THE SAME PROPORTION
-    AS YOUR ORIGINAL DESIGN
-  */
 
   .tours-images-media-left-col {
     flex: 0 0 calc(58% - 12px);
@@ -248,7 +256,7 @@
 .tours-images-media-label {
   margin: 0;
 
-  color: #17243d;
+  color: #032b43;
 
   font-size: 14px;
   line-height: 1.4;
@@ -259,7 +267,7 @@
 }
 
 .tours-images-media-label-muted {
-  color: #758197;
+  color: #537188;
 
   font-size: 13px;
 
@@ -275,10 +283,9 @@
 .tours-images-media-sublabel {
   margin: 0;
 
-  color: #8792a5;
+  color: #7b96b2;
 
   font-size: 12.5px;
-
   line-height: 1.4;
 
   font-weight: 500;
@@ -292,11 +299,6 @@
   position: relative;
 
   width: 100%;
-
-  /*
-    SAME IMAGE BOX WIDTH
-    AND SAME APPROXIMATE HEIGHT
-  */
 
   min-height: 310px;
 
@@ -313,11 +315,11 @@
   background:
     linear-gradient(
       145deg,
-      #fafbff 0%,
-      #f7f9ff 100%
+      #ffffff 0%,
+      #f0f9ff 100%
     );
 
-  border: 1.5px dashed #c6d0ff;
+  border: 1.5px dashed #7dd3fc;
 
   border-radius: 11px;
 
@@ -328,17 +330,18 @@
 }
 
 .tours-images-media-main-dropzone:hover {
-  border-color: #6366f1;
+  border-color: #0284c7;
 
   background:
     linear-gradient(
       145deg,
-      #f7f8ff 0%,
-      #eef1ff 100%
+      #f8fcff 0%,
+      #e0f2fe 100%
     );
 
   box-shadow:
-    inset 0 0 0 1px rgba(99, 102, 241, 0.05);
+    inset 0 0 0 1px rgba(2, 132, 199, 0.08),
+    0 10px 25px rgba(2, 132, 199, 0.08);
 }
 
 .tours-images-media-main-dropzone::before {
@@ -357,7 +360,7 @@
   background:
     radial-gradient(
       circle,
-      rgba(99, 102, 241, 0.065),
+      rgba(2, 132, 199, 0.08),
       transparent 70%
     );
 
@@ -395,21 +398,21 @@
   align-items: center;
   justify-content: center;
 
-  color: #5148e8;
+  color: #0284c7;
 
   background:
     linear-gradient(
       145deg,
-      #eef0ff,
-      #e6eaff
+      #ffffff,
+      #e0f2fe
     );
 
-  border: 1px solid #dde2ff;
+  border: 1px solid #bae6fd;
 
   border-radius: 18px;
 
   box-shadow:
-    0 8px 20px rgba(79, 70, 229, 0.08);
+    0 8px 20px rgba(2, 132, 199, 0.1);
 }
 
 .tours-images-media-cloud-icon {
@@ -421,7 +424,7 @@
 .tours-images-media-placeholder-text {
   margin: 0 0 7px;
 
-  color: #65728a;
+  color: #537188;
 
   font-size: 14px;
 
@@ -431,13 +434,13 @@
 }
 
 .tours-images-media-bold-text {
-  color: #17213a;
+  color: #032b43;
 
   font-weight: 750;
 }
 
 .tours-images-media-hint-text {
-  color: #98a3b5;
+  color: #7b96b2;
 
   font-size: 12px;
 
@@ -451,7 +454,7 @@
 .tours-images-media-has-preview {
   border-style: solid;
 
-  border-color: #d8deeb;
+  border-color: #bae6fd;
 }
 
 .tours-images-media-preview-container {
@@ -496,7 +499,7 @@
   background:
     linear-gradient(
       transparent,
-      rgba(15, 23, 42, 0.65)
+      rgba(3, 43, 67, 0.75)
     );
 
   font-size: 11.5px;
@@ -532,9 +535,9 @@
 
   color: #ffffff;
 
-  background: rgba(15, 23, 42, 0.72);
+  background: rgba(3, 43, 67, 0.78);
 
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   border-radius: 9px;
 
@@ -575,7 +578,7 @@
 
   z-index: 2;
 
-  color: #8d99ac;
+  color: #7b96b2;
 
   font-size: 18px;
 
@@ -588,11 +591,11 @@
 
   padding: 0 14px 0 43px;
 
-  color: #172033;
+  color: #032b43;
 
   background: #ffffff;
 
-  border: 1px solid #dce3ed;
+  border: 1px solid #cde0f0;
 
   border-radius: 10px;
 
@@ -610,26 +613,26 @@
 }
 
 .tours-images-media-input::placeholder {
-  color: #a1acbd;
+  color: #9cb3c9;
 
   font-weight: 450;
 }
 
 .tours-images-media-input:hover {
-  border-color: #cbd5e1;
+  border-color: #93c5fd;
 }
 
 .tours-images-media-input:focus {
-  border-color: #646cf0;
+  border-color: #0284c7;
 
   box-shadow:
-    0 0 0 4px rgba(79, 70, 229, 0.075);
+    0 0 0 4px rgba(2, 132, 199, 0.12);
 }
 
 .tours-images-media-subtext {
   margin-top: 1px;
 
-  color: #98a3b5;
+  color: #7b96b2;
 
   font-size: 11.5px;
 
@@ -668,11 +671,11 @@
 
   gap: 8px;
 
-  color: #5148e8;
+  color: #0284c7;
 
-  background: #ffffff;
+  background: #f0f9ff;
 
-  border: 1.5px solid #c9d1ff;
+  border: 1.5px solid #bae6fd;
 
   border-radius: 10px;
 
@@ -687,24 +690,25 @@
   margin-bottom: 15px;
 
   box-shadow:
-    0 3px 8px rgba(79, 70, 229, 0.035);
+    0 3px 8px rgba(2, 132, 199, 0.05);
 
   transition:
     background 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease,
+    color 0.2s ease,
     transform 0.18s ease;
 }
 
 .tours-images-media-gallery-btn:hover {
-  color: #4338ca;
+  color: #ffffff;
 
-  background: #f6f7ff;
+  background: #0284c7;
 
-  border-color: #6366f1;
+  border-color: #0284c7;
 
   box-shadow:
-    0 5px 13px rgba(79, 70, 229, 0.08);
+    0 5px 14px rgba(2, 132, 199, 0.2);
 
   transform: translateY(-1px);
 }
@@ -737,9 +741,9 @@
 
   overflow: hidden;
 
-  background: #f4f6fa;
+  background: #f0f8ff;
 
-  border: 1px solid #e0e5ed;
+  border: 1px solid #d7e7f5;
 
   border-radius: 9px;
 
@@ -770,8 +774,8 @@
   background:
     linear-gradient(
       180deg,
-      rgba(15, 23, 42, 0.02),
-      rgba(15, 23, 42, 0.2)
+      rgba(3, 43, 67, 0.02),
+      rgba(3, 43, 67, 0.22)
     );
 
   pointer-events: none;
@@ -794,9 +798,9 @@
 
   color: #ffffff;
 
-  background: rgba(15, 23, 42, 0.72);
+  background: rgba(3, 43, 67, 0.78);
 
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   border-radius: 7px;
 
@@ -847,16 +851,16 @@
 
   text-align: center;
 
-  color: #a0aabd;
+  color: #7b96b2;
 
   background:
     linear-gradient(
       145deg,
-      #fafbfe,
-      #f7f8fc
+      #ffffff,
+      #f0f9ff
     );
 
-  border: 1px dashed #d9e0ea;
+  border: 1px dashed #bae6fd;
 
   border-radius: 10px;
 
@@ -870,7 +874,7 @@
 .tours-images-media-gallery-empty svg {
   font-size: 24px;
 
-  color: #b2bdcc;
+  color: #7dd3fc;
 }
 
 /* =========================================================
@@ -887,7 +891,7 @@
 
   padding-top: 18px;
 
-  border-top: 1px solid #edf0f5;
+  border-top: 1px solid #eaf3fa;
 }
 
 /* =========================================================
@@ -904,11 +908,11 @@
   align-items: center;
   justify-content: center;
 
-  color: #526078;
+  color: #0369a1;
 
-  background: #f6f8fb;
+  background: #f0f9ff;
 
-  border: 1px solid #e1e6ee;
+  border: 1px solid #bae6fd;
 
   border-radius: 10px;
 
@@ -928,11 +932,11 @@
 }
 
 .tours-images-media-btn-cancel:hover {
-  color: #25334b;
+  color: #0284c7;
 
-  background: #edf0f5;
+  background: #e0f2fe;
 
-  border-color: #d6dde7;
+  border-color: #7dd3fc;
 
   transform: translateY(-1px);
 }
@@ -958,8 +962,8 @@
   background:
     linear-gradient(
       135deg,
-      #5047e8 0%,
-      #655cf2 100%
+      #0284c7 0%,
+      #0369a1 100%
     );
 
   border: 0;
@@ -975,7 +979,7 @@
   cursor: pointer;
 
   box-shadow:
-    0 7px 17px rgba(79, 70, 229, 0.2);
+    0 7px 17px rgba(2, 132, 199, 0.22);
 
   transition:
     transform 0.18s ease,
@@ -984,12 +988,12 @@
 }
 
 .tours-images-media-btn-save:hover {
-  filter: brightness(1.035);
+  filter: brightness(1.05);
 
   transform: translateY(-1px);
 
   box-shadow:
-    0 10px 22px rgba(79, 70, 229, 0.27);
+    0 10px 22px rgba(2, 132, 199, 0.3);
 }
 
 .tours-images-media-btn-save:active {

@@ -1,13 +1,15 @@
 /* =========================================
    BLOG MANAGEMENT STYLING (Blogmanagement.css)
+   LIGHT BLUE & WHITE THEME
+   Backend / logic / DOM selectors untouched
    ========================================= */
 
 .blogmanagement-wrapper {
   padding: 28px;
-  background-color: #f8fafc;
+  background-color: #f5faff;
   min-height: 100vh;
   font-family: inherit;
-  color: #1e293b;
+  color: #032b43;
 }
 
 /* Controls Bar */
@@ -18,11 +20,11 @@
   background: #ffffff;
   padding: 16px 20px;
   border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.05);
   margin-bottom: 24px;
   flex-wrap: wrap;
   gap: 16px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #d7e7f5;
 }
 
 .blogmanagement-view-toggles {
@@ -37,24 +39,25 @@
   padding: 8px 16px;
   font-size: 14px;
   font-weight: 500;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #d7e7f5;
   background: #ffffff;
-  color: #64748b;
+  color: #537188;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .blogmanagement-toggle-btn:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: #f0f9ff;
+  color: #0284c7;
+  border-color: #bae6fd;
 }
 
 .blogmanagement-toggle-active {
-  background: #2563eb !important;
+  background: #0284c7 !important;
   color: #ffffff !important;
-  border-color: #2563eb !important;
-  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+  border-color: #0284c7 !important;
+  box-shadow: 0 3px 10px rgba(2, 132, 199, 0.25);
 }
 
 .blogmanagement-filters-group {
@@ -67,17 +70,22 @@
 .blogmanagement-select {
   padding: 8px 14px;
   font-size: 14px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cde0f0;
   border-radius: 8px;
   background-color: #ffffff;
-  color: #334155;
+  color: #032b43;
   outline: none;
   cursor: pointer;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.blogmanagement-select:hover {
+  border-color: #93c5fd;
 }
 
 .blogmanagement-select:focus {
-  border-color: #2563eb;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
 }
 
 .blogmanagement-search-container {
@@ -89,23 +97,33 @@
 .blogmanagement-search-icon {
   position: absolute;
   left: 12px;
-  color: #94a3b8;
+  color: #7b96b2;
   font-size: 16px;
 }
 
 .blogmanagement-search-input {
   padding: 8px 14px 8px 38px;
   font-size: 14px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cde0f0;
   border-radius: 8px;
   outline: none;
   width: 220px;
   background: #ffffff;
+  color: #032b43;
   transition: all 0.2s;
 }
 
+.blogmanagement-search-input::placeholder {
+  color: #9cb3c9;
+}
+
+.blogmanagement-search-input:hover {
+  border-color: #93c5fd;
+}
+
 .blogmanagement-search-input:focus {
-  border-color: #2563eb;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
   width: 260px;
 }
 
@@ -120,8 +138,8 @@
 
 .blogmanagement-section-title {
   font-size: 18px;
-  font-weight: 600;
-  color: #0f172a;
+  font-weight: 700;
+  color: #032b43;
   margin: 0;
 }
 
@@ -133,7 +151,7 @@
 
 .blogmanagement-sort-label {
   font-size: 14px;
-  color: #64748b;
+  color: #537188;
   font-weight: 500;
 }
 
@@ -143,11 +161,11 @@
   text-align: center;
   padding: 60px;
   font-size: 16px;
-  color: #64748b;
+  color: #537188;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.05);
+  border: 1px solid #d7e7f5;
 }
 
 /* GRID VIEW STYLING */
@@ -161,29 +179,35 @@
   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.04);
+  border: 1px solid #d7e7f5;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .blogmanagement-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 20px -4px rgba(0, 0, 0, 0.08);
+  border-color: #93c5fd;
+  box-shadow: 0 14px 26px -4px rgba(2, 132, 199, 0.12);
 }
 
 .blogmanagement-card-media {
   position: relative;
   height: 160px;
   width: 100%;
-  background: #f1f5f9;
+  background: #f0f8ff;
 }
 
 .blogmanagement-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blogmanagement-card:hover .blogmanagement-card-img {
+  transform: scale(1.03);
 }
 
 .blogmanagement-card-img-placeholder {
@@ -192,21 +216,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #94a3b8;
+  color: #7b96b2;
   font-size: 24px;
+  background: #f0f9ff;
 }
 
 .blogmanagement-card-category-tag {
   position: absolute;
   top: 12px;
   left: 12px;
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(3, 43, 67, 0.82);
   backdrop-filter: blur(4px);
   color: #ffffff;
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 4px 10px;
   border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .blogmanagement-card-body {
@@ -218,8 +244,8 @@
 
 .blogmanagement-card-title {
   font-size: 15px;
-  font-weight: 600;
-  color: #0f172a;
+  font-weight: 700;
+  color: #032b43;
   margin: 0 0 12px 0;
   line-height: 1.4;
   display: -webkit-box;
@@ -233,7 +259,7 @@
   align-items: center;
   gap: 16px;
   font-size: 12px;
-  color: #64748b;
+  color: #537188;
   margin-bottom: 16px;
 }
 
@@ -243,11 +269,15 @@
   gap: 4px;
 }
 
+.blogmanagement-card-meta svg {
+  color: #0284c7;
+}
+
 .blogmanagement-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid #eaf3fa;
   padding-top: 12px;
   margin-top: auto;
 }
@@ -258,27 +288,29 @@
   align-items: center;
   padding: 5px 12px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 20px;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .blogmanagement-status-toggle-btn:hover {
-  opacity: 0.85;
+  opacity: 0.9;
   transform: scale(1.03);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
 }
 
 .blogmanagement-status-published {
-  background: #dcfce7;
-  color: #15803d;
+  background: #f0fdf4;
+  color: #059669;
+  border-color: #bbf7d0;
 }
 
 .blogmanagement-status-draft {
-  background: #fee2e2;
-  color: #b91c1c;
+  background: #fef2f2;
+  color: #dc2626;
+  border-color: #fecdd3;
 }
 
 .blogmanagement-card-actions,
@@ -288,8 +320,8 @@
 }
 
 .blogmanagement-action-btn {
-  background: transparent;
-  border: none;
+  background: #f8fbff;
+  border: 1px solid #d7e7f5;
   width: 32px;
   height: 32px;
   border-radius: 6px;
@@ -297,31 +329,34 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #64748b;
+  color: #537188;
   transition: all 0.2s ease;
 }
 
 .blogmanagement-action-btn:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: #edf6fd;
+  color: #032b43;
+  border-color: #bae6fd;
 }
 
 .blogmanagement-action-btn.blogmanagement-edit:hover {
-  background: #eff6ff;
-  color: #2563eb;
+  background: #e0f2fe;
+  color: #0284c7;
+  border-color: #7dd3fc;
 }
 
 .blogmanagement-action-btn.blogmanagement-delete:hover {
   background: #fee2e2;
   color: #ef4444;
+  border-color: #fecdd3;
 }
 
 /* LIST / TABLE VIEW STYLING */
 .blogmanagement-table-container {
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.05);
+  border: 1px solid #d7e7f5;
   overflow-x: auto;
 }
 
@@ -334,18 +369,25 @@
 }
 
 .blogmanagement-table th {
-  background: #f8fafc;
-  color: #475569;
-  font-weight: 600;
+  background: #f8fbff;
+  color: #537188;
+  font-weight: 700;
   padding: 14px 16px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #d7e7f5;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
 }
 
 .blogmanagement-table td {
   padding: 12px 16px;
-  border-bottom: 1px solid #f1f5f9;
-  color: #334155;
+  border-bottom: 1px solid #eaf3fa;
+  color: #032b43;
   vertical-align: middle;
+}
+
+.blogmanagement-table tr:hover td {
+  background: #f0f9ff;
 }
 
 .blogmanagement-table-thumb,
@@ -354,19 +396,20 @@
   height: 36px;
   border-radius: 6px;
   object-fit: cover;
+  border: 1px solid #bae6fd;
 }
 
 .blogmanagement-table-thumb-placeholder {
-  background: #f1f5f9;
+  background: #f0f9ff;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #94a3b8;
+  color: #7b96b2;
 }
 
 .blogmanagement-table-title-text {
-  font-weight: 500;
-  color: #0f172a;
+  font-weight: 600;
+  color: #032b43;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -376,12 +419,13 @@
 }
 
 .blogmanagement-table-chip {
-  background: #f1f5f9;
-  color: #334155;
+  background: #f0f9ff;
+  color: #0284c7;
+  border: 1px solid #bae6fd;
   padding: 4px 8px;
   border-radius: 6px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* RESPONSIVE DESIGN */

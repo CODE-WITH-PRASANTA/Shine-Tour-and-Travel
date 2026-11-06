@@ -1,24 +1,25 @@
 /* =========================================================
    TOURS LOCATION
-   PREMIUM ADMIN UI
+   PREMIUM ADMIN UI - LIGHT BLUE & WHITE THEME
    Backend / state logic unchanged
    ========================================================= */
 
 :root {
-  --location-primary: #5546e8;
-  --location-primary-hover: #493bd4;
-  --location-primary-soft: #eef0ff;
+  --location-primary: #0284c7;           /* Sky / Ocean Blue */
+  --location-primary-hover: #0369a1;     /* Deep Sky Blue */
+  --location-primary-soft: #f0f9ff;      /* Very soft icy blue */
+  --location-primary-border: #bae6fd;    /* Soft pastel blue border */
 
-  --location-text: #14213d;
-  --location-text-dark: #0f172a;
-  --location-text-muted: #64748b;
-  --location-text-light: #94a3b8;
+  --location-text: #0f172a;              /* Deep slate navy */
+  --location-text-dark: #032b43;         /* Deepest midnight blue */
+  --location-text-muted: #537188;        /* Slate blue-gray */
+  --location-text-light: #8ba2b5;        /* Light blue-slate */
 
-  --location-border: #dfe5ee;
-  --location-border-light: #edf1f6;
+  --location-border: #d7e7f5;            /* Subtle light blue-gray border */
+  --location-border-light: #eaf3fa;
 
   --location-background: #ffffff;
-  --location-page-background: #f8fafc;
+  --location-page-background: #f5faff;
 
   --location-radius: 17px;
 }
@@ -61,12 +62,23 @@
   border-radius: var(--location-radius);
 
   box-shadow:
-    0 18px 45px rgba(15, 23, 42, 0.055),
-    0 4px 12px rgba(15, 23, 42, 0.025);
+    0 18px 45px rgba(2, 132, 199, 0.05),
+    0 4px 12px rgba(15, 23, 42, 0.02);
 
   overflow: hidden;
 
   box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ToursLocation-card:hover {
+  border-color: #bcd9f2;
+  box-shadow:
+    0 20px 48px rgba(2, 132, 199, 0.08),
+    0 5px 14px rgba(15, 23, 42, 0.025);
 }
 
 
@@ -92,7 +104,7 @@
 }
 
 .ToursLocation-header:hover {
-  background: #fcfcff;
+  background: #f8fbff;
 }
 
 
@@ -124,16 +136,16 @@
   background:
     linear-gradient(
       145deg,
-      #f2f3ff 0%,
-      #e9ebff 100%
+      #f0f9ff 0%,
+      #e0f2fe 100%
     );
 
-  border: 1px solid #dfe2ff;
+  border: 1px solid var(--location-primary-border);
 
   border-radius: 12px;
 
   box-shadow:
-    0 5px 12px rgba(85, 70, 232, 0.07);
+    0 5px 12px rgba(2, 132, 199, 0.08);
 }
 
 .ToursLocation-icon-box svg {
@@ -156,7 +168,7 @@
 .ToursLocation-header-title {
   margin: 0;
 
-  color: var(--location-text);
+  color: var(--location-text-dark);
 
   font-size: 20px;
   line-height: 1.25;
@@ -199,7 +211,7 @@
 
   background: transparent;
 
-  color: #64748b;
+  color: #7b96b2;
 
   cursor: pointer;
 
@@ -208,9 +220,10 @@
     color 0.2s ease;
 }
 
+.ToursLocation-header:hover .ToursLocation-toggle-button,
 .ToursLocation-toggle-button:hover {
-  background: #f3f5f8;
-  color: #17233b;
+  background: #edf6fd;
+  color: var(--location-primary);
 }
 
 
@@ -301,13 +314,13 @@
 
   padding: 7px 11px;
 
-  border: 1px solid #e3e7ef;
+  border: 1px solid var(--location-border);
 
   border-radius: 8px;
 
-  background: #f8fafc;
+  background: #f8fbff;
 
-  color: #64748b;
+  color: #537188;
 
   font-size: 11.5px;
   font-weight: 600;
@@ -324,10 +337,10 @@
 
   border-radius: 50%;
 
-  background: #22c55e;
+  background: #059669;
 
   box-shadow:
-    0 0 0 3px rgba(34, 197, 94, 0.10);
+    0 0 0 3px rgba(5, 150, 105, 0.15);
 }
 
 
@@ -343,14 +356,14 @@
 
   overflow: hidden;
 
-  background: #e5e7eb;
+  background: #eaf3fa;
 
-  border: 1px solid #dce2eb;
+  border: 1.5px solid #cde0f0;
 
   border-radius: 14px;
 
   box-shadow:
-    0 10px 25px rgba(15, 23, 42, 0.075);
+    0 10px 25px rgba(2, 132, 199, 0.08);
 
   isolation: isolate;
 }
@@ -367,13 +380,6 @@
   display: block;
 
   border: 0;
-
-  /*
-    IMPORTANT:
-    No dark filter here.
-    Google Maps itself already provides
-    the native controls and attribution.
-  */
 
   filter: none;
 }
@@ -400,17 +406,17 @@
 
   background: rgba(255, 255, 255, 0.94);
 
-  border: 1px solid rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(186, 230, 253, 0.6);
 
   border-radius: 9px;
 
-  color: #172033;
+  color: var(--location-text-dark);
 
   font-size: 12px;
   font-weight: 700;
 
   box-shadow:
-    0 5px 15px rgba(15, 23, 42, 0.15);
+    0 5px 15px rgba(2, 132, 199, 0.12);
 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -435,6 +441,8 @@
   background: var(--location-primary-soft);
 
   color: var(--location-primary);
+
+  border: 1px solid var(--location-primary-border);
 
   border-radius: 7px;
 }
@@ -501,7 +509,7 @@
 .ToursLocation-field-optional {
   margin-left: 6px;
 
-  color: #94a3b8;
+  color: #7b96b2;
 
   font-size: 12px;
 
@@ -531,7 +539,7 @@
 
   transform: translateY(-50%);
 
-  color: #9aa7b8;
+  color: #8da4bb;
 
   pointer-events: none;
 
@@ -561,7 +569,7 @@
 
   box-sizing: border-box;
 
-  border: 1px solid #dce3ec;
+  border: 1px solid #cde0f0;
 
   border-radius: 10px;
 
@@ -585,7 +593,7 @@
 
 
 .ToursLocation-input-control:hover {
-  border-color: #cbd5e1;
+  border-color: #93c5fd;
 }
 
 
@@ -595,12 +603,12 @@
   background: #ffffff;
 
   box-shadow:
-    0 0 0 4px rgba(85, 70, 232, 0.09);
+    0 0 0 4px rgba(2, 132, 199, 0.12);
 }
 
 
 .ToursLocation-input-control::placeholder {
-  color: #9aa8ba;
+  color: #9cb3c9;
 
   font-weight: 450;
 }
@@ -613,7 +621,7 @@
 .ToursLocation-field-hint {
   margin-top: 6px;
 
-  color: #94a3b8;
+  color: #7b96b2;
 
   font-size: 11.5px;
 

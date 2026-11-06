@@ -1,24 +1,24 @@
 /* =========================================================
    TOURS ALL SECTION
-   PREMIUM ADMIN DASHBOARD UI
+   PREMIUM ADMIN DASHBOARD UI - LIGHT BLUE & WHITE THEME
    RESPONSIVE + CONTAINER AWARE
    BACKEND / PROPS / STATE LOGIC UNTOUCHED
    ========================================================= */
 
 
 /* =========================================================
-   ROOT VARIABLES
+   ROOT VARIABLES (LIGHT BLUE & WHITE PALETTE)
    ========================================================= */
 
 :root {
-  --tas-primary: #5546e8;
-  --tas-primary-hover: #493bd4;
-  --tas-primary-soft: #f2f1ff;
-  --tas-primary-border: #dedbff;
+  --tas-primary: #0284c7;           /* Sky / Ocean Blue */
+  --tas-primary-hover: #0369a1;     /* Deep Sky Blue */
+  --tas-primary-soft: #f0f9ff;      /* Very soft icy blue */
+  --tas-primary-border: #bae6fd;    /* Soft pastel blue border */
 
-  --tas-success: #16a34a;
-  --tas-success-hover: #15803d;
-  --tas-success-soft: #ecfdf3;
+  --tas-success: #059669;
+  --tas-success-hover: #047857;
+  --tas-success-soft: #ecfdf5;
 
   --tas-danger: #ef4444;
   --tas-danger-soft: #fff1f2;
@@ -28,19 +28,19 @@
   --tas-warning-soft: #fff7ed;
   --tas-warning-border: #fed7aa;
 
-  --tas-text: #14213d;
-  --tas-text-dark: #0f172a;
-  --tas-text-muted: #64748b;
-  --tas-text-subtle: #94a3b8;
+  --tas-text: #0f172a;              /* Deep slate navy */
+  --tas-text-dark: #032b43;         /* Deepest midnight blue */
+  --tas-text-muted: #537188;         /* Slate blue-gray */
+  --tas-text-subtle: #8ba2b5;        /* Light blue-slate */
 
   --tas-card-bg: #ffffff;
-  --tas-bg: #f8fafc;
+  --tas-bg: #f5faff;                 /* Crisp white with icy blue wash */
 
-  --tas-border: #e1e7ef;
-  --tas-border-light: #edf1f5;
-  --tas-border-input: #dce3ec;
+  --tas-border: #d7e7f5;            /* Subtle light blue-gray border */
+  --tas-border-light: #eaf3fa;
+  --tas-border-input: #cde0f0;
 
-  --tas-focus: #5546e8;
+  --tas-focus: #0284c7;
 
   --tas-radius-xl: 17px;
   --tas-radius-lg: 13px;
@@ -48,12 +48,12 @@
   --tas-radius-sm: 7px;
 
   --tas-shadow:
-    0 15px 40px rgba(15, 23, 42, 0.045),
-    0 3px 10px rgba(15, 23, 42, 0.025);
+    0 15px 40px rgba(2, 132, 199, 0.05),
+    0 3px 10px rgba(15, 23, 42, 0.02);
 
   --tas-shadow-hover:
-    0 18px 45px rgba(15, 23, 42, 0.055),
-    0 4px 12px rgba(15, 23, 42, 0.025);
+    0 18px 45px rgba(2, 132, 199, 0.08),
+    0 4px 12px rgba(15, 23, 42, 0.03);
 
   --tas-transition: 0.2s ease;
 }
@@ -152,11 +152,15 @@
   background: var(--tas-primary);
   color: #ffffff;
   border: 1px solid var(--tas-primary);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);
 }
 
 
 .tours-all-section__btn-primary:hover {
   background: var(--tas-primary-hover);
+  border-color: var(--tas-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.28);
 }
 
 
@@ -168,14 +172,16 @@
   border: 1px solid var(--tas-border);
 
   box-shadow:
-    0 2px 5px rgba(15, 23, 42, 0.025);
+    0 2px 5px rgba(2, 132, 199, 0.04);
 }
 
 
 .tours-all-section__btn-secondary:hover {
-  background: #fafbff;
+  background: var(--tas-primary-soft);
 
-  border-color: #cfd7e3;
+  border-color: var(--tas-primary-border);
+
+  color: var(--tas-primary-hover);
 
   transform: translateY(-1px);
 }
@@ -189,7 +195,7 @@
   border: 1px solid var(--tas-success);
 
   box-shadow:
-    0 5px 14px rgba(22, 163, 74, 0.16);
+    0 5px 14px rgba(5, 150, 105, 0.16);
 }
 
 
@@ -201,7 +207,7 @@
   transform: translateY(-1px);
 
   box-shadow:
-    0 8px 18px rgba(22, 163, 74, 0.2);
+    0 8px 18px rgba(5, 150, 105, 0.2);
 }
 
 
@@ -243,16 +249,16 @@
 
   gap: 10px;
 
-  background: #111827;
+  background: #082f49;
 
   color: #ffffff;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(186, 230, 253, 0.2);
 
   border-radius: 11px;
 
   box-shadow:
-    0 18px 45px rgba(15, 23, 42, 0.25);
+    0 18px 45px rgba(8, 47, 73, 0.35);
 
   font-size: 12.5px;
   font-weight: 600;
@@ -270,7 +276,7 @@
 
   flex-shrink: 0;
 
-  color: #4ade80;
+  color: #38bdf8;
 }
 
 
@@ -311,7 +317,7 @@
 
 
 .tours-all-section__card:hover {
-  border-color: #d8dfe9;
+  border-color: #bcd9f2;
 
   box-shadow: var(--tas-shadow-hover);
 }
@@ -346,7 +352,7 @@
 
 
 .tours-all-section__card-header:hover {
-  background: #fcfcff;
+  background: #f8fbff;
 }
 
 
@@ -379,8 +385,8 @@
   background:
     linear-gradient(
       145deg,
-      #f1f2ff 0%,
-      #e9eaff 100%
+      #f0f9ff 0%,
+      #e0f2fe 100%
     );
 
   border: 1px solid var(--tas-primary-border);
@@ -388,7 +394,7 @@
   color: var(--tas-primary);
 
   box-shadow:
-    0 5px 12px rgba(85, 70, 232, 0.065);
+    0 5px 12px rgba(2, 132, 199, 0.08);
 }
 
 
@@ -401,7 +407,7 @@
 .tours-all-section__heading {
   margin: 0 0 3px;
 
-  color: var(--tas-text);
+  color: var(--tas-text-dark);
 
   font-size: 17px;
   line-height: 1.25;
@@ -433,7 +439,7 @@
   align-items: center;
   justify-content: center;
 
-  color: #64748b;
+  color: #7b96b2;
 
   border-radius: 8px;
 
@@ -445,9 +451,9 @@
 
 .tours-all-section__card-header:hover
 .tours-all-section__chevron {
-  background: #f3f5f8;
+  background: #edf6fd;
 
-  color: var(--tas-text-dark);
+  color: var(--tas-primary);
 }
 
 
@@ -495,11 +501,11 @@
   background:
     linear-gradient(
       145deg,
-      #fbfcff 0%,
-      #f7f8ff 100%
+      #ffffff 0%,
+      #f0f8ff 100%
     );
 
-  border: 1px solid #e7e9f5;
+  border: 1px solid #d4e7f8;
 
   border-radius: 13px;
 }
@@ -552,17 +558,20 @@
   transition:
     background 0.2s ease,
     border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease,
+    color 0.2s ease;
 }
 
 
 .tours-all-section__btn-action-light:hover {
-  background: #fafbff;
+  background: #f0f9ff;
 
-  border-color: #cbd5e1;
+  border-color: #bae6fd;
+
+  color: var(--tas-primary-hover);
 
   box-shadow:
-    0 4px 10px rgba(15, 23, 42, 0.04);
+    0 4px 10px rgba(2, 132, 199, 0.08);
 }
 
 
@@ -613,7 +622,7 @@
   background: var(--tas-success);
 
   box-shadow:
-    0 0 0 3px rgba(22, 163, 74, 0.1);
+    0 0 0 3px rgba(5, 150, 105, 0.15);
 }
 
 
@@ -621,7 +630,7 @@
   width: 14px;
   height: 14px;
 
-  color: #7c8ba1;
+  color: #6486a6;
 }
 
 
@@ -715,14 +724,14 @@
   background:
     radial-gradient(
       circle at 35% 30%,
-      #e7e9ff,
-      #dce1ff
+      #ffffff,
+      #e0f2fe
     );
 
-  border: 1px solid #d8dcff;
+  border: 1px solid #bae6fd;
 
   box-shadow:
-    0 8px 20px rgba(85, 70, 232, 0.1);
+    0 8px 20px rgba(2, 132, 199, 0.12);
 }
 
 
@@ -732,7 +741,7 @@
 
 
 .tours-all-section__visual-label {
-  color: #7c8799;
+  color: #62829d;
 
   font-size: 10.5px;
 
@@ -776,7 +785,7 @@
   cursor: pointer;
 
   box-shadow:
-    0 5px 14px rgba(22, 163, 74, 0.12);
+    0 5px 14px rgba(5, 150, 105, 0.14);
 
   transition:
     background 0.2s ease,
@@ -791,7 +800,7 @@
   transform: translateY(-1px);
 
   box-shadow:
-    0 8px 18px rgba(22, 163, 74, 0.17);
+    0 8px 18px rgba(5, 150, 105, 0.2);
 }
 
 
@@ -883,7 +892,7 @@
 
 
 .tours-all-section__control:hover {
-  border-color: #cbd5e1;
+  border-color: #93c5fd;
 }
 
 
@@ -891,12 +900,12 @@
   border-color: var(--tas-focus);
 
   box-shadow:
-    0 0 0 4px rgba(85, 70, 232, 0.08);
+    0 0 0 4px rgba(2, 132, 199, 0.12);
 }
 
 
 .tours-all-section__control::placeholder {
-  color: #9aa8ba;
+  color: #9cb3c9;
 
   opacity: 1;
 
@@ -918,7 +927,7 @@
 
   text-align: right;
 
-  color: #a0aabb;
+  color: #8da4bb;
 
   font-size: 9.5px;
 
@@ -1017,7 +1026,7 @@
 .tours-all-section__field-count {
   flex-shrink: 0;
 
-  color: #94a3b8;
+  color: #7b96b2;
 
   font-size: 9.5px;
 
@@ -1029,7 +1038,7 @@
 
 .tours-all-section__seo-card
 .tours-all-section__label {
-  color: #111827;
+  color: var(--tas-text-dark);
 
   font-size: 12px;
 
@@ -1049,7 +1058,7 @@
 
   padding: 11px 13px;
 
-  border: 1px solid #dce3ec;
+  border: 1px solid var(--tas-border-input);
 
   border-radius: 10px;
 
@@ -1057,7 +1066,7 @@
 
   background: #ffffff;
 
-  color: #111827;
+  color: var(--tas-text-dark);
 
   font-family: inherit;
 
@@ -1068,7 +1077,7 @@
   font-weight: 500;
 
   box-shadow:
-    0 1px 2px rgba(15, 23, 42, 0.015);
+    0 1px 2px rgba(2, 132, 199, 0.02);
 
   transition:
     border-color 0.2s ease,
@@ -1079,7 +1088,7 @@
 
 .tours-all-section__seo-card
 .tours-all-section__control:hover {
-  border-color: #cbd5e1;
+  border-color: #93c5fd;
 }
 
 
@@ -1090,7 +1099,7 @@
   background: #ffffff;
 
   box-shadow:
-    0 0 0 4px rgba(85, 70, 232, 0.075);
+    0 0 0 4px rgba(2, 132, 199, 0.12);
 }
 
 
@@ -1113,7 +1122,7 @@
 
   margin-top: 6px;
 
-  color: #94a3b8;
+  color: #7b96b2;
 
   font-size: 9.5px;
 
@@ -1160,7 +1169,7 @@
 
   padding: 11px 13px 11px 38px;
 
-  border: 1px solid #dce3ec;
+  border: 1px solid var(--tas-border-input);
 
   border-radius: 10px;
 
@@ -1168,7 +1177,7 @@
 
   background: #ffffff;
 
-  color: #111827;
+  color: var(--tas-text-dark);
 
   font-family: inherit;
 
@@ -1183,7 +1192,7 @@
 
 
 .tours-all-section__keyword-input:hover {
-  border-color: #cbd5e1;
+  border-color: #93c5fd;
 }
 
 
@@ -1191,12 +1200,12 @@
   border-color: var(--tas-primary);
 
   box-shadow:
-    0 0 0 4px rgba(85, 70, 232, 0.075);
+    0 0 0 4px rgba(2, 132, 199, 0.12);
 }
 
 
 .tours-all-section__keyword-input::placeholder {
-  color: #a1adbd;
+  color: #9cb3c9;
 }
 
 
@@ -1230,7 +1239,7 @@
 .tours-all-section__media-description {
   max-width: 520px;
 
-  color: #94a3b8;
+  color: #7b96b2;
 
   font-size: 9.5px;
 
@@ -1292,15 +1301,15 @@
 
   overflow: hidden;
 
-  border: 1.5px dashed #c8c7f8;
+  border: 1.5px dashed #7dd3fc;
 
   border-radius: 13px;
 
   background:
     linear-gradient(
       145deg,
-      #fbfbff 0%,
-      #f5f5ff 100%
+      #ffffff 0%,
+      #f0f9ff 100%
     );
 
   cursor: pointer;
@@ -1319,17 +1328,17 @@
   background:
     linear-gradient(
       145deg,
-      #f9f9ff 0%,
-      #f1f2ff 100%
+      #f8fcff 0%,
+      #e0f2fe 100%
     );
 
   box-shadow:
-    0 10px 25px rgba(85, 70, 232, 0.075);
+    0 10px 25px rgba(2, 132, 199, 0.12);
 }
 
 
 .tours-all-section__upload-box:focus-visible {
-  outline: 3px solid rgba(85, 70, 232, 0.15);
+  outline: 3px solid rgba(2, 132, 199, 0.2);
 
   outline-offset: 3px;
 }
@@ -1361,21 +1370,21 @@
   align-items: center;
   justify-content: center;
 
-  border: 1px solid #dcd9ff;
+  border: 1px solid #bae6fd;
 
   border-radius: 13px;
 
   background:
     linear-gradient(
       145deg,
-      #f1f0ff,
-      #e9e8ff
+      #ffffff,
+      #e0f2fe
     );
 
   color: var(--tas-primary);
 
   box-shadow:
-    0 7px 18px rgba(85, 70, 232, 0.075);
+    0 7px 18px rgba(2, 132, 199, 0.1);
 
   transition:
     transform 0.2s ease,
@@ -1388,7 +1397,7 @@
   transform: translateY(-2px);
 
   box-shadow:
-    0 9px 20px rgba(85, 70, 232, 0.11);
+    0 9px 20px rgba(2, 132, 199, 0.15);
 }
 
 
@@ -1399,7 +1408,7 @@
 
 
 .tours-all-section__upload-title {
-  color: #111827;
+  color: var(--tas-text-dark);
 
   font-size: 13px;
 
@@ -1412,7 +1421,7 @@
 .tours-all-section__upload-subtitle {
   margin-top: 5px;
 
-  color: #64748b;
+  color: var(--tas-text-muted);
 
   font-size: 10px;
 
@@ -1430,7 +1439,7 @@
 
   gap: 8px;
 
-  color: #94a3b8;
+  color: #7b96b2;
 
   font-size: 9px;
 
@@ -1444,7 +1453,7 @@
 
   border-radius: 50%;
 
-  background: #cbd5e1;
+  background: #bae6fd;
 }
 
 
@@ -1456,7 +1465,7 @@
 
   gap: 5px;
 
-  color: #94a3b8;
+  color: #7b96b2;
 
   font-size: 9px;
 
@@ -1472,16 +1481,16 @@
 
   flex-shrink: 0;
 
-  color: #7c8798;
+  color: #0284c7;
 }
 
 
 .tours-all-section__upload-box--has-image {
   border-style: solid;
 
-  border-color: #dce3ec;
+  border-color: #bae6fd;
 
-  background: #f1f5f9;
+  background: #f0f9ff;
 }
 
 
@@ -1526,8 +1535,8 @@
   background:
     linear-gradient(
       to top,
-      rgba(15, 23, 42, 0.78),
-      rgba(15, 23, 42, 0)
+      rgba(8, 47, 73, 0.8),
+      rgba(8, 47, 73, 0)
     );
 
   pointer-events: none;
@@ -1576,11 +1585,11 @@
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 
   border-radius: 8px;
 
-  background: rgba(255, 255, 255, 0.13);
+  background: rgba(2, 132, 199, 0.35);
 
   backdrop-filter: blur(7px);
 }
@@ -1610,7 +1619,7 @@
 
 
 .tours-all-section__preview-overlay span {
-  color: #dbe3ed;
+  color: #e0f2fe;
 
   font-size: 9px;
 
@@ -1647,7 +1656,7 @@
 
   left: 13px;
 
-  color: #64748b;
+  color: #537188;
 
   font-size: 13px;
 
@@ -1664,7 +1673,7 @@
 
   right: 13px;
 
-  color: #94a3b8;
+  color: #7b96b2;
 
   font-size: 10.5px;
 
@@ -1740,7 +1749,7 @@
   width: 15px;
   height: 15px;
 
-  color: #94a3b8;
+  color: #8da4bb;
 
   pointer-events: none;
 
@@ -1788,7 +1797,7 @@
 
 
 .tours-all-section__tag-box:hover {
-  border-color: #cbd5e1;
+  border-color: #93c5fd;
 }
 
 
@@ -1796,7 +1805,7 @@
   border-color: var(--tas-primary);
 
   box-shadow:
-    0 0 0 4px rgba(85, 70, 232, 0.08);
+    0 0 0 4px rgba(2, 132, 199, 0.12);
 }
 
 
@@ -1873,7 +1882,7 @@
 .tours-all-section__chip--tag {
   background: var(--tas-primary-soft);
 
-  color: var(--tas-primary);
+  color: var(--tas-primary-hover);
 
   border: 1px solid var(--tas-primary-border);
 }
@@ -1913,7 +1922,7 @@
 .tours-all-section__chip button:hover {
   opacity: 1;
 
-  background: rgba(15, 23, 42, 0.06);
+  background: rgba(2, 132, 199, 0.12);
 }
 
 
@@ -1961,7 +1970,7 @@
 
 
 .tours-all-section__tag-inline input::placeholder {
-  color: #a0aabb;
+  color: #9cb3c9;
 }
 
 
@@ -1992,9 +2001,9 @@
 
   border-radius: 6px;
 
-  background: #f1f5f9;
+  background: #e0f2fe;
 
-  color: #64748b;
+  color: var(--tas-primary);
 
   font-size: 15px;
 
@@ -2046,11 +2055,11 @@
 
   padding: 11px;
 
-  border: 1px solid #edf1f6;
+  border: 1px solid #e0effa;
 
   border-radius: 9px;
 
-  background: #fcfdff;
+  background: #fbfdff;
 }
 
 
@@ -2123,15 +2132,15 @@
 
   gap: 9px;
 
-  border: 1px solid #e7e9f5;
+  border: 1px solid #bae6fd;
 
   border-radius: 13px;
 
   background:
     linear-gradient(
       145deg,
-      #fbfcff,
-      #f4f5ff
+      #ffffff,
+      #f0f9ff
     );
 }
 
@@ -2149,14 +2158,14 @@
   background:
     radial-gradient(
       circle at 35% 30%,
-      #e8f6ff,
-      #dff3ff
+      #ffffff,
+      #e0f2fe
     );
 
-  border: 1px solid #d8efff;
+  border: 1px solid #bae6fd;
 
   box-shadow:
-    0 8px 20px rgba(14, 165, 233, 0.08);
+    0 8px 20px rgba(2, 132, 199, 0.12);
 }
 
 
@@ -2168,7 +2177,7 @@
 .tours-all-section__tips-visual > span {
   max-width: 110px;
 
-  color: #7c8799;
+  color: #62829d;
 
   font-size: 10px;
 
@@ -2192,14 +2201,14 @@
 .tours-all-section__inline-edit:focus-visible,
 .tours-all-section__keyword-input:focus-visible,
 .tours-all-section__control:focus-visible {
-  outline: 3px solid rgba(85, 70, 232, 0.18);
+  outline: 3px solid rgba(2, 132, 199, 0.22);
 
   outline-offset: 2px;
 }
 
 
 .tours-all-section__card-header.clickable:focus-visible {
-  outline: 3px solid rgba(85, 70, 232, 0.14);
+  outline: 3px solid rgba(2, 132, 199, 0.18);
 
   outline-offset: -3px;
 }
